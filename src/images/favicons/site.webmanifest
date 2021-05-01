@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "wickedblocks",
+    "short_name": "wickedblocks",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#010412",
-    "background_color": "#010412",
+    "theme_color": "#3473fd",
+    "background_color": "#3473fd",
     "display": "standalone"
 }
