@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://blocks.wickedtemplates.com/*"
+  to = "https://www.wickedblocks.dev/:splat"
+  status = 301
+  force = true

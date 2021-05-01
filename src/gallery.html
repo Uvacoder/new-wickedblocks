@@ -1,0 +1,524 @@
+{{#extend "default" }}{{#content "body"}}
+{{> navigation }}
+{{> snackbar }}
+
+<!----Hero  -->
+{{#>section-screens-hero}}
+<div class="flex flex-col w-full mb-4 ">
+    <h1 class="mb-2 text-2xl font-bold tracking-tight text-left text-white uppercase sm:text-5xl title-font lg:w-3/3">
+        Gallery.
+    </h1>
+</div>
+<span class="px-4 py-2 text-left text-white border border-gray-400 rounded-lg">5 Blocks</span>
+<div class="flex flex-col w-full mt-6 ">
+    <p class="items-center w-full text-2xl leading-snug text-gray-50 lg:text-base lg:w-1/2">
+        <span class="font-semibold tracking-tighter text-blue-500 uppercase">
+            WEB VISUAL MARKETING</span>
+        is one of the most effective ways of advertising and promoting your business, and adding an
+        image
+        gallery to your web page has the potential to instantly expand your client base.
+    </p>
+</div>
+{{/section-screens-hero}}
+<!----end hero -->
+<!--- gallery 1-->
+{{#>section-screens}}
+<div class="bg-white shadow-thick rounded-xl" x-data="{ tab: 'preview1' }">
+    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview1' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            @click="tab = 'preview1'">
+            Preview
+        </button>
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code1' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+            @click="tab = 'code1'">
+            Code
+        </button>
+        <!---- Copy Buton -->
+        <button
+            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            onclick="copyToClip(document.getElementById('galleryOne').innerHTML)" x-data="{}"
+            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="8" y="8" width="12" height="12" rx="2" />
+                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+            </svg>
+        </button>
+    </div>
+    <div class=" rounded-b-xl" x-show="tab === 'preview1'">
+        <iframe class="w-full h-screen rounded-b-xl" src="./snippets/gallery/gallery-1.html"
+            title="wicked"></iframe>
+    </div>
+    <div class=" rounded-b-xl" x-show="tab === 'code1'">
+        <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+            <div class="rounded-b-xl">
+                <div class="hidden" id="galleryOne">
+                    <!------
+                                          <section class="overflow-hidden text-gray-700 ">
+            <div class="container px-5 py-2 mx-auto lg:px-32">
+                <div class="flex flex-wrap justify-center mx-auto ">
+                    <div class="w-full mt-6 lg:w-2/4 lg:pl-10 lg:py-6 lg:mt-0">
+                        <img alt="image"
+                            class="object-cover object-center w-full h-64 rounded-lg lg:h-auto"
+                            src="https://dummyimage.com/400x400/F3F4F7/8693ac">
+                    </div>
+                    <div class="w-full mt-6 lg:w-2/4 lg:pl-10 lg:py-6 lg:mt-0">
+                        <img alt="image"
+                            class="object-cover object-center w-full h-64 rounded-lg lg:h-auto"
+                            src="https://dummyimage.com/400x400/F3F4F7/8693ac">
+                    </div>
+                </div>
+            </div>
+        </section>
+                                        --->
+                </div>
+                <!---- display code goes here.-->
+                <pre class="leading-6"><code data-language="html">
+        &lt;section class="overflow-hidden text-gray-700 "&gt;
+            &lt;div class="container px-5 py-2 mx-auto lg:px-32"&gt;
+                &lt;div class="flex flex-wrap justify-center mx-auto "&gt;
+                    &lt;div class="w-full mt-6 lg:w-2/4 lg:pl-10 lg:py-6 lg:mt-0"&gt;
+                        &lt;img alt="image"
+                            class="object-cover object-center w-full h-64 rounded-lg lg:h-auto"
+                            src="https://dummyimage.com/400x400/F3F4F7/8693ac"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="w-full mt-6 lg:w-2/4 lg:pl-10 lg:py-6 lg:mt-0"&gt;
+                        &lt;img alt="image"
+                            class="object-cover object-center w-full h-64 rounded-lg lg:h-auto"
+                            src="https://dummyimage.com/400x400/F3F4F7/8693ac"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+                                    </code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{{/section-screens}}
+{{> wicked-ad }}
+<!--- gallery 2-->
+{{#>section-screens}}
+<div class="bg-white shadow-thick rounded-xl" x-data="{ tab: 'preview2' }">
+    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+        <button :class="{ 'active font-bold  bg-gray-500 text-white  ': tab === 'preview2' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            @click="tab = 'preview2'">
+            Preview
+        </button>
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code2' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+            @click="tab = 'code2'">
+            Code
+        </button>
+        <!---- Copy Buton -->
+        <button
+            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            onclick="copyToClip(document.getElementById('galleryTwo').innerHTML)" x-data="{}"
+            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="8" y="8" width="12" height="12" rx="2" />
+                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+            </svg>
+        </button>
+    </div>
+    <div class="">
+        <div class=" rounded-b-xl" x-show="tab === 'preview2'">
+            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/gallery/gallery-2.html"
+                title="wicked"></iframe>
+        </div>
+        <div class=" rounded-b-xl" x-show="tab === 'code2'">
+            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                <div class="rounded-b-xl">
+                    <div class="hidden" id="galleryTwo">
+                        <!----
+          <section class="overflow-hidden text-gray-700 ">
+            <div class="container px-5 py-2 mx-auto lg:px-10">
+                <div class="flex flex-wrap py-8 md:flex-no-wrap">
+                    <div class="w-full ">
+                        <img alt="image" style="height:400px;"
+                            class="object-cover object-center w-full h-64 rounded-lg lg:h-auto"
+                            src="https://dummyimage.com/1024x400/F3F4F7/8693ac">
+                    </div>
+                </div>
+            </div>
+        </section>
+                              --->
+                    </div>
+                    <!---- display code goes here.-->
+                    <pre class="leading-6"><code data-language="html">
+        &lt;section class="overflow-hidden text-gray-700 "&gt;
+            &lt;div class="container px-5 py-2 mx-auto lg:px-10"&gt;
+                &lt;div class="flex flex-wrap py-8 md:flex-no-wrap"&gt;
+                    &lt;div class="w-full "&gt;
+                        &lt;img alt="image" style="height:400px;"
+                            class="object-cover object-center w-full h-64 rounded-lg lg:h-auto"
+                            src="https://dummyimage.com/1024x400/F3F4F7/8693ac"&gt;
+                        &lt;div class="flex flex-col items-start mx-auto mt-8 sm:flex-row sm:items-center"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+                                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/section-screens}}
+<!--- gallery 6 -->
+{{#>section-screens}}
+<div class="bg-white shadow-thick rounded-xl" x-data="{ tab: 'preview6' }">
+    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+        <button :class="{ 'active font-bold  bg-gray-500 text-white  ': tab === 'preview6' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            @click="tab = 'preview6'">
+            Preview
+        </button>
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code6' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+            @click="tab = 'code6'">
+            Code
+        </button>
+        <!---- Copy Buton -->
+        <button
+            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            onclick="copyToClip(document.getElementById('gallerySix').innerHTML)" x-data="{}"
+            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="8" y="8" width="12" height="12" rx="2" />
+                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+            </svg>
+        </button>
+    </div>
+    <div class="">
+        <div class=" rounded-b-xl" x-show="tab === 'preview6'">
+            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/gallery/gallery-6.html"
+                title="wicked"></iframe>
+        </div>
+        <div class=" rounded-b-xl" x-show="tab === 'code6'">
+            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                <div class="rounded-b-xl">
+                    <div class="hidden" id="gallerySix">
+                        <!------
+                                  <section class="overflow-hidden text-gray-700 ">
+            <div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-32">
+            <div class="flex flex-wrap -m-1 md:-m-2">
+                <div class="flex flex-wrap w-1/2">
+                    <div class="w-1/2 p-1 md:p-2">
+                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="https://dummyimage.com/500x300/F3F4F7/8693ac">
+                    </div>
+                    <div class="w-1/2 p-1 md:p-2">
+                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="https://dummyimage.com/501x301/F3F4F7/8693ac">
+                    </div>
+                    <div class="w-full p-1 md:p-2">
+                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="https://dummyimage.com/600x360/F3F4F7/8693ac">
+                    </div>
+                </div>
+                <div class="flex flex-wrap w-1/2">
+                    <div class="w-full p-1 md:p-2">
+                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="https://dummyimage.com/601x361/F3F4F7/8693ac">
+                    </div>
+                    <div class="w-1/2 p-1 md:p-2">
+                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="https://dummyimage.com/502x302/F3F4F7/8693ac">
+                    </div>
+                    <div class="w-1/2 p-1 md:p-2">
+                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="https://dummyimage.com/503x303/F3F4F7/8693ac">
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+                    </div>
+                    <!---- display code goes here.-->
+                    <pre class="leading-6"><code data-language="html">
+        &lt;section class="overflow-hidden text-gray-700 "&gt;
+            &lt;div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-32"&gt;
+            &lt;div class="flex flex-wrap -m-1 md:-m-2"&gt;
+                &lt;div class="flex flex-wrap w-1/2"&gt;
+                    &lt;div class="w-1/2 p-1 md:p-2"&gt;
+                        &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="https://dummyimage.com/500x300/F3F4F7/8693ac"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="w-1/2 p-1 md:p-2"&gt;
+                        &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="https://dummyimage.com/501x301/F3F4F7/8693ac"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="w-full p-1 md:p-2"&gt;
+                        &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="https://dummyimage.com/600x360/F3F4F7/8693ac"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="flex flex-wrap w-1/2"&gt;
+                    &lt;div class="w-full p-1 md:p-2"&gt;
+                        &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="https://dummyimage.com/601x361/F3F4F7/8693ac"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="w-1/2 p-1 md:p-2"&gt;
+                        &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="https://dummyimage.com/502x302/F3F4F7/8693ac"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="w-1/2 p-1 md:p-2"&gt;
+                        &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="https://dummyimage.com/503x303/F3F4F7/8693ac"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+                                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/section-screens}}
+<!--- gallery 10 -->
+{{#>section-screens}}
+<div class="bg-white shadow-thick rounded-xl" x-data="{ tab: 'preview10' }">
+    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+        <button :class="{ 'active font-bold  bg-gray-500 text-white  ': tab === 'preview10' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            @click="tab = 'preview10'">
+            Preview
+        </button>
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code10' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+            @click="tab = 'code10'">
+            Code
+        </button>
+        <!---- Copy Buton -->
+        <button
+            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            onclick="copyToClip(document.getElementById('galleryTen').innerHTML)" x-data="{}"
+            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="8" y="8" width="12" height="12" rx="2" />
+                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+            </svg>
+        </button>
+    </div>
+    <div class="">
+        <div class=" rounded-b-xl" x-show="tab === 'preview10'">
+            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/gallery/gallery-10.html"
+                title="wicked"></iframe>
+        </div>
+        <div class=" rounded-b-xl" x-show="tab === 'code10'">
+            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                <div class="rounded-b-xl">
+                    <div class="hidden" id="galleryTen">
+                        <!----
+                       <section class="overflow-hidden text-gray-700 ">
+            <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
+                <div class="flex flex-wrap -m-1 md:-m-2">
+                    <div class="flex flex-wrap w-1/3">
+                        <div class="w-full p-1 md:p-2">
+                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/800x600/F3F4F7/8693ac">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap w-1/3">
+                        <div class="w-full p-1 md:p-2">
+                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/800x600/F3F4F7/8693ac">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap w-1/3">
+                        <div class="w-full p-1 md:p-2">
+                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/800x600/F3F4F7/8693ac">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap w-1/3">
+                        <div class="w-full p-1 md:p-2">
+                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/800x600/F3F4F7/8693ac">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap w-1/3">
+                        <div class="w-full p-1 md:p-2">
+                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/800x600/F3F4F7/8693ac">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap w-1/3">
+                        <div class="w-full p-1 md:p-2">
+                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/800x600/F3F4F7/8693ac">
+                        </div>
+                    </div>
+                </div>
+        </section>
+                                      ---->
+                    </div>
+                    <!---- display code goes here.-->
+                    <pre class="leading-6"><code data-language="html">
+        &lt;section class="overflow-hidden text-gray-700 "&gt;
+            &lt;div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32"&gt;
+                &lt;div class="flex flex-wrap -m-1 md:-m-2"&gt;
+                    &lt;div class="flex flex-wrap w-1/3"&gt;
+                        &lt;div class="w-full p-1 md:p-2"&gt;
+                            &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/800x600/F3F4F7/8693ac"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flex flex-wrap w-1/3"&gt;
+                        &lt;div class="w-full p-1 md:p-2"&gt;
+                            &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/800x600/F3F4F7/8693ac"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flex flex-wrap w-1/3"&gt;
+                        &lt;div class="w-full p-1 md:p-2"&gt;
+                            &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/800x600/F3F4F7/8693ac"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flex flex-wrap w-1/3"&gt;
+                        &lt;div class="w-full p-1 md:p-2"&gt;
+                            &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/800x600/F3F4F7/8693ac"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flex flex-wrap w-1/3"&gt;
+                        &lt;div class="w-full p-1 md:p-2"&gt;
+                            &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/800x600/F3F4F7/8693ac"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flex flex-wrap w-1/3"&gt;
+                        &lt;div class="w-full p-1 md:p-2"&gt;
+                            &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/800x600/F3F4F7/8693ac"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+        &lt;/section&gt;
+                                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/section-screens}}
+<!--- gallery 11 -->
+{{#>section-screens}}
+<div class="bg-white shadow-thick rounded-xl" x-data="{ tab: 'preview11' }">
+    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+        <button :class="{ 'active font-bold  bg-gray-500 text-white  ': tab === 'preview11' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            @click="tab = 'preview11'">
+            Preview
+        </button>
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code11' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+            @click="tab = 'code11'">
+            Code
+        </button>
+        <!---- Copy Buton -->
+        <button
+            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            onclick="copyToClip(document.getElementById('galleryEleven').innerHTML)" x-data="{}"
+            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="8" y="8" width="12" height="12" rx="2" />
+                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+            </svg>
+        </button>
+    </div>
+    <div class="">
+        <div class=" rounded-b-xl" x-show="tab === 'preview11'">
+            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/gallery/gallery-1.html"
+                title="wicked"></iframe>
+        </div>
+        <div class=" rounded-b-xl" x-show="tab === 'code11'">
+            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                <div class="rounded-b-xl">
+                    <div class="hidden" id="galleryEleven">
+                        <!-------
+ <section class="overflow-hidden text-gray-700 ">
+            <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
+                <div class="flex flex-wrap -m-1 md:-m-2">
+                    <div class="flex flex-wrap w-1/2">
+                        <div class="w-full p-1 md:p-2">
+                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/500x300/F3F4F7/8693ac">
+                        </div>
+                        <div class="w-full p-1 md:p-2">
+                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/500x200/F3F4F7/8693ac">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap w-1/2">
+                        <div class="w-full p-1 md:p-2">
+                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/500x200/F3F4F7/8693ac">
+                        </div>
+                        <div class="w-full p-1 md:p-2">
+                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                                src="https://dummyimage.com/500x300/F3F4F7/8693ac">
+                        </div>
+                    </div>
+                </div>
+        </section>
+                    -->
+                    </div>
+                    <!---- display code goes here.-->
+                    <pre class="leading-6"><code data-language="html">
+        &lt;section class="overflow-hidden text-gray-700 "&gt;
+        &lt;div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32"&gt;
+        &lt;div class="flex flex-wrap -m-1 md:-m-2"&gt;
+        &lt;div class="flex flex-wrap w-1/2"&gt;
+        &lt;div class="w-full p-1 md:p-2"&gt;
+        &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+        src="https://dummyimage.com/500x300/F3F4F7/8693ac"&gt;
+        &lt;/div&gt;
+        &lt;div class="w-full p-1 md:p-2"&gt;
+        &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+        src="https://dummyimage.com/500x200/F3F4F7/8693ac"&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="flex flex-wrap w-1/2"&gt;
+        &lt;div class="w-full p-1 md:p-2"&gt;
+        &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+        src="https://dummyimage.com/500x200/F3F4F7/8693ac"&gt;
+        &lt;/div&gt;
+        &lt;div class="w-full p-1 md:p-2"&gt;
+        &lt;img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+        src="https://dummyimage.com/500x300/F3F4F7/8693ac"&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/section&gt;
+                                                                        </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/section-screens}}
+
+{{>js-tags}}
+{{/content}}{{/extend}}

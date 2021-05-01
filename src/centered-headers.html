@@ -1,0 +1,408 @@
+{{#extend "default" }}{{#content "body"}}
+{{> navigation }} ">
+{{> snackbar }}
+<!----Hero  -->
+{{#>section-screens-hero}}
+<div class="flex flex-col w-full mb-4 ">
+    <h1 class="mb-2 text-2xl font-bold tracking-tight text-left text-white uppercase sm:text-5xl title-font lg:w-3/3">
+        Centered Headers.
+    </h1>
+</div>
+<span class="px-4 py-2 text-left text-white border border-gray-400 rounded-lg">5 Blocks</span>
+<div class="flex flex-col w-full mt-6 ">
+    <p class="items-center w-full text-2xl leading-snug text-gray-50 lg:text-base lg:w-1/2">
+        <span class="font-semibold tracking-tighter text-blue-500 uppercase">
+            CENTERING ELEMENTS</span>
+        in a web design is a very effective way to create visual balance. Centered designs can also
+        facilitate responsiveness, a property that is becoming increasingly desirable with the growth of
+        the 'mobile web'.
+    </p>
+</div>
+{{/section-screens-hero}}
+<!----end hero -->
+<!--- header 2-->
+{{#>section-screens}}
+<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview2' }">
+    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview2' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            @click="tab = 'preview2'">
+            Preview
+        </button>
+        <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code2' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+            @click="tab = 'code2'">
+            Code
+        </button>
+        <!---- Copy Buton -->
+        <button
+            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            onclick="copyToClip(document.getElementById('headerTwo').innerHTML)" x-data="{}"
+            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="8" y="8" width="12" height="12" rx="2" />
+                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+            </svg>
+        </button>
+    </div>
+    <div class="">
+        <div class=" rounded-b-xl" x-show="tab === 'preview2'">
+            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/headers-center/header-2.html"
+                title="wicked"></iframe>
+        </div>
+        <div class=" rounded-b-xl" x-show="tab === 'code2'">
+            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                <div class="rounded-b-xl">
+                    <div class="hidden" id="headerTwo">
+                        <!----
+          <section class="text-gray-700 body-font">
+            <div class="container flex flex-col px-5 py-24 mx-auto lg:items-center">
+                <div class="flex flex-col w-full mb-12 text-left lg:text-center">
+                    <h2 class="mb-1 text-xs font-semibold tracking-widest text-blue-600 uppercase title-font">a great
+                        header right here</h2>
+                    <h1 class="mb-6 text-2xl font-semibold tracking-tighter text-black sm:text-5xl title-font">
+                        A centered
+                        <br class="md:hidden">
+                        medium lenght display headline.
+                    </h1>
+                    <p class="mx-auto text-base font-medium leading-relaxed text-gray-700 lg:w-2/3">You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the landing page and testing a site. Instead, integrate one with your favourite framework.
+.</p>
+                </div>
+                <div class="flex lg:justify-center">
+                    <button
+                        class="inline-flex px-6 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Button</button>
+                    <button
+                        class="inline-flex items-center px-6 py-2 ml-4 font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg shadow-xl hover:border-gray-600 hover:bg-gray-600 hover:text-white focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Button</button>
+                </div>
+        </section>
+                              --->
+                    </div>
+                    <!---- display code goes here.-->
+                    <pre class="leading-6"><code data-language="html">
+        &lt;section class="text-gray-700 body-font"&gt;
+            &lt;div class="container px-8 py-48 mx-auto lg:px-4"&gt;
+                &lt;div class="flex flex-col w-full mb-12 text-left lg:text-center"&gt;
+                    &lt;h2 class="mb-1 text-xs font-semibold tracking-widest text-blue-600 uppercase title-font"&gt;a great
+                        header right here&lt;/h2&gt;
+                    &lt;h1 class="mb-6 text-2xl font-semibold tracking-tighter text-black sm:text-5xl title-font"&gt;
+                        A centered
+                        &lt;br class="md:hidden"&gt;
+                        medium length display headline.
+                    &lt;/h1&gt;
+                    &lt;p class="mx-auto text-base font-medium leading-relaxed text-gray-700 lg:w-2/3"&gt;You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the landing page and testing a site. Instead, integrate one with your favourite framework.
+.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="flex lg:justify-center"&gt;
+                    &lt;button
+                        class="inline-flex px-6 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"&gt;Button&lt;/button&gt;
+                    &lt;button
+                        class="inline-flex items-center px-6 py-2 ml-4 font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg shadow-xl hover:border-gray-600 hover:bg-gray-600 hover:text-white focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"&gt;Button&lt;/button&gt;
+                &lt;/div&gt;
+        &lt;/section&gt;
+                                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/section-screens}}
+{{> wicked-ad }}
+<!--- header 4 -->
+{{#>section-screens}}
+<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview4' }">
+    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview4' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            @click="tab = 'preview4'">
+            Preview
+        </button>
+        <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code4' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+            @click="tab = 'code4'">
+            Code
+        </button>
+        <!---- Copy Buton -->
+        <button
+            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            onclick="copyToClip(document.getElementById('headerFour').innerHTML)" x-data="{}"
+            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="8" y="8" width="12" height="12" rx="2" />
+                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+            </svg>
+        </button>
+    </div>
+    <div class="">
+        <div class=" rounded-b-xl" x-show="tab === 'preview4'">
+            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/headers-center/header-4.html"
+                title="wicked"></iframe>
+        </div>
+        <div class=" rounded-b-xl" x-show="tab === 'code4'">
+            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                <div class="rounded-b-xl">
+                    <div class="hidden" id="headerFour">
+                        <!------
+                                        <section class="text-gray-700 body-font">
+            <div class="container flex flex-col px-5 py-20 mx-auto lg:items-center">
+                <div class="flex flex-col w-full mx-auto mb-12 text-left lg:w-2/3 lg:text-center">
+                    <h1 class="mb-6 text-2xl font-semibold tracking-tighter text-black sm:text-5xl title-font">
+                        A medium length headline.
+                    </h1>
+                    <p class="mx-auto text-base font-medium leading-relaxed text-gray-700 lg:w-2/3">Whatever cardigan
+                        tote bag tumblr hexagon brooklyn
+                        asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of
+                        them man
+                        bun deep.</p>
+                </div>
+                <div class="flex flex-col w-full px-0 mx-auto lg:w-2/3 sm:flex-row md:px-8">
+                    <input
+                        class="flex-grow w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-1000 ease-in-out transform bg-gray-200 rounded-lg focus:outline-none focus:border-purple-500 sm:mb-0 focus:bg-white focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                        placeholder="Your Name" type="text">
+                    <input
+                        class="flex-grow w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-1000 ease-in-out transform bg-gray-200 rounded-lg focus:outline-none focus:border-purple-500 sm:mb-0 focus:bg-white focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                        placeholder="Your Email" type="email">
+                    <button
+                        class="w-1/2 px-8 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-900 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Sign
+                        Up</button>
+                </div>
+                <p class="w-full mt-12 mb-8 text-sm text-gray-500 lg:text-center">Neutra shabby chic ramps, viral
+                    fixie. <a href="#"
+                        class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 ">
+                        Learn More
+                        <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+                            height="20" fill="currentColor">
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path
+                                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
+                        </svg>
+                    </a></p>
+        </section>
+                                        ----->
+                    </div>
+                    <!---- display code goes here.-->
+                    <pre class="leading-6"><code data-language="html">
+        &lt;section class="text-gray-700 body-font"&gt;
+            &lt;container flex flex-col px-5 py-20 mx-auto lg:items-center"&gt;
+                &lt;div class="flex flex-col w-full mx-auto mb-12 text-left lg:w-2/3 lg:text-center"&gt;
+                    &lt;h1 class="mb-6 text-2xl font-semibold tracking-tighter text-black sm:text-5xl title-font"&gt;
+                        A  medium length display headline.
+                    &lt;/h1&gt;
+                    &lt;p class="mx-auto text-base font-medium leading-relaxed text-gray-700 lg:w-2/3"&gt;You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the landing page and testing a site. Instead, integrate one with your favourite framework.
+.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="flex flex-col w-full px-0 mx-auto lg:w-2/3 sm:flex-row md:px-8"&gt;
+                    &lt;input
+                        class="flex-grow w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-1000 ease-in-out transform bg-gray-200 rounded-lg focus:outline-none focus:border-purple-500 sm:mb-0 focus:bg-white focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                        placeholder="Your Name" type="text"&gt;
+                    &lt;input
+                        class="flex-grow w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-1000 ease-in-out transform bg-gray-200 rounded-lg focus:outline-none focus:border-purple-500 sm:mb-0 focus:bg-white focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                        placeholder="Your Email" type="email"&gt;
+                    &lt;button
+                        class="w-1/2 px-8 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-900 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"&gt;Sign
+                        Up&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;p class="w-full mt-12 mb-8 text-sm text-gray-500 lgtext-center"&gt;Neutra shabby chic ramps, viral
+                    fixie.&lt;a href="#"
+                        class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 "&gt;
+                        Learn More
+                        &lt;svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+                            height="20" fill="currentColor"&gt;
+                            &lt;path fill="none" d="M0 0h24v24H0z" /&gt;
+                            &lt;path
+                                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" /&gt;
+                        &lt;/svg&gt;
+                    &lt;/a&gt;&lt;/p&gt;
+        &lt;/section&gt;
+                                </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/section-screens}}
+<!--- header 6 -->
+{{#>section-screens}}
+<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview6' }">
+    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview6' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            @click="tab = 'preview6'">
+            Preview
+        </button>
+        <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code6' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+            @click="tab = 'code6'">
+            Code
+        </button>
+        <!---- Copy Buton -->
+        <button
+            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            onclick="copyToClip(document.getElementById('headerSix').innerHTML)" x-data="{}"
+            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="8" y="8" width="12" height="12" rx="2" />
+                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+            </svg>
+        </button>
+    </div>
+    <div class="">
+        <div class=" rounded-b-xl" x-show="tab === 'preview6'">
+            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/headers-center/header-6.html"
+                title="wicked"></iframe>
+        </div>
+        <div class=" rounded-b-xl" x-show="tab === 'code6'">
+            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                <div class="rounded-b-xl">
+                    <div class="hidden" id="headerSix">
+                        <!------
+                                 <section class="text-gray-700 body-font">
+            <div class="container flex flex-col px-5 py-8 mx-auto lg:items-center">
+                <div class="flex flex-col w-full mb-8 text-left lg:text-center">
+                    <h2 class="mb-1 text-xs font-semibold tracking-widest text-black uppercase title-font">a great
+                        header right here</h2>
+                    <h1 class="mb-6 text-2xl font-semibold tracking-tighter text-black sm:text-6xl title-font">
+                       A Long headline
+                        <br class="">
+                        to convey your users.
+                    </h1>
+                    <p class="mx-auto text-base font-medium leading-relaxed text-gray-700 lg:w-2/3">You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the
+                    landing page and testing a site. Instead, integrate one with your favourite framework.
+.</p>
+                        <div class="flex items-start w-full mt-12 lg:mx-auto lg:justify-center lg:w-1/2">
+                            <div class="relative w-2/4 mr-4 text-left lg:w-full xl:w-1/2 md:w-full">
+                                <input type="text" id="hero-field" name="hero-field"
+                                    class="flex-grow w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-1000 ease-in-out transform bg-gray-200 rounded-lg focus:outline-none focus:border-purple-500 sm:mb-0 focus:bg-white focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
+                            </div>
+                            <button
+                                class="flex items-center px-6 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-900 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Action</button>
+                        </div>
+                        <p class="mt-6 mb-8 text-sm text-gray-600 lg:mx-auto lg:w-1/3 ">It enables developers to host Jamstack websites and web services that deploy instantly.</p>
+                </div>
+        </section>
+        -->
+                    </div>
+                    <!---- display code goes here.-->
+                    <pre class="leading-6"><code data-language="html">
+                                        &lt;section class="text-gray-700 body-font"&gt;
+            &lt;div class="container flex flex-col px-5 py-8 mx-auto lg:items-center"&gt;
+                &lt;div class="flex flex-col w-full mb-8 text-left lg:text-center"&gt;
+                    &lt;h2 class="mb-1 text-xs font-semibold tracking-widest text-black uppercase title-font"&gt;a great
+                        header right here&lt;/h2&gt;
+                    &lt;h1 class="mb-6 text-2xl font-semibold tracking-tighter text-black sm:text-6xl title-font"&gt;
+                       A Long headline
+                        &lt;br class=""&gt;
+                        to convey your users.
+                    &lt;/h1&gt;
+                    &lt;p class="mx-auto text-base font-medium leading-relaxed text-gray-700 lg:w-2/3"&gt;You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the
+                    landing page and testing a site. Instead, integrate one with your favourite framework.
+.&lt;/p&gt;
+                        &lt;div class="flex items-start w-full mt-12 lg:mx-auto lg:justify-center lg:w-1/2"&gt;
+                            &lt;div class="relative w-2/4 mr-4 text-left lg:w-full xl:w-1/2 md:w-full"&gt;
+                                &lt;input type="text" id="hero-field" name="hero-field"
+                                    class="flex-grow w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-1000 ease-in-out transform bg-gray-200 rounded-lg focus:outline-none focus:border-purple-500 sm:mb-0 focus:bg-white focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"&gt;
+                            &lt;/div&gt;
+                            &lt;button
+                                class="flex items-center px-6 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-900 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"&gt;Action&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;p class="mt-6 mb-8 text-sm text-gray-600 lg:mx-auto lg:w-1/3 "&gt;It enables developers to host Jamstack websites and web services that deploy instantly.&lt;/p&gt;
+                &lt;/div&gt;
+        &lt;/section&gt;
+                                                                        </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/section-screens}}
+<!--- header 7 -->
+{{#>section-screens}}
+<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview7' }">
+    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview7' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            @click="tab = 'preview7'">
+            Preview
+        </button>
+        <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code7' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+            @click="tab = 'code7'">
+            Code
+        </button>
+        <!---- Copy Buton -->
+        <button
+            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            onclick="copyToClip(document.getElementById('headerSeven').innerHTML)" x-data="{}"
+            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="8" y="8" width="12" height="12" rx="2" />
+                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+            </svg>
+        </button>
+    </div>
+    <div class="">
+        <div class=" rounded-b-xl" x-show="tab === 'preview7'">
+            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/headers-center/header-7.html"
+                title="wicked"></iframe>
+        </div>
+        <div class=" rounded-b-xl" x-show="tab === 'code7'">
+            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                <div class="rounded-b-xl">
+                    <div class="hidden" id="headerSeven">
+                        <!--------
+ <section class="text-gray-700 body-font">
+            <div class="container px-8 mx-auto py-36 lg:px-4">
+                <div class="flex flex-col w-full mb-12 text-left lg:text-center">
+                    <h2 class="mb-1 text-xs font-semibold tracking-widest text-blue-600 uppercase title-font">a great
+                        header right here</h2>
+                    <h1 class="mb-6 text-2xl font-semibold tracking-tighter text-black sm:text-6xl title-font">
+                        A Long headline
+                        <br class="">
+                        to convey your users.
+                    </h1>
+                    <p class="mx-auto text-base font-medium leading-relaxed text-gray-700 lg:w-1/2">Tailwind CSS templates
+                    with a wicked design.
+                    Professionally designed and 100% responsive static templates for startups and personal use.You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the landing page and testing a site. Instead, integrate one with your favourite framework.
+. </p>
+                </div>
+        </section>
+                -->
+                    </div>
+                    <!---- display code goes here.-->
+                    <pre class="leading-6"><code data-language="html">
+        &lt;section class="text-gray-700 body-font"&gt;
+            &lt;div class="container px-8 mx-auto py-36 lg:px-4"&gt;
+                &lt;div class="flex flex-col w-full mb-12 text-left lg:text-center"&gt;
+                    &lt;h2 class="mb-1 text-xs font-semibold tracking-widest text-blue-600 uppercase title-font"&gt;a great
+                        header right here&lt;/h2&gt;
+                    &lt;h1 class="mb-6 text-2xl font-semibold tracking-tighter text-black sm:text-6xl title-font"&gt;
+                        A Long headline
+                        &lt;br class=""&gt;
+                        to convey your users.
+                    &lt;/h1&gt;
+                    &lt;p class="mx-auto text-base font-medium leading-relaxed text-gray-700 lg:w-1/2"&gt;Tailwind CSS templates
+                    with a wicked design.
+                    Professionally designed and 100% responsive static templates for startups and personal use.You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the landing page and testing a site. Instead, integrate one with your favourite framework.
+. &lt;/p&gt;
+                &lt;/div&gt;
+       &lt;/section&gt;
+                                                                        </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/section-screens}}
+{{>js-tags}}
+{{/content}}{{/extend}}

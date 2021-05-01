@@ -1,0 +1,450 @@
+{{#extend "default" }}{{#content "body"}}
+{{> navigation }}
+{{> snackbar }}
+{{#>section-screens-hero}}
+<div class="flex flex-col w-full mb-4 ">
+    <h1 class="mb-2 text-2xl font-bold tracking-tight text-left text-white uppercase sm:text-5xl title-font lg:w-3/3">
+        Footer.
+    </h1>
+</div>
+<span class="px-4 py-2 text-left text-white border border-gray-400 rounded-lg">3 Blocks</span>
+<div class="flex flex-col w-full mt-6 ">
+    <p class="items-center w-full text-2xl leading-snug text-gray-50 lg:text-base lg:w-1/2">
+        <span class="font-semibold tracking-tighter text-blue-500 uppercase">
+            FOOTERS</span>
+        must provide valuable information that allows people to navigate the site, engage and re-engage
+        visitors with
+        quality content, and give them a means to seek help.
+    </p>
+</div>
+{{/section-screens-hero}}
+{{> wicked-ad }}
+{{#>section-screens}}
+<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview2' }">
+    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview2' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            @click="tab = 'preview2'">
+            Preview
+        </button>
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code2' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+            @click="tab = 'code2'">
+            Code
+        </button>
+        <!---- Copy Buton -->
+        <button
+            class="justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer jitems-center ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            onclick="copyToClip(document.getElementById('footerTwo').innerHTML)" x-data="{}"
+            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="8" y="8" width="12" height="12" rx="2" />
+                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+            </svg>
+        </button>
+    </div>
+    <div class="">
+        <div class=" rounded-b-xl" x-show="tab === 'preview2'">
+            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/footers/footer-2.html"
+                title="wicked"></iframe>
+        </div>
+        <div class=" rounded-b-xl" x-show="tab === 'code2'">
+            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                <div class="z-10 rounded-b-xl">
+                    <div class="hidden" id="footerTwo">
+                        <!-------------
+ <div
+            class="container w-full p-20 m-4 mx-auto mt-4 text-center bg-white border-2 border-gray-300 border-dashed h-60 rounded-xl">
+            <p class="mt-20 italic tracking-tighter text-gray-500 title-font">
+                -- Content goes here --
+            </p>
+        </div>
+        <footer class="mt-20 text-gray-700 bg-white border-t ">
+            <div
+                class="container flex flex-col flex-wrap p-5 py-10 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap ">
+                <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+                    <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start ">
+                        <div class="w-2 h-2 p-2 mr-2 rounded-full bg-gradient-to-tr from-cyan-400 to-lightBlue-500">
+                        </div>
+                        <h2
+                            class="text-lg font-bold tracking-tighter text-black uppercase transition duration-500 ease-in-out transform hover:text-lightBlack-500 ">
+                            Wickedblocks
+                        </h2>
+                    </a>
+                    <p class="mt-6 text-xs text-left text-gray-600">
+                        Wicked Templates helps you jumpstart a landing page by providing you with swapable sections.</p>
+                </div>
+                <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left ">
+                    <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+                        <h1 class="mb-3 text-sm font-medium tracking-widest text-black uppercase title-font">Product
+                        </h1>
+                        <nav class="mb-10 list-none">
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Email Templates</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Web Templates</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Figma Files</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Sketch Files</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+                        <h1 class="mb-3 text-sm font-medium tracking-widest text-black uppercase title-font">Company
+                        </h1>
+                        <nav class="mb-10 list-none">
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Home</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">About</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Carriers</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Pricing</a>
+                            </li>
+                            <li>
+                        </nav>
+                    </div>
+                    <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+                        <h1 class="mb-3 text-sm font-semibold tracking-widest text-black uppercase title-font">
+                            Subscribe
+                        </h1>
+                        <div class="flex mb-2">
+                            <input
+                                class="w-full px-4 py-2 mt-2 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg ext-blue-700 focus:border-gray-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                id="grid-title" type="text" name="title" placeholder="From..." required="">
+                        </div>
+                        <div class="flex ">
+                            <button
+                                class="inline-flex w-full px-4 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg shadow-xl hover:bg-gray-900 focus:outline-none ocus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">Action
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-4 h-4 my-auto ml-2" viewBox="0 0 24 24">
+                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-black">
+                <div class="container flex flex-col flex-wrap px-5 py-6 mx-auto sm:flex-row">
+                    <p class="text-sm text-center text-gray-200 sm:text-left ">© 2020
+                    </p>
+                    <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
+                        <a class="ml-4 text-white hover:text-blue-500">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+                                            ---------->
+                    </div>
+                    <!---- display code goes here.-->
+                    <pre class="leading-6"><code data-language="html">
+        &lt;div
+            class="container w-full p-20 m-4 mx-auto mt-4 text-center bg-white border-2 border-gray-300 border-dashed h-60 rounded-xl"&gt;
+            &lt;p class="mt-20 italic tracking-tighter text-gray-500 title-font"&gt;
+                -- Content goes here --
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;footer class="mt-20 text-gray-700 bg-white border-t "&gt;
+            &lt;div
+                class="container flex flex-col flex-wrap p-5 py-10 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap "&gt;
+                &lt;div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left"&gt;
+                    &lt;a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start "&gt;
+                        &lt;div class="w-2 h-2 p-2 mr-2 rounded-full bg-gradient-to-tr from-cyan-400 to-lightBlue-500"&gt;
+                        &lt;/div&gt;
+                        &lt;h2
+                            class="text-lg font-bold tracking-tighter text-black uppercase transition duration-500 ease-in-out transform hover:text-lightBlack-500 "&gt;
+                            Wickedblocks
+                        &lt;/h2&gt;
+                    &lt;/a&gt;
+                    &lt;p class="mt-6 text-xs text-left text-gray-600"&gt;
+                        Wicked Templates helps you jumpstart a landing page by providing you with swapable sections.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left "&gt;
+                    &lt;div class="w-full px-4 lg:w-1/3 md:w-1/2"&gt;
+                        &lt;h1 class="mb-3 text-sm font-medium tracking-widest text-black uppercase title-font"&gt;Product
+                        &lt;/h1&gt;
+                        &lt;nav class="mb-10 list-none"&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Email Templates&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Web Templates&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Figma Files&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Sketch Files&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/nav&gt;
+                    &lt;/div&gt;
+                    &lt;div class="w-full px-4 lg:w-1/3 md:w-1/2"&gt;
+                        &lt;h1 class="mb-3 text-sm font-medium tracking-widest text-black uppercase title-font"&gt;Company
+                        &lt;/h1&gt;
+                        &lt;nav class="mb-10 list-none"&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Home&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;About&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Carriers&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Pricing&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                        &lt;/nav&gt;
+                    &lt;/div&gt;
+                    &lt;div class="w-full px-4 lg:w-1/3 md:w-1/2"&gt;
+                        &lt;h1 class="mb-3 text-sm font-semibold tracking-widest text-black uppercase title-font"&gt;
+                            Subscribe
+                        &lt;/h1&gt;
+                        &lt;div class="flex mb-2"&gt;
+                            &lt;input
+                                class="w-full px-4 py-2 mt-2 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg ext-blue-700 focus:border-gray-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                id="grid-title" type="text" name="title" placeholder="From..." required=""&gt;
+                        &lt;/div&gt;
+                        &lt;div class="flex "&gt;
+                            &lt;button
+                                class="inline-flex w-full px-4 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg shadow-xl hover:bg-gray-900 focus:outline-none ocus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"&gt;Action
+                                &lt;svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-4 h-4 my-auto ml-2" viewBox="0 0 24 24"&gt;
+                                    &lt;path d="M5 12h14M12 5l7 7-7 7"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="bg-black"&gt;
+                &lt;div class="container flex flex-col flex-wrap px-5 py-6 mx-auto sm:flex-row"&gt;
+                    &lt;p class="text-sm text-center text-gray-200 sm:text-left "&gt;© 2020
+                    &lt;/p&gt;
+                    &lt;span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start"&gt;
+                        &lt;a class="ml-4 text-white hover:text-blue-500"&gt;
+                            &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                &lt;path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"&gt;
+                                &lt;/path&gt;
+                            &lt;/svg&gt;
+                        &lt;/a&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+                                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/section-screens}}
+<!--- footer 6 -->
+{{#>section-screens}}
+<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview6' }">
+    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview6' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            @click="tab = 'preview6'">
+            Preview
+        </button>
+        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code6' }"
+            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+            @click="tab = 'code6'">
+            Code
+        </button>
+        <!---- Copy Buton -->
+        <button
+            class="justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer jitems-center ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+            onclick="copyToClip(document.getElementById('footerSix').innerHTML)" x-data="{}"
+            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="8" y="8" width="12" height="12" rx="2" />
+                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+            </svg>
+        </button>
+    </div>
+    <div class="">
+        <div class=" rounded-b-xl" x-show="tab === 'preview6'">
+            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/footers/footer-6.html"
+                title="wicked"></iframe>
+        </div>
+        <div class=" rounded-b-xl" x-show="tab === 'code6'">
+            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                <div class="z-10 rounded-b-xl">
+                    <div class="hidden" id="footerSix">
+                        <!-----------
+                                            <div
+            class="container w-full p-20 m-4 mx-auto mt-6 text-center bg-white border-2 border-gray-300 border-dashed h-72 rounded-xl">
+            <p class="mt-20 italic tracking-tighter text-gray-500 title-font">
+                -- Content goes here --
+            </p>
+        </div>
+        <footer class="mt-6 text-gray-700 bg-white border-t ">
+            <div
+                class="container flex flex-col flex-wrap p-5 py-10 mx-auto lg:px-20 md:items-center lg:items-start md:flex-row md:flex-no-wrap ">
+                <div class="flex flex-wrap flex-grow mx-auto mt-10 -mb-10 text-left md:mt-0 ">
+                    <div class="w-full lg:w-1/3 md:w-full">
+                        <h1 class="mb-8 text-2xl font-bold text-center text-black lg:text-left lg:text-2xl title-font">
+                            A pretty long lenght display headline ready to convert visitors into users.</h1>
+                    </div>
+                    <div class="w-full text-right lg:w-1/3 md:w-1/2 ">
+                        <h1 class="mb-3 text-sm font-semibold tracking-widest text-black uppercase title-font">
+                            Company
+                        </h1>
+                        <nav class="mb-10 list-none">
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Home</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">About</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Carriers</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Pricing</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="w-full text-right lg:w-1/3 md:w-1/2">
+                        <h1 class="mb-3 text-sm font-semibold tracking-widest text-black uppercase title-font">Legal
+                        </h1>
+                        <nav class="mb-10 list-none">
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Terms Of Service</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Trademark Policy</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-gray-600 hover:text-gray-800">Inactivity Policy</a>
+                            </li>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-black">
+                <div class="container flex flex-col flex-wrap px-5 py-6 mx-auto lg:px-20 sm:flex-row">
+                    <span class="inline-flex justify-center mt-2 sm:mt-0 sm:justify-start">
+                        <a class="ml-4 text-white hover:text-blue-500">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+                                            --------->
+                    </div>
+                    <!---- display code goes here.-->
+                    <pre class="leading-6"><code data-language="html">
+        &lt;div
+            class="container w-full p-20 m-4 mx-auto mt-6 text-center bg-white border-2 border-gray-300 border-dashed h-72 rounded-xl"&gt;
+            &lt;p class="mt-20 italic tracking-tighter text-gray-500 title-font"&gt;
+                -- Content goes here --
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;footer class="mt-6 text-gray-700 bg-white border-t "&gt;
+            &lt;div
+                class="container flex flex-col flex-wrap p-5 py-10 mx-auto lg:px-20 md:items-center lg:items-start md:flex-row md:flex-no-wrap "&gt;
+                &lt;div class="flex flex-wrap flex-grow mx-auto mt-10 -mb-10 text-left md:mt-0 "&gt;
+                    &lt;div class="w-full lg:w-1/3 md:w-full"&gt;
+                        &lt;h1 class="mb-8 text-2xl font-bold text-center text-black lg:text-left lg:text-2xl title-font"&gt;
+                            A pretty long lenght display headline ready to convert visitors into users.&lt;/h1&gt;
+                    &lt;/div&gt;
+                    &lt;div class="w-full text-right lg:w-1/3 md:w-1/2 "&gt;
+                        &lt;h1 class="mb-3 text-sm font-semibold tracking-widest text-black uppercase title-font"&gt;
+                            Company
+                        &lt;/h1&gt;
+                        &lt;nav class="mb-10 list-none"&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Home&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;About&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Carriers&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Pricing&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/nav&gt;
+                    &lt;/div&gt;
+                    &lt;div class="w-full text-right lg:w-1/3 md:w-1/2"&gt;
+                        &lt;h1 class="mb-3 text-sm font-semibold tracking-widest text-black uppercase title-font"&gt;Legal
+                        &lt;/h1&gt;
+                        &lt;nav class="mb-10 list-none"&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Privacy Policy&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Terms Of Service&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Trademark Policy&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="text-sm text-gray-600 hover:text-gray-800"&gt;Inactivity Policy&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/nav&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="bg-black"&gt;
+                &lt;div class="container flex flex-col flex-wrap px-5 py-6 mx-auto lg:px-20 sm:flex-row"&gt;
+                    &lt;span class="inline-flex justify-center mt-2 sm:mt-0 sm:justify-start"&gt;
+                        &lt;a class="ml-4 text-white hover:text-blue-500"&gt;
+                            &lt;svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24"&gt;
+                                &lt;path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"&gt;
+                                &lt;/path&gt;
+                            &lt;/svg&gt;
+                        &lt;/a&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+                                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/section-screens}}
+{ {> js-tags } }
+{{/content}}{{/extend}}

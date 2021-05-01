@@ -1,0 +1,15 @@
+<div x-data="noticesHandler()" class="fixed inset-0 flex flex-col-reverse items-end justify-start w-screen h-screen"
+    @notice.window="add($event.detail)" style="pointer-events:none">
+    <template x-for="notice of notices" :key="notice.id">
+        <div x-show="visible.includes(notice)" x-transition:enter="transition ease-in duration-200"
+            x-transition:enter-start="transform opacity-0 translate-y-2" x-transition:enter-end="transform opacity-100"
+            x-transition:leave="transition ease-out duration-500"
+            x-transition:leave-start="transform translate-x-0 opacity-100"
+            x-transition:leave-end="transform translate-x-full opacity-0" @click="remove(notice.id)"
+            class="z-50 flex items-center justify-center w-full h-16 mb-4 text-lg font-semibold tracking-tighter border shadow-xl cursor-pointer text-dark-1 lg:mx-auto lg:w-1/4 rounded-xl"
+            :class="{
+                    				'bg-white   ': notice.type === 'success',
+                    			 }" style="pointer-events:all" x-text="notice.text">
+        </div>
+    </template>
+</div>

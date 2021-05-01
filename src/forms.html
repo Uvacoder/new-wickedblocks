@@ -1,0 +1,385 @@
+{{#extend "default" }}{{#content "body"}}
+{{> navigation }}
+{{> snackbar }}
+<!----Hero  -->
+{{#>section-screens-hero}}
+<div class="flex flex-col w-full mb-4 ">
+    <h1 class="mb-2 text-2xl font-bold tracking-tight text-left text-white uppercase sm:text-5xl title-font lg:w-3/3">
+        Form.
+    </h1>
+</div>
+<span class="px-4 py-2 text-left text-white border border-gray-400 rounded-lg">3 Blocks</span>
+<div class="flex flex-col w-full mt-6 ">
+    <p class="items-center w-full text-2xl leading-snug text-gray-50 lg:text-base lg:w-1/2">
+        <span class="font-semibold tracking-tighter text-blue-500 uppercase">WEB
+            A WEB FORM OR HTML FORM</span>
+        on a web page allows a user to enter data that is sent to a server for processing. Forms can
+        resemble paper or database forms because web users fill out the forms using checkboxes, radio buttons, or text
+        fields.
+
+    </p>
+</div>
+{{/section-screens-hero}}
+<!----end hero -->
+<!--- form 2-->
+{{#>section-screens}}
+        <div class="shadow rounded-xl" x-data="{ tab: 'preview2' }">
+            <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview2' }"
+                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                    @click="tab = 'preview2'">
+                    Preview
+                </button>
+                <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code2' }"
+                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                    @click="tab = 'code2'">
+                    Code
+                </button>
+                <!---- Copy Buton -->
+                <button
+                    class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                    onclick="copyToClip(document.getElementById('formTwo').innerHTML)" x-data="{}"
+                    @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <rect x="8" y="8" width="12" height="12" rx="2" />
+                        <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                    </svg>
+                </button>
+            </div>
+            <div class="">
+                <div class=" rounded-b-xl" x-show="tab === 'preview2'">
+                    <iframe class="w-full h-screen rounded-b-xl" src="./snippets/forms/form-2.html"
+                        title="wicked"></iframe>
+                </div>
+                <div class=" rounded-b-xl" x-show="tab === 'code2'">
+                    <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                        <div class="rounded-b-xl">
+                            <div class="hidden" id="formTwo">
+                                <!------- <section class="text-gray-700 ">
+                    <div class="container px-8 pt-48 pb-24 mx-auto lg:px-4">
+                        <div
+                            class="flex flex-col w-full p-8 mx-auto mt-10 border rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
+                            <div class="relative ">
+                                <input type="email" id="email" name="email" placeholder="Password"
+                                    class="w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
+                            </div>
+                            <div class="relative ">
+                                <input type="email" id="email" name="email" placeholder="email"
+                                    class="w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
+                            </div>
+                            <div class="flex my-4">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox">
+                                    <span class="ml-2">Subscribe me </span>
+                                </label>
+                            </div>
+                            <button
+                                class="px-8 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Button</button>
+                            <p class="mx-auto mt-3 text-xs text-gray-500">Literally you probably haven't heard of them jean
+                                shorts.</p>
+                        </div>
+                    </div>
+                </section>-->
+                            </div>
+                            <!---- display code goes here.-->
+                            <pre class="leading-6"><code data-language="html">
+                &lt;section class="text-gray-700 "&gt;
+                    &lt;div class="container px-8 pt-48 pb-24 mx-auto lg:px-4"&gt;
+                        &lt;div
+                            class="flex flex-col w-full p-8 mx-auto mt-10 border rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0"&gt;
+                            &lt;div class="relative "&gt;
+                                &lt;input type="email" id="email" name="email" placeholder="Password"
+                                    class="w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="relative "&gt;
+                                &lt;input type="email" id="email" name="email" placeholder="email"
+                                    class="w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="flex my-4"&gt;
+                                &lt;label class="flex items-center"&gt;
+                                    &lt;input type="checkbox" class="form-checkbox"&gt;
+                                    &lt;span class="ml-2"&gt;Subscribe me &lt;/span&gt;
+                                &lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;button
+                                class="px-8 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"&gt;Button&lt;/button&gt;
+                            &lt;p class="mx-auto mt-3 text-xs text-gray-500"&gt;Literally you probably haven't heard of them jean
+                                shorts.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/section&gt;
+                                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/section-screens}}
+{{> wicked-ad }}
+<!--- form 7 -->
+{{#>section-screens}}
+        <div class="shadow rounded-xl" x-data="{ tab: 'preview7' }">
+            <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview7' }"
+                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                    @click="tab = 'preview7'">
+                    Preview
+                </button>
+                <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code7' }"
+                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                    @click="tab = 'code7'">
+                    Code
+                </button>
+                <!---- Copy Buton -->
+                <button
+                    class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                    onclick="copyToClip(document.getElementById('formSeven').innerHTML)" x-data="{}"
+                    @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <rect x="8" y="8" width="12" height="12" rx="2" />
+                        <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                    </svg>
+                </button>
+            </div>
+            <div class="">
+                <div class=" rounded-b-xl" x-show="tab === 'preview7'">
+                    <iframe class="w-full h-screen rounded-b-xl" src="./snippets/forms/form-7.html"
+                        title="wicked"></iframe>
+                </div>
+                <div class=" rounded-b-xl" x-show="tab === 'code7'">
+                    <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                        <div class="rounded-b-xl">
+                            <div class="hidden" id="formSeven">
+                                <!----
+                       <section class="text-gray-700 ">
+            <div class="container px-8 pt-24 pb-24 mx-auto lg:px-4">
+                <div
+                    class="flex flex-col w-full p-8 mx-auto mt-10 border rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
+                    <div class="flex flex-wrap -m-2">
+                        <div class="w-1/2 p-2">
+                            <div class="relative">
+                                <input type="text" id="name" name="name" placeholder="name"
+                                    class="w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
+                            </div>
+                        </div>
+                        <div class="w-1/2 p-2">
+                            <div class="relative">
+                                <input type="name" id="name" name="name" placeholder="name"
+                                    class="w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
+                            </div>
+                        </div>
+                        <div class="w-full p-2">
+                            <input type="email" id="email" name="email" placeholder="email"
+                                class="w-full px-4 py-2 mr-4 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
+                        </div>
+                        <div class="w-full p-2">
+                            <input type="password" id="password" name="password" placeholder="password"
+                                class="w-full px-4 py-2 mr-4 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
+                        </div>
+                        <div class="w-full p-2">
+                            <input type="password" id="password" name="password" placeholder=" password"
+                                class="w-full px-4 py-2 mr-4 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
+                        </div>
+                        <div class="flex p-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded form-checkbox">
+                                <span class="ml-2">Subscribe me </span>
+                            </label>
+                        </div>
+                        <div class="w-full p-2">
+                            <input type="password" id="password" name="password" placeholder="password"
+                                class="w-full px-4 py-2 mr-4 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
+                        </div>
+                        <div class="w-full p-2 ">
+                            <button
+                                class="w-full px-8 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Button</button>
+                                <p class="mx-auto mt-3 text-xs text-center text-gray-500">WickedTemplates rocks, and you know it.</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+                          ---->
+                            </div>
+                            <!---- display code goes here.-->
+                            <pre class="leading-6"><code data-language="html">
+        &lt;section class="text-gray-700 "&gt;
+            &lt;div class="container px-8 pt-24 pb-24 mx-auto lg:px-4"&gt;
+                &lt;div
+                    class="flex flex-col w-full p-8 mx-auto mt-10 border rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0"&gt;
+                    &lt;div class="flex flex-wrap -m-2"&gt;
+                        &lt;div class="w-1/2 p-2"&gt;
+                            &lt;div class="relative"&gt;
+                                &lt;input type="text" id="name" name="name" placeholder="name"
+                                    class="w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="w-1/2 p-2"&gt;
+                            &lt;div class="relative"&gt;
+                                &lt;input type="name" id="name" name="name" placeholder="name"
+                                    class="w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="w-full p-2"&gt;
+                            &lt;input type="email" id="email" name="email" placeholder="email"
+                                class="w-full px-4 py-2 mr-4 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="w-full p-2"&gt;
+                            &lt;input type="password" id="password" name="password" placeholder="password"
+                                class="w-full px-4 py-2 mr-4 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="w-full p-2"&gt;
+                            &lt;input type="password" id="password" name="password" placeholder=" password"
+                                class="w-full px-4 py-2 mr-4 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="flex p-2"&gt;
+                            &lt;label class="flex items-center"&gt;
+                                &lt;input type="checkbox" class="rounded form-checkbox"&gt;
+                                &lt;span class="ml-2"&gt;Subscribe me &lt;/span&gt;
+                            &lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class="w-full p-2"&gt;
+                            &lt;input type="password" id="password" name="password" placeholder="password"
+                                class="w-full px-4 py-2 mr-4 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="w-full p-2 "&gt;
+                            &lt;button
+                                class="w-full px-8 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"&gt;Button&lt;/button&gt;
+                                &lt;p class="mx-auto mt-3 text-xs text-center text-gray-500"&gt;WickedTemplates rocks, and you know it.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+        &lt;/section&gt;
+                                    </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/section-screens}}
+<!--- form 8 -->
+{{#>section-screens}}
+        <div class="shadow rounded-xl" x-data="{ tab: 'preview8' }">
+            <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview8' }"
+                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                    @click="tab = 'preview8'">
+                    Preview
+                </button>
+                <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code8' }"
+                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                    @click="tab = 'code8'">
+                    Code
+                </button>
+                <!---- Copy Buton -->
+                <button
+                    class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                    onclick="copyToClip(document.getElementById('formEight').innerHTML)" x-data="{}"
+                    @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <rect x="8" y="8" width="12" height="12" rx="2" />
+                        <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                    </svg>
+                </button>
+            </div>
+            <div class="">
+                <div class=" rounded-b-xl" x-show="tab === 'preview8'">
+                    <iframe class="w-full h-screen rounded-b-xl" src="./snippets/forms/form-8.html"
+                        title="wicked"></iframe>
+                </div>
+                <div class=" rounded-b-xl" x-show="tab === 'code8'">
+                    <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                        <div class="rounded-b-xl">
+                            <div class="hidden" id="formEight">
+                                <!----
+<section class="text-gray-700 ">
+            <div class="container px-8 pt-24 pb-24 mx-auto lg:px-4">
+                <div
+                    class="flex flex-col w-full p-8 mx-auto mt-10 border rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
+                    <div class="relative ">
+                        <label for="email" class="text-sm leading-7 text-gray-600">Email</label>
+                        <input type="email" id="v" name="email" placeholder="email"
+                            class="w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
+                    </div>
+                    <div class="relative ">
+                        <label for="name" class="text-sm leading-7 text-gray-600">Name</label>
+                        <input type="name" id="name" name="name" placeholder="name"
+                            class="w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
+                    </div>
+                    <div class="relative mb-4 ">
+                        <label class="block ">
+                            <label for="email" class="text-sm leading-7 text-gray-600">Choose</label>
+                            <select
+                                class="block w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
+                                <option>Corporate event</option>
+                                <option>Wedding</option>
+                                <option>Birthday</option>
+                                <option>Other</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="relative ">
+                        <textarea type="message" id="message" name="message" placeholder="message"
+                            class="w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"></textarea>
+                    </div>
+                    <button
+                        class="px-8 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Button</button>
+                </div>
+            </div>
+        </section>
+                              ---->
+                            </div>
+                            <!---- display code goes here.-->
+                            <pre class="leading-6"><code data-language="html">
+        &lt;section class="text-gray-700 "&gt;
+            &lt;div class="container px-8 pt-24 pb-24 mx-auto lg:px-4"&gt;
+                &lt;div
+                    class="flex flex-col w-full p-8 mx-auto mt-10 border rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0"&gt;
+                    &lt;div class="relative "&gt;
+                        &lt;label for="email" class="text-sm leading-7 text-gray-600"&gt;Email&lt;/label&gt;
+                        &lt;input type="email" id="v" name="email" placeholder="email"
+                            class="w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="relative "&gt;
+                        &lt;label for="name" class="text-sm leading-7 text-gray-600"&gt;Name&lt;/label&gt;
+                        &lt;input type="name" id="name" name="name" placeholder="name"
+                            class="w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="relative mb-4 "&gt;
+                        &lt;label class="block "&gt;
+                            &lt;label for="email" class="text-sm leading-7 text-gray-600"&gt;Choose&lt;/label&gt;
+                            &lt;select
+                                class="block w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"&gt;
+                                &lt;option&gt;Corporate event&lt;/option&gt;
+                                &lt;option&gt;Wedding&lt;/option&gt;
+                                &lt;option&gt;Birthday&lt;/option&gt;
+                                &lt;option&gt;Other&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;div class="relative "&gt;
+                        &lt;textarea type="message" id="message" name="message" placeholder="message"
+                            class="w-full px-4 py-2 mb-4 mr-4 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"&gt;&lt;/textarea&gt;
+                    &lt;/div&gt;
+                    &lt;button
+                        class="px-8 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"&gt;Button&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+                                    </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/section-screens}}
+{{>js-tags}}
+{{/content}}{{/extend}}
