@@ -16,7 +16,7 @@
   position: fixed;
   right: 10px;
   bottom: 10px;
-
+border-radius: 8px;
   max-width: 330px;
   background-color: #121212;
   box-shadow: 0 0 1px hsla(0, 0%, 0%, 0.5);
