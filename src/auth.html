@@ -53,7 +53,7 @@
             </svg>
         </button>
     </div>
-    <div class="">
+
         <div class="bg-white rounded-b-xl" x-show="tab === 'preview1'">
             {{>"snippets/authentication/auth-1"}}
         </div>
@@ -230,7 +230,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 </div>
 {{/section-screens}}
 {{> wicked-ad }}
@@ -264,8 +264,7 @@
     </div>
     <div class="">
         <div class="bg-white rounded-b-xl" x-show="tab === 'preview2'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets//authentication/auth-2.html"
-                title="wicked"></iframe>
+            <i {{>"snippets/authentication/auth-2"}}
         </div>
         <div class=" rounded-b-xl" x-show="tab === 'code2'" style="display: none;">
             <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
