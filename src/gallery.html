@@ -49,33 +49,14 @@
             </svg>
         </button>
     </div>
-    <div class=" rounded-b-xl" x-show="tab === 'preview1'">
-        <iframe class="w-full h-screen rounded-b-xl" src="./snippets/gallery/gallery-1.html"
-            title="wicked"></iframe>
+    <div class="bg-white rounded-b-xl" x-show="tab === 'preview1'">
+        {{>"snippets/gallery/gallery-1"}}
     </div>
     <div class=" rounded-b-xl" x-show="tab === 'code1'">
         <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
             <div class="rounded-b-xl">
                 <div class="hidden" id="galleryOne">
-                    <!------
-                                          <section class="overflow-hidden text-gray-700 ">
-            <div class="container px-5 py-2 mx-auto lg:px-32">
-                <div class="flex flex-wrap justify-center mx-auto ">
-                    <div class="w-full mt-6 lg:w-2/4 lg:pl-10 lg:py-6 lg:mt-0">
-                        <img alt="image"
-                            class="object-cover object-center w-full h-64 rounded-lg lg:h-auto"
-                            src="https://dummyimage.com/400x400/F3F4F7/8693ac">
-                    </div>
-                    <div class="w-full mt-6 lg:w-2/4 lg:pl-10 lg:py-6 lg:mt-0">
-                        <img alt="image"
-                            class="object-cover object-center w-full h-64 rounded-lg lg:h-auto"
-                            src="https://dummyimage.com/400x400/F3F4F7/8693ac">
-                    </div>
-                </div>
-            </div>
-        </section>
-                                        --->
-                </div>
+                    {{>"snippets/gallery/gallery-1"}} </div>
                 <!---- display code goes here.-->
                 <pre class="leading-6"><code data-language="html">
         &lt;section class="overflow-hidden text-gray-700 "&gt;
@@ -130,29 +111,15 @@
             </svg>
         </button>
     </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview2'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/gallery/gallery-2.html"
-                title="wicked"></iframe>
+
+        <div class="bg-white rounded-b-xl" x-show="tab === 'preview2'">
+            {{>"snippets/gallery/gallery-2"}}
         </div>
         <div class=" rounded-b-xl" x-show="tab === 'code2'">
             <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                 <div class="rounded-b-xl">
                     <div class="hidden" id="galleryTwo">
-                        <!----
-          <section class="overflow-hidden text-gray-700 ">
-            <div class="container px-5 py-2 mx-auto lg:px-10">
-                <div class="flex flex-wrap py-8 md:flex-no-wrap">
-                    <div class="w-full ">
-                        <img alt="image" style="height:400px;"
-                            class="object-cover object-center w-full h-64 rounded-lg lg:h-auto"
-                            src="https://dummyimage.com/1024x400/F3F4F7/8693ac">
-                    </div>
-                </div>
-            </div>
-        </section>
-                              --->
-                    </div>
+                        {{>"snippets/gallery/gallery-2"}} </div>
                     <!---- display code goes here.-->
                     <pre class="leading-6"><code data-language="html">
         &lt;section class="overflow-hidden text-gray-700 "&gt;
@@ -171,7 +138,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 </div>
 {{/section-screens}}
 <!--- gallery 6 -->
@@ -202,51 +169,15 @@
             </svg>
         </button>
     </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview6'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/gallery/gallery-6.html"
-                title="wicked"></iframe>
+
+        <div class="bg-white rounded-b-xl" x-show="tab === 'preview6'">
+            {{>"snippets/gallery/gallery-6"}}
         </div>
         <div class=" rounded-b-xl" x-show="tab === 'code6'">
             <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                 <div class="rounded-b-xl">
                     <div class="hidden" id="gallerySix">
-                        <!------
-                                  <section class="overflow-hidden text-gray-700 ">
-            <div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-32">
-            <div class="flex flex-wrap -m-1 md:-m-2">
-                <div class="flex flex-wrap w-1/2">
-                    <div class="w-1/2 p-1 md:p-2">
-                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                            src="https://dummyimage.com/500x300/F3F4F7/8693ac">
-                    </div>
-                    <div class="w-1/2 p-1 md:p-2">
-                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                            src="https://dummyimage.com/501x301/F3F4F7/8693ac">
-                    </div>
-                    <div class="w-full p-1 md:p-2">
-                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                            src="https://dummyimage.com/600x360/F3F4F7/8693ac">
-                    </div>
-                </div>
-                <div class="flex flex-wrap w-1/2">
-                    <div class="w-full p-1 md:p-2">
-                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                            src="https://dummyimage.com/601x361/F3F4F7/8693ac">
-                    </div>
-                    <div class="w-1/2 p-1 md:p-2">
-                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                            src="https://dummyimage.com/502x302/F3F4F7/8693ac">
-                    </div>
-                    <div class="w-1/2 p-1 md:p-2">
-                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                            src="https://dummyimage.com/503x303/F3F4F7/8693ac">
-                    </div>
-                </div>
-            </div>
-        </section>
-        -->
-                    </div>
+                        {{>"snippets/gallery/gallery-6"}} </div>
                     <!---- display code goes here.-->
                     <pre class="leading-6"><code data-language="html">
         &lt;section class="overflow-hidden text-gray-700 "&gt;
@@ -286,7 +217,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 </div>
 {{/section-screens}}
 <!--- gallery 10 -->
@@ -317,59 +248,16 @@
             </svg>
         </button>
     </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview10'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/gallery/gallery-10.html"
-                title="wicked"></iframe>
+
+        <div class="bg-white rounded-b-xl" x-show="tab === 'preview10'">
+            {{>"snippets/gallery/gallery-10"}}
         </div>
         <div class=" rounded-b-xl" x-show="tab === 'code10'">
             <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                 <div class="rounded-b-xl">
                     <div class="hidden" id="galleryTen">
-                        <!----
-                       <section class="overflow-hidden text-gray-700 ">
-            <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
-                <div class="flex flex-wrap -m-1 md:-m-2">
-                    <div class="flex flex-wrap w-1/3">
-                        <div class="w-full p-1 md:p-2">
-                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                src="https://dummyimage.com/800x600/F3F4F7/8693ac">
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap w-1/3">
-                        <div class="w-full p-1 md:p-2">
-                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                src="https://dummyimage.com/800x600/F3F4F7/8693ac">
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap w-1/3">
-                        <div class="w-full p-1 md:p-2">
-                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                src="https://dummyimage.com/800x600/F3F4F7/8693ac">
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap w-1/3">
-                        <div class="w-full p-1 md:p-2">
-                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                src="https://dummyimage.com/800x600/F3F4F7/8693ac">
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap w-1/3">
-                        <div class="w-full p-1 md:p-2">
-                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                src="https://dummyimage.com/800x600/F3F4F7/8693ac">
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap w-1/3">
-                        <div class="w-full p-1 md:p-2">
-                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                src="https://dummyimage.com/800x600/F3F4F7/8693ac">
-                        </div>
-                    </div>
-                </div>
-        </section>
-                                      ---->
-                    </div>
+                                {{>"snippets/gallery/gallery-10"}}
+                                </div>
                     <!---- display code goes here.-->
                     <pre class="leading-6"><code data-language="html">
         &lt;section class="overflow-hidden text-gray-700 "&gt;
@@ -417,7 +305,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 </div>
 {{/section-screens}}
 <!--- gallery 11 -->
@@ -448,43 +336,17 @@
             </svg>
         </button>
     </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview11'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/gallery/gallery-1.html"
-                title="wicked"></iframe>
+
+        <div class="bg-white rounded-b-xl" x-show="tab === 'preview11'">
+                    {{>"snippets/gallery/gallery-11"}}
+
         </div>
         <div class=" rounded-b-xl" x-show="tab === 'code11'">
             <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                 <div class="rounded-b-xl">
                     <div class="hidden" id="galleryEleven">
-                        <!-------
- <section class="overflow-hidden text-gray-700 ">
-            <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
-                <div class="flex flex-wrap -m-1 md:-m-2">
-                    <div class="flex flex-wrap w-1/2">
-                        <div class="w-full p-1 md:p-2">
-                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                src="https://dummyimage.com/500x300/F3F4F7/8693ac">
-                        </div>
-                        <div class="w-full p-1 md:p-2">
-                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                src="https://dummyimage.com/500x200/F3F4F7/8693ac">
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap w-1/2">
-                        <div class="w-full p-1 md:p-2">
-                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                src="https://dummyimage.com/500x200/F3F4F7/8693ac">
-                        </div>
-                        <div class="w-full p-1 md:p-2">
-                            <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                                src="https://dummyimage.com/500x300/F3F4F7/8693ac">
-                        </div>
-                    </div>
-                </div>
-        </section>
-                    -->
-                    </div>
+                                    {{>"snippets/gallery/gallery-11"}}
+ </div>
                     <!---- display code goes here.-->
                     <pre class="leading-6"><code data-language="html">
         &lt;section class="overflow-hidden text-gray-700 "&gt;
@@ -516,7 +378,7 @@
                 </div>
             </div>
         </div>
-    </div>
+   
 </div>
 {{/section-screens}}
 
