@@ -262,9 +262,9 @@
             </svg>
         </button>
     </div>
-    <div class="">
+
         <div class="bg-white rounded-b-xl" x-show="tab === 'preview2'">
-            <i {{>"snippets/authentication/auth-2"}}
+             {{>"snippets/authentication/auth-1"}}
         </div>
         <div class=" rounded-b-xl" x-show="tab === 'code2'" style="display: none;">
             <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
@@ -466,7 +466,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 </div>
 {{/section-screens}}
 <!--- auth 3-->
@@ -499,8 +499,7 @@
     </div>
     <div class="">
         <div class="bg-white rounded-b-xl" x-show="tab === 'preview3'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets//authentication/auth-3.html"
-                title="wicked"></iframe>
+            {{>"snippets/authentication/auth-3"}}
         </div>
         <div class=" rounded-b-xl" x-show="tab === 'code3'" style="display: none;">
             <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
