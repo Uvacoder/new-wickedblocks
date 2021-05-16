@@ -1,7 +1,6 @@
 {{#extend "default" }}{{#content "body"}}
         {{> navigation }}
         {{> snackbar }}v>
-
         {{#>section-screens-hero}}
             <div class="flex flex-col w-full mb-4 ">
                 <h1
@@ -50,8 +49,7 @@
                             </svg>
                         </button>
                     </div>
-
-                    <div class=" rounded-b-xl" x-show="tab === 'preview1'">
+                    <div class="bg-white rounded-b-xl" x-show="tab === 'preview1'">
                         {{>"snippets/grids/grid-1"}}
                     </div>
                     <div class="rounded-b-xl" x-show="tab === 'code1'">
@@ -123,7 +121,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 {{/section-screens}}
                 {{> wicked-ad }}
@@ -155,8 +152,7 @@
                                 </svg>
                             </button>
                         </div>
-
-                        <div class=" rounded-b-xl" x-show="tab === 'preview4'">
+                        <div class="bg-white rounded-b-xl" x-show="tab === 'preview4'">
                             {{>"snippets/grids/grid-4"}}
                         </div>
                         <div class=" rounded-b-xl" x-show="tab === 'code4'">
@@ -360,9 +356,7 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                     {{/section-screens}}
                     <!--- grid 6----->
                     {{#>section-screens}}
@@ -393,8 +387,7 @@
                                     </svg>
                                 </button>
                             </div>
-
-                            <div class=" rounded-b-xl" x-show="tab === 'preview7'">
+                            <div class="bg-white rounded-b-xl" x-show="tab === 'preview7'">
                                 {{>"snippets/grids/grid-6"}}
                             </div>
                             <div class=" rounded-b-xl" x-show="tab === 'code7'">
@@ -543,9 +536,7 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
                         {{/section-screens}}
                         <!--- grid 8 ------>
                         {{#>section-screens}}
@@ -577,7 +568,7 @@
                                     </button>
                                 </div>
                                 <div>
-                                    <div class=" rounded-b-xl" x-show="tab === 'preview8'">
+                                    <div class="bg-white rounded-b-xl" x-show="tab === 'preview8'">
                                         {{>"snippets/grids/grid-8"}}
                                     </div>
                                     <div class=" rounded-b-xl" x-show="tab === 'code8'">
@@ -655,7 +646,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             {{/section-screens}}
                             <!--- grid 9 ------>
                             {{#>section-screens}}
@@ -691,8 +681,7 @@
                                             </svg>
                                         </button>
                                     </div>
-
-                                    <div class=" rounded-b-xl" x-show="tab === 'preview9'">
+                                    <div class="bg-white rounded-b-xl" x-show="tab === 'preview9'">
                                         {{>"snippets/grids/grid-9"}}
                                     </div>
                                     <div class=" rounded-b-xl" x-show="tab === 'code9'">
@@ -753,9 +742,7 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
-
                                 {{/section-screens}}
                                 <!--- grid 11 ------>
                                 {{#>section-screens}}
@@ -791,8 +778,7 @@
                                                 </svg>
                                             </button>
                                         </div>
-
-                                        <div class=" rounded-b-xl" x-show="tab === 'preview11'">
+                                        <div class="bg-white rounded-b-xl" x-show="tab === 'preview11'">
                                             {{>"snippets/grids/grid-11"}}
                                         </div>
                                         <div class="rounded-b-xl" x-show="tab === 'code11'">
@@ -888,9 +874,7 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
-
                                     {{/section-screens}}
                                     <!--- grid 15 ------>
                                     {{#>section-screens}}
@@ -926,8 +910,9 @@
                                                     </svg>
                                                 </button>
                                             </div>
-
-                                            {{>"snippets/grids/grid-15"}}
+                                            <div class="bg-white rounded-b-xl" x-show="tab === 'preview15'">
+                                                {{>"snippets/grids/grid-15"}}
+                                            </div>
                                         </div>
                                         <div class="rounded-b-xl" x-show="tab === 'code15'">
                                             <div
@@ -1008,9 +993,6 @@
                                             </div>
                                         </div>
 
-                                        </div>
-                                        </div>
                                         {{/section-screens}}
-
                                         {{>js-tags}}
     {{/content}}{{/extend}}

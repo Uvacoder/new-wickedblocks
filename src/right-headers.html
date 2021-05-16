@@ -57,7 +57,8 @@
                             class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                             <div class="rounded-b-xl">
                                 <div class="hidden" id="headerThree">
-                                    {>"snippets/headers-right/header-3"}}  </div>
+                                    {{>"snippets/headers-right/header-3"}}
+                                </div>
                                 <!---- display code goes here.-->
                                 <pre class="leading-6"><code data-language="html">
             &lt;section class="text-gray-700 "&gt;
@@ -128,14 +129,15 @@
                         </div>
 
                         <div class="bg-white rounded-b-xl" x-show="tab === 'preview5'">
-                            {{>"snippets/headers-right/header-3"}}
+                            {{>"snippets/headers-right/header-5"}}
                         </div>
                         <div class=" rounded-b-xl" x-show="tab === 'code5'">
                             <div
                                 class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                                 <div class="rounded-b-xl">
                                     <div class="hidden" id="headerFive">
-                                        {{>"snippets/headers-right/header-3"}} </div>
+                                        {{>"snippets/headers-right/header-5"}}
+                                    </div>
                                     <!---- display code goes here.-->
                                     <pre class="leading-6"><code data-language="html">
         &lt;section class="text-gray-700 "&gt;
@@ -254,7 +256,8 @@
                                     class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                                     <div class="rounded-b-xl">
                                         <div class="hidden" id="headerSeven">
-                                            {{>"snippets/headers-right/header-7"}}     </div>
+                                            {{>"snippets/headers-right/header-7"}}
+                                        </div>
                                         <!---- display code goes here.-->
                                         <pre class="leading-6"><code data-language="html">
        &lt;section class="text-gray-700 "&gt;
@@ -344,7 +347,8 @@
                                         class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                                         <div class="rounded-b-xl">
                                             <div class="hidden" id="headerEight">
-                                            {{>"snippets/headers-right/header-8"}}    </div>
+                                                {{>"snippets/headers-right/header-8"}}
+                                            </div>
                                             <!---- display code goes here.-->
                                             <pre class="leading-6"><code data-language="html">
        &lt;section class="text-gray-700 "&gt;
@@ -480,7 +484,8 @@
                                             class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                                             <div class="rounded-b-xl">
                                                 <div class="hidden" id="headerEleven">
-                                            {{>"snippets/headers-right/header-11"}}        </div>
+                                                    {{>"snippets/headers-right/header-11"}}
+                                                </div>
                                                 <!---- display code goes here.-->
                                                 <pre class="leading-6"><code data-language="html">
         &lt;section class="text-gray-700 "&gt;
@@ -586,94 +591,6 @@
 
                                 </div>
                                 {{/section-screens}}
-                                <!--- header 12 -->
-                                {{#>section-screens}}
-                                    <div class="shadow rounded-xl" x-data="{ tab: 'preview12' }">
-                                        <div
-                                            class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-                                            <button
-                                                :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview12' }"
-                                                class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                                                @click="tab = 'preview12'">
-                                                Preview
-                                            </button>
-                                            <button
-                                                :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code12' }"
-                                                class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-                                                @click="tab = 'code12'">
-                                                Code
-                                            </button>
-                                            <!---- Copy Buton -->
-                                            <button
-                                                class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                                                onclick="copyToClip(document.getElementById('headerTwelve').innerHTML)"
-                                                x-data="{}"
-                                                @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-copy" width="24" height="24"
-                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <rect x="8" y="8" width="12" height="12" rx="2" />
-                                                    <path
-                                                        d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-                                                </svg>
-                                            </button>
-                                        </div>
-
-                                        <div class="bg-white rounded-b-xl" x-show="tab === 'preview12'">
-                                            {{>"snippets/headers-right/header-12"}}
-                                        </div>
-                                        <div class="rounded-b-xl" x-show="tab === 'code12'">
-                                            <div
-                                                class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                                                <div class="rounded-b-xl">
-                                                    <div class="hidden" id="headerTwelve">
-                                                {{>"snippets/headers-right/header-12"}}    </div>
-                                                    <!---- display code goes here.-->
-                                                    <pre class="leading-6"><code data-language="html">
-        &lt;section class="flex flex-wrap items-center h-screen md"&gt;
-            &lt;div class="container w-full h-screen bg-white md:w-1/2"&gt;
-                &lt;div class="mx-5 lg:mx-32 "&gt;
-                    &lt;a class="flex items-center w-48 mt-32 mb-4 font-medium text-gray-900 title-font md:mb-0 lg:mt-16"&gt;
-                    &lt;div class="w-2 h-2 p-2 mr-2 rounded-full bg-gradient-to-tr from-cyan-400 to-lightBlue-500"&gt;
-                    &lt;/div&gt;
-                    &lt;h2
-                        class="font-semibold tracking-tighter text-gray-500 uppercase transition duration-1000 ease-in-out transform text-bold lg:mr-8"&gt;
-                        Wickedblocks
-                    &lt;/h2&gt;
-                    &lt;/a&gt;
-                    &lt;div class="flex mt-16 font-light text-gray-500"&gt;
-                        &lt;div class="pr-4"&gt;
-                            &lt;h1 class="mb-6 text-2xl font-semibold tracking-tighter text-black sm:text-6xl title-font"&gt;
-                                Short Header.
-                            &lt;/h1&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="w-full mt-16 text-base font-medium text-gray-700 sm:md:w-3/3 mb-8leading-relaxed"&gt;
-                        All you have to do is choose the section you need, remove the one that you do not need for that
-                        project and paste the one you need in that moment. All the section have been given the same
-                        left/right padding. Because consistence is king. (Bullshit)
-                    &lt;/div&gt;
-                    &lt;div class="flex mt-12"&gt;
-                        &lt;button
-                            class="flex items-center px-6 py-2 mt-auto font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"&gt;
-                            Action
-                        &lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="hidden w-full h-screen bg-center bg-cover md:w-1/2 lg:block"&gt;
-                &lt;!----Image will be full height/width--&gt;
-                &lt;img src="https://dummyimage.com/1000x1000/F3F4F7/8693ac" class="object-fill w-full h-screen" alt="" /&gt;
-            &lt;/div&gt;
-        &lt;/section&gt;
-                  </code></pre>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    {{/section-screens}}
+                               
                                     {{>js-tags}}
     {{/content}}{{/extend}}
