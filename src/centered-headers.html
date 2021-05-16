@@ -1,63 +1,63 @@
 {{#extend "default" }}{{#content "body"}}
-{{> navigation }} ">
-{{> snackbar }}
-<!----Hero  -->
-{{#>section-screens-hero}}
-<div class="flex flex-col w-full mb-4 ">
-    <h1 class="mb-2 text-2xl font-bold tracking-tight text-left text-white uppercase sm:text-5xl title-font lg:w-3/3">
-        Centered Headers.
-    </h1>
-</div>
-<span class="px-4 py-2 text-left text-white border border-gray-400 rounded-lg">5 Blocks</span>
-<div class="flex flex-col w-full mt-6 ">
-    <p class="items-center w-full text-2xl leading-snug text-gray-50 lg:text-base lg:w-1/2">
-        <span class="font-semibold tracking-tighter text-blue-500 uppercase">
-            CENTERING ELEMENTS</span>
-        in a web design is a very effective way to create visual balance. Centered designs can also
-        facilitate responsiveness, a property that is becoming increasingly desirable with the growth of
-        the 'mobile web'.
-    </p>
-</div>
-{{/section-screens-hero}}
-<!----end hero -->
-<!--- header 2-->
-{{#>section-screens}}
-<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview2' }">
-    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview2' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            @click="tab = 'preview2'">
-            Preview
-        </button>
-        <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code2' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-            @click="tab = 'code2'">
-            Code
-        </button>
-        <!---- Copy Buton -->
-        <button
-            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            onclick="copyToClip(document.getElementById('headerTwo').innerHTML)" x-data="{}"
-            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <rect x="8" y="8" width="12" height="12" rx="2" />
-                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-            </svg>
-        </button>
-    </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview2'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/headers-center/header-2.html"
-                title="wicked"></iframe>
-        </div>
-        <div class=" rounded-b-xl" x-show="tab === 'code2'">
-            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                <div class="rounded-b-xl">
-                    <div class="hidden" id="headerTwo">
-                        <!----
+        {{> navigation }} ">
+        {{> snackbar }}
+        <!----Hero  -->
+        {{#>section-screens-hero}}
+            <div class="flex flex-col w-full mb-4 ">
+                <h1
+                    class="mb-2 text-2xl font-bold tracking-tight text-left text-white uppercase sm:text-5xl title-font lg:w-3/3">
+                    Centered Headers.
+                </h1>
+            </div>
+            <span class="px-4 py-2 text-left text-white border border-gray-400 rounded-lg">5 Blocks</span>
+            <div class="flex flex-col w-full mt-6 ">
+                <p class="items-center w-full text-2xl leading-snug text-gray-50 lg:text-base lg:w-1/2">
+                    <span class="font-semibold tracking-tighter text-blue-500 uppercase">
+                        CENTERING ELEMENTS</span>
+                    in a web design is a very effective way to create visual balance. Centered designs can also
+                    facilitate responsiveness, a property that is becoming increasingly desirable with the growth of
+                    the 'mobile web'.
+                </p>
+            </div>
+            {{/section-screens-hero}}
+            <!----end hero -->
+            <!--- header 2-->
+            {{#>section-screens}}
+                <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview2' }">
+                    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview2' }"
+                            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                            @click="tab = 'preview2'">
+                            Preview
+                        </button>
+                        <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code2' }"
+                            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                            @click="tab = 'code2'">
+                            Code
+                        </button>
+                        <!---- Copy Buton -->
+                        <button
+                            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                            onclick="copyToClip(document.getElementById('headerTwo').innerHTML)" x-data="{}"
+                            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24"
+                                height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <rect x="8" y="8" width="12" height="12" rx="2" />
+                                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="bg-white rounded-b-xl" x-show="tab === 'preview2'">
+                        {{>"snippets/headers-center/header-2"}}
+                    </div>
+                    <div class=" rounded-b-xl" x-show="tab === 'code2'">
+                        <div
+                            class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                            <div class="rounded-b-xl">
+                                <div class="hidden" id="headerTwo">
+                                    <!----
           <section class="text-gray-700 body-font">
             <div class="container flex flex-col px-5 py-24 mx-auto lg:items-center">
                 <div class="flex flex-col w-full mb-12 text-left lg:text-center">
@@ -79,9 +79,9 @@
                 </div>
         </section>
                               --->
-                    </div>
-                    <!---- display code goes here.-->
-                    <pre class="leading-6"><code data-language="html">
+                                </div>
+                                <!---- display code goes here.-->
+                                <pre class="leading-6"><code data-language="html">
         &lt;section class="text-gray-700 body-font"&gt;
             &lt;div class="container px-8 py-48 mx-auto lg:px-4"&gt;
                 &lt;div class="flex flex-col w-full mb-12 text-left lg:text-center"&gt;
@@ -103,51 +103,49 @@
                 &lt;/div&gt;
         &lt;/section&gt;
                                     </code></pre>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{/section-screens}}
-{{> wicked-ad }}
-<!--- header 4 -->
-{{#>section-screens}}
-<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview4' }">
-    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview4' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            @click="tab = 'preview4'">
-            Preview
-        </button>
-        <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code4' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-            @click="tab = 'code4'">
-            Code
-        </button>
-        <!---- Copy Buton -->
-        <button
-            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            onclick="copyToClip(document.getElementById('headerFour').innerHTML)" x-data="{}"
-            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <rect x="8" y="8" width="12" height="12" rx="2" />
-                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-            </svg>
-        </button>
-    </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview4'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/headers-center/header-4.html"
-                title="wicked"></iframe>
-        </div>
-        <div class=" rounded-b-xl" x-show="tab === 'code4'">
-            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                <div class="rounded-b-xl">
-                    <div class="hidden" id="headerFour">
-                        <!------
+                {{/section-screens}}
+                {{> wicked-ad }}
+                <!--- header 4 -->
+                {{#>section-screens}}
+                    <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview4' }">
+                        <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                            <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview4' }"
+                                class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                @click="tab = 'preview4'">
+                                Preview
+                            </button>
+                            <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code4' }"
+                                class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                                @click="tab = 'code4'">
+                                Code
+                            </button>
+                            <!---- Copy Buton -->
+                            <button
+                                class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                onclick="copyToClip(document.getElementById('headerFour').innerHTML)" x-data="{}"
+                                @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy"
+                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <rect x="8" y="8" width="12" height="12" rx="2" />
+                                    <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="bg-white rounded-b-xl" x-show="tab === 'preview4'">
+                            {{>"snippets/headers-center/header-4"}}
+                        </div>
+                        <div class=" rounded-b-xl" x-show="tab === 'code4'">
+                            <div
+                                class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                                <div class="rounded-b-xl">
+                                    <div class="hidden" id="headerFour">
+                                        <!------
                                         <section class="text-gray-700 body-font">
             <div class="container flex flex-col px-5 py-20 mx-auto lg:items-center">
                 <div class="flex flex-col w-full mx-auto mb-12 text-left lg:w-2/3 lg:text-center">
@@ -184,9 +182,9 @@
                     </a></p>
         </section>
                                         ----->
-                    </div>
-                    <!---- display code goes here.-->
-                    <pre class="leading-6"><code data-language="html">
+                                    </div>
+                                    <!---- display code goes here.-->
+                                    <pre class="leading-6"><code data-language="html">
         &lt;section class="text-gray-700 body-font"&gt;
             &lt;container flex flex-col px-5 py-20 mx-auto lg:items-center"&gt;
                 &lt;div class="flex flex-col w-full mx-auto mb-12 text-left lg:w-2/3 lg:text-center"&gt;
@@ -220,50 +218,49 @@
                     &lt;/a&gt;&lt;/p&gt;
         &lt;/section&gt;
                                 </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{/section-screens}}
-<!--- header 6 -->
-{{#>section-screens}}
-<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview6' }">
-    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview6' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            @click="tab = 'preview6'">
-            Preview
-        </button>
-        <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code6' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-            @click="tab = 'code6'">
-            Code
-        </button>
-        <!---- Copy Buton -->
-        <button
-            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            onclick="copyToClip(document.getElementById('headerSix').innerHTML)" x-data="{}"
-            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <rect x="8" y="8" width="12" height="12" rx="2" />
-                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-            </svg>
-        </button>
-    </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview6'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/headers-center/header-6.html"
-                title="wicked"></iframe>
-        </div>
-        <div class=" rounded-b-xl" x-show="tab === 'code6'">
-            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                <div class="rounded-b-xl">
-                    <div class="hidden" id="headerSix">
-                        <!------
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/section-screens}}
+                    <!--- header 6 -->
+                    {{#>section-screens}}
+                        <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview6' }">
+                            <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                                <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview6' }"
+                                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                    @click="tab = 'preview6'">
+                                    Preview
+                                </button>
+                                <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code6' }"
+                                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                                    @click="tab = 'code6'">
+                                    Code
+                                </button>
+                                <!---- Copy Buton -->
+                                <button
+                                    class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                    onclick="copyToClip(document.getElementById('headerSix').innerHTML)" x-data="{}"
+                                    @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy"
+                                        width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <rect x="8" y="8" width="12" height="12" rx="2" />
+                                        <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="bg-white rounded-b-xl" x-show="tab === 'preview6'">
+                                {{>"snippets/headers-center/header-6"}}
+                            </div>
+                            <div class=" rounded-b-xl" x-show="tab === 'code6'">
+                                <div
+                                    class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                                    <div class="rounded-b-xl">
+                                        <div class="hidden" id="headerSix">
+                                            <!------
                                  <section class="text-gray-700 body-font">
             <div class="container flex flex-col px-5 py-8 mx-auto lg:items-center">
                 <div class="flex flex-col w-full mb-8 text-left lg:text-center">
@@ -289,9 +286,9 @@
                 </div>
         </section>
         -->
-                    </div>
-                    <!---- display code goes here.-->
-                    <pre class="leading-6"><code data-language="html">
+                                        </div>
+                                        <!---- display code goes here.-->
+                                        <pre class="leading-6"><code data-language="html">
                                         &lt;section class="text-gray-700 body-font"&gt;
             &lt;div class="container flex flex-col px-5 py-8 mx-auto lg:items-center"&gt;
                 &lt;div class="flex flex-col w-full mb-8 text-left lg:text-center"&gt;
@@ -317,50 +314,50 @@
                 &lt;/div&gt;
         &lt;/section&gt;
                                                                         </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{/section-screens}}
-<!--- header 7 -->
-{{#>section-screens}}
-<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview7' }">
-    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview7' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            @click="tab = 'preview7'">
-            Preview
-        </button>
-        <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code7' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-            @click="tab = 'code7'">
-            Code
-        </button>
-        <!---- Copy Buton -->
-        <button
-            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            onclick="copyToClip(document.getElementById('headerSeven').innerHTML)" x-data="{}"
-            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <rect x="8" y="8" width="12" height="12" rx="2" />
-                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-            </svg>
-        </button>
-    </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview7'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/headers-center/header-7.html"
-                title="wicked"></iframe>
-        </div>
-        <div class=" rounded-b-xl" x-show="tab === 'code7'">
-            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                <div class="rounded-b-xl">
-                    <div class="hidden" id="headerSeven">
-                        <!--------
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{/section-screens}}
+                        <!--- header 7 -->
+                        {{#>section-screens}}
+                            <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview7' }">
+                                <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                                    <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview7' }"
+                                        class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                        @click="tab = 'preview7'">
+                                        Preview
+                                    </button>
+                                    <button :class="{ 'active font-bold  bg-gray-200 text-gray-500 ': tab === 'code7' }"
+                                        class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                                        @click="tab = 'code7'">
+                                        Code
+                                    </button>
+                                    <!---- Copy Buton -->
+                                    <button
+                                        class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                        onclick="copyToClip(document.getElementById('headerSeven').innerHTML)"
+                                        x-data="{}"
+                                        @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <rect x="8" y="8" width="12" height="12" rx="2" />
+                                            <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="bg-white rounded-b-xl" x-show="tab === 'preview7'">
+                                    {{>"snippets/headers-center/header-7"}}
+                                </div>
+                                <div class=" rounded-b-xl" x-show="tab === 'code7'">
+                                    <div
+                                        class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                                        <div class="rounded-b-xl">
+                                            <div class="hidden" id="headerSeven">
+                                                <!--------
  <section class="text-gray-700 body-font">
             <div class="container px-8 mx-auto py-36 lg:px-4">
                 <div class="flex flex-col w-full mb-12 text-left lg:text-center">
@@ -378,9 +375,9 @@
                 </div>
         </section>
                 -->
-                    </div>
-                    <!---- display code goes here.-->
-                    <pre class="leading-6"><code data-language="html">
+                                            </div>
+                                            <!---- display code goes here.-->
+                                            <pre class="leading-6"><code data-language="html">
         &lt;section class="text-gray-700 body-font"&gt;
             &lt;div class="container px-8 mx-auto py-36 lg:px-4"&gt;
                 &lt;div class="flex flex-col w-full mb-12 text-left lg:text-center"&gt;
@@ -398,11 +395,10 @@
                 &lt;/div&gt;
        &lt;/section&gt;
                                                                         </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{/section-screens}}
-{{>js-tags}}
-{{/content}}{{/extend}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/section-screens}}
+                            {{>js-tags}}
+    {{/content}}{{/extend}}
