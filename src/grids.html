@@ -1,124 +1,68 @@
 {{#extend "default" }}{{#content "body"}}
-{{> navigation }}
-{{> snackbar }}v>
+        {{> navigation }}
+        {{> snackbar }}v>
 
-{{#>section-screens-hero}}
-<div class="flex flex-col w-full mb-4 ">
-    <h1 class="mb-2 text-2xl font-bold tracking-tight text-left text-white uppercase sm:text-5xl title-font lg:w-3/3">
-        Grids.
-    </h1>
-</div>
-<span class="px-4 py-2 text-left text-white border border-gray-400 rounded-lg">3 Blocks</span>
-<div class="flex flex-col w-full mt-6 ">
-    <p class="items-center w-full text-2xl leading-snug text-gray-50 lg:text-base lg:w-1/2">
-        <span class="font-semibold tracking-tighter text-blue-500 uppercase">
-            FLEX BOX</span>
-        is a one-dimensional layout system that we can use to create a row or a column axis layout. It
-        makes our life
-        easier to design and build responsive web pages without having to use tricky hacks and a lot of
-        float and position
-        properties in our CSS code.
-    </p>
-</div>
-{{/section-screens-hero}}
-<!--- grid 1------>
-{{#>section-screens}}
-<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview1' }">
-    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview1' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            @click="tab = 'preview1'">
-            Preview
-        </button>
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code1' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-            @click="tab = 'code1'">
-            Code
-        </button>
-        <!---- Copy Buton ------>
-        <button
-            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            onclick="copyToClip(document.getElementById('gridOne').innerHTML)" x-data="{}"
-            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <rect x="8" y="8" width="12" height="12" rx="2" />
-                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-            </svg>
-        </button>
-    </div>
-    <div>
-        <div class=" rounded-b-xl" x-show="tab === 'preview1'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/grids/grid-1.html"
-                title="wicked"></iframe>
-        </div>
-        <div class="rounded-b-xl" x-show="tab === 'code1'">
-            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                <div class="rounded-b-xl">
-                    <div class="hidden" id="gridOne">
-                        <!------
-                                        <section class="text-gray-700 ">
-            <div class="container px-8 pt-48 pb-24 mx-auto lg:px-4">
-                <div class="flex flex-wrap text-center">
-                    <div class="px-8 py-6 lg:px-24 lg:w-2/4 md:w-full">
-                        <div
-                            class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 text-blue-800 bg-gray-200 rounded-full">
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18"
-                                height="18" fill="currentColor">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path
-                                    d="M21 3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18zM11 13H4v6h7v-6zm9 0h-7v6h7v-6zm-9-8H4v6h7V5zm9 0h-7v6h7V5z" />
-                            </svg>
-                        </div>
-                        <h2 class="mb-3 text-lg font-medium text-gray-700 title-font">Information 1</h2>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                        <a href="#"
-                            class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 ">
-                            Learn More
-                            <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
-                                height="20" fill="currentColor">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path
-                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
-                                </svg>
-                        </a>
-                    </div>
-                    <div class="px-8 py-6 lg:px-24 lg:w-2/4 md:w-full">
-                        <div
-                            class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 text-blue-800 bg-gray-200 rounded-full">
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18"
-                                height="18" fill="currentColor">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path
-                                    d="M14 10h-4v4h4v-4zm2 0v4h3v-4h-3zm-2 9v-3h-4v3h4zm2 0h3v-3h-3v3zM14 5h-4v3h4V5zm2 0v3h3V5h-3zm-8 5H5v4h3v-4zm0 9v-3H5v3h3zM8 5H5v3h3V5zM4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
-                            </svg>
-                        </div>
-                        <h2 class="mb-3 text-lg font-medium text-gray-700 title-font">Information 2</h2>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                        <a href="#"
-                            class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 ">
-                            Learn More
-                            <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
-                                height="20" fill="currentColor">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path
-                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
-                                </svg>
-                        </a>
-                    </div>
-                </div>
+        {{#>section-screens-hero}}
+            <div class="flex flex-col w-full mb-4 ">
+                <h1
+                    class="mb-2 text-2xl font-bold tracking-tight text-left text-white uppercase sm:text-5xl title-font lg:w-3/3">
+                    Grids.
+                </h1>
             </div>
-        </section>
-                                        ------->
+            <span class="px-4 py-2 text-left text-white border border-gray-400 rounded-lg">3 Blocks</span>
+            <div class="flex flex-col w-full mt-6 ">
+                <p class="items-center w-full text-2xl leading-snug text-gray-50 lg:text-base lg:w-1/2">
+                    <span class="font-semibold tracking-tighter text-blue-500 uppercase">
+                        FLEX BOX</span>
+                    is a one-dimensional layout system that we can use to create a row or a column axis layout. It
+                    makes our life
+                    easier to design and build responsive web pages without having to use tricky hacks and a lot of
+                    float and position
+                    properties in our CSS code.
+                </p>
+            </div>
+            {{/section-screens-hero}}
+            <!--- grid 1------>
+            {{#>section-screens}}
+                <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview1' }">
+                    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview1' }"
+                            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                            @click="tab = 'preview1'">
+                            Preview
+                        </button>
+                        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code1' }"
+                            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                            @click="tab = 'code1'">
+                            Code
+                        </button>
+                        <!---- Copy Buton ------>
+                        <button
+                            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                            onclick="copyToClip(document.getElementById('gridOne').innerHTML)" x-data="{}"
+                            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24"
+                                height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <rect x="8" y="8" width="12" height="12" rx="2" />
+                                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                            </svg>
+                        </button>
                     </div>
-                    <!---- display code goes here.------>
-                    <pre class="leading-6"><code data-language="html">
+
+                    <div class=" rounded-b-xl" x-show="tab === 'preview1'">
+                        {{>"snippets/grids/grid-1"}}
+                    </div>
+                    <div class="rounded-b-xl" x-show="tab === 'code1'">
+                        <div
+                            class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                            <div class="rounded-b-xl">
+                                <div class="hidden" id="gridOne">
+                                    {{>"snippets/grids/grid-1"}}
+                                </div>
+                                <!---- display code goes here.------>
+                                <pre class="leading-6"><code data-language="html">
         &lt;section class="text-gray-700 "&gt;
             &lt;div class="container px-8 pt-48 pb-24 mx-auto lg:px-4"&gt;
                 &lt;div class="flex flex-wrap text-center"&gt;
@@ -176,51 +120,51 @@
             &lt;/div&gt;
         &lt;/section&gt;
                                     </code></pre>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{/section-screens}}
-{{> wicked-ad }}
-<!--- grid 4 ------>
-{{#>section-screens}}
-<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview4' }">
-    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview4' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            @click="tab = 'preview4'">
-            Preview
-        </button>
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code4' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-            @click="tab = 'code4'">
-            Code
-        </button>
-        <!---- Copy Buton ------>
-        <button
-            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            onclick="copyToClip(document.getElementById('gridFour').innerHTML)" x-data="{}"
-            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <rect x="8" y="8" width="12" height="12" rx="2" />
-                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-            </svg>
-        </button>
-    </div>
-    <div>
-        <div class=" rounded-b-xl" x-show="tab === 'preview4'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/grids/grid-4.html"
-                title="wicked"></iframe>
-        </div>
-        <div class=" rounded-b-xl" x-show="tab === 'code4'">
-            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                <div class="rounded-b-xl">
-                    <div class="hidden" id="gridFour">
-                        <!------
+                {{/section-screens}}
+                {{> wicked-ad }}
+                <!--- grid 4 ------>
+                {{#>section-screens}}
+                    <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview4' }">
+                        <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                            <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview4' }"
+                                class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                @click="tab = 'preview4'">
+                                Preview
+                            </button>
+                            <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code4' }"
+                                class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                                @click="tab = 'code4'">
+                                Code
+                            </button>
+                            <!---- Copy Buton ------>
+                            <button
+                                class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                onclick="copyToClip(document.getElementById('gridFour').innerHTML)" x-data="{}"
+                                @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy"
+                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <rect x="8" y="8" width="12" height="12" rx="2" />
+                                    <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class=" rounded-b-xl" x-show="tab === 'preview4'">
+                            {{>"snippets/grids/grid-4"}}
+                        </div>
+                        <div class=" rounded-b-xl" x-show="tab === 'code4'">
+                            <div
+                                class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                                <div class="rounded-b-xl">
+                                    <div class="hidden" id="gridFour">
+                                        <!------
                                         <section class="text-gray-700 ">
             <div class="container px-8 mx-<section class="text-gray-700 ">
             <div class="container px-8 pt-48 mx-auto lg:px-4">
@@ -316,9 +260,9 @@
             </div>
         </section>
                                         --------->
-                    </div>
-                    <!---- display code goes here.------>
-                    <pre class="leading-6"><code data-language="html">
+                                    </div>
+                                    <!---- display code goes here.------>
+                                    <pre class="leading-6"><code data-language="html">
         &lt;section class="text-gray-700 "&gt;
             &lt;div class="container px-8 pt-48 mx-auto lg:px-4"&gt;
                 &lt;div class="flex flex-wrap text-left"&gt;
@@ -413,51 +357,52 @@
             &lt;/div&gt;
         &lt;/section&gt;
                                                                         </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-{{/section-screens}}
-<!--- grid 6----->
-{{#>section-screens}}
-<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview7' }">
-    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview7' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            @click="tab = 'preview7'">
-            Preview
-        </button>
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code7' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-            @click="tab = 'code7'">
-            Code
-        </button>
-        <!---- Copy Buton ------>
-        <button
-            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            onclick="copyToClip(document.getElementById('gridSeven').innerHTML)" x-data="{}"
-            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <rect x="8" y="8" width="12" height="12" rx="2" />
-                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-            </svg>
-        </button>
-    </div>
-    <div>
-        <div class=" rounded-b-xl" x-show="tab === 'preview7'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/grids/grid-6.html"
-                title="wicked"></iframe>
-        </div>
-        <div class=" rounded-b-xl" x-show="tab === 'code7'">
-            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                <div class="rounded-b-xl">
-                    <div class="hidden" id="gridSeven">
-                        <!--------
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {{/section-screens}}
+                    <!--- grid 6----->
+                    {{#>section-screens}}
+                        <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview7' }">
+                            <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                                <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview7' }"
+                                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                    @click="tab = 'preview7'">
+                                    Preview
+                                </button>
+                                <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code7' }"
+                                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                                    @click="tab = 'code7'">
+                                    Code
+                                </button>
+                                <!---- Copy Buton ------>
+                                <button
+                                    class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                    onclick="copyToClip(document.getElementById('gridSeven').innerHTML)" x-data="{}"
+                                    @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy"
+                                        width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <rect x="8" y="8" width="12" height="12" rx="2" />
+                                        <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class=" rounded-b-xl" x-show="tab === 'preview7'">
+                                {{>"snippets/grids/grid-6"}}
+                            </div>
+                            <div class=" rounded-b-xl" x-show="tab === 'code7'">
+                                <div
+                                    class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                                    <div class="rounded-b-xl">
+                                        <div class="hidden" id="gridSeven">
+                                            <!--------
  <section class="text-gray-700 ">
             <div class="container px-8 pt-48 pb-24 mx-auto lg:px-4">
                 <div class="flex flex-wrap text-left">
@@ -525,9 +470,9 @@
             </div>
         </section>
                 ------>
-                    </div>
-                    <!---- display code goes here.------>
-                    <pre class="leading-6"><code data-language="html">
+                                        </div>
+                                        <!---- display code goes here.------>
+                                        <pre class="leading-6"><code data-language="html">
          &lt;section class="text-gray-700 "&gt;
             &lt;div class="container px-8 pt-48 pb-24 mx-auto lg:px-4"&gt;
                 &lt;div class="flex flex-wrap text-left"&gt;
@@ -595,115 +540,55 @@
             &lt;/div&gt;
         &lt;/section&gt;
                                                                         </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-{{/section-screens}}
-<!--- grid 8 ------>
-{{#>section-screens}}
-<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview8' }">
-    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview8' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            @click="tab = 'preview8'">
-            Preview
-        </button>
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code8' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-            @click="tab = 'code8'">
-            Code
-        </button>
-        <!---- Copy Buton ------>
-        <button
-            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            onclick="copyToClip(document.getElementById('gridEight').innerHTML)" x-data="{}"
-            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <rect x="8" y="8" width="12" height="12" rx="2" />
-                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-            </svg>
-        </button>
-    </div>
-    <div>
-        <div class=" rounded-b-xl" x-show="tab === 'preview8'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/grids/grid-8.html"
-                title="wicked"></iframe>
-        </div>
-        <div class=" rounded-b-xl" x-show="tab === 'code8'">
-            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                <div class="rounded-b-xl">
-                    <div class="hidden" id="gridEight">
-                        <!--------
-                                      <section class="text-gray-700 ">
-            <div class="container px-8 mx-auto py-36 lg:px-4">
-                <div class="flex flex-wrap text-left">
-                    <div class="px-8 py-6 lg:w-1/3 md:w-full">
-                                  <img class="object-cover object-center w-full h-40 mb-6 rounded" src="https://dummyimage.com/720x400/F3F4F7/8693ac" alt="content">
-                        <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font"> Information 1
-                        </h2>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                        <a href="#"
-                            class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 ">
-                            Read More
-                            <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
-                                height="20" fill="currentColor">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path
-                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="px-8 py-6 lg:w-1/3 md:w-full">
-                                  <img class="object-cover object-center w-full h-40 mb-6 rounded" src="https://dummyimage.com/720x400/F3F4F7/8693ac" alt="content">
-                        <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font"> Information 2
-                        </h2>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                        <a href="#"
-                            class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 ">
-                            Read More
-                            <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
-                                height="20" fill="currentColor">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path
-                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="px-8 py-6 lg:w-1/3 md:w-full">
-                                  <img class="object-cover object-center w-full h-40 mb-6 rounded" src="https://dummyimage.com/720x400/F3F4F7/8693ac" alt="content">
-                        <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font"> Information 2
-                        </h2>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                        <a href="#"
-                            class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 ">
-                            Read More
-                            <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
-                                height="20" fill="currentColor">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path
-                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-                                    ------->
-                    </div>
-                    <!---- display code goes here.------>
-                    <pre class="leading-6"><code data-language="html">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        {{/section-screens}}
+                        <!--- grid 8 ------>
+                        {{#>section-screens}}
+                            <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview8' }">
+                                <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                                    <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview8' }"
+                                        class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                        @click="tab = 'preview8'">
+                                        Preview
+                                    </button>
+                                    <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code8' }"
+                                        class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                                        @click="tab = 'code8'">
+                                        Code
+                                    </button>
+                                    <!---- Copy Buton ------>
+                                    <button
+                                        class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                        onclick="copyToClip(document.getElementById('gridEight').innerHTML)" x-data="{}"
+                                        @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <rect x="8" y="8" width="12" height="12" rx="2" />
+                                            <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div>
+                                    <div class=" rounded-b-xl" x-show="tab === 'preview8'">
+                                        {{>"snippets/grids/grid-8"}}
+                                    </div>
+                                    <div class=" rounded-b-xl" x-show="tab === 'code8'">
+                                        <div
+                                            class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                                            <div class="rounded-b-xl">
+                                                <div class="hidden" id="gridEight">
+                                                    {{>"snippets/grids/grid-8"}}
+                                                </div>
+                                                <!---- display code goes here.------>
+                                                <pre class="leading-6"><code data-language="html">
         &lt;section class="text-gray-700 "&gt;
             &lt;div class="container px-8 mx-auto py-36 lg:px-4"&gt;
                 &lt;div class="flex flex-wrap text-left"&gt;
@@ -765,100 +650,60 @@
             &lt;/div&gt;
         &lt;/section&gt;
                                                                         </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-{{/section-screens}}
-<!--- grid 9 ------>
-{{#>section-screens}}
-<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview9' }">
-    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview9' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            @click="tab = 'preview9'">
-            Preview
-        </button>
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code9' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-            @click="tab = 'code9'">
-            Code
-        </button>
-        <!---- Copy Buton ------>
-        <button
-            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            onclick="copyToClip(document.getElementById('gridNine').innerHTML)" x-data="{}"
-            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <rect x="8" y="8" width="12" height="12" rx="2" />
-                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-            </svg>
-        </button>
-    </div>
-    <div>
-        <div class=" rounded-b-xl" x-show="tab === 'preview9'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/grids/grid-9.html"
-                title="wicked"></iframe>
-        </div>
-        <div class=" rounded-b-xl" x-show="tab === 'code9'">
-            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                <div class="rounded-b-xl">
-                    <div class="hidden" id="gridNine">
-                        <!-------
-                                    <section class="text-gray-700 ">
-            <div class="container px-8 mx-auto py-36 lg:px-4">
-                <div class="flex flex-wrap text-left">
-                    <div class="px-8 py-6 lg:w-1/3 md:w-full">
-                        <img class="object-cover object-center w-full h-40 mb-6 rounded"
-                            src="https://dummyimage.com/720x400/F3F4F7/8693ac" alt="content">
-                        <div class="flex items-center justify-between ">
-                            <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font"> Information 1
-                            </h2>
-                            <span class="mb-1 text-xs font-medium tracking-widest text-blue-500 title-font">Your
-                                tagline</span>
-                        </div>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                    </div>
-                    <div class="px-8 py-6 lg:w-1/3 md:w-full">
-                        <img class="object-cover object-center w-full h-40 mb-6 rounded"
-                            src="https://dummyimage.com/720x400/F3F4F7/8693ac" alt="content">
-                        <div class="flex items-center justify-between ">
-                            <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font"> Information 2
-                            </h2>
-                            <span class="mb-1 text-xs font-medium tracking-widest text-blue-500 title-font">Your
-                                tagline</span>
-                        </div>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                    </div>
-                    <div class="px-8 py-6 lg:w-1/3 md:w-full">
-                        <img class="object-cover object-center w-full h-40 mb-6 rounded"
-                            src="https://dummyimage.com/720x400/F3F4F7/8693ac" alt="content">
-                        <div class="flex items-center justify-between ">
-                            <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font"> Information 3
-                            </h2>
-                            <span class="mb-1 text-xs font-medium tracking-widest text-blue-500 title-font">Your
-                                tagline</span>
-                        </div>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-                                    ------>
-                    </div>
-                    <!---- display code goes here.------>
-                    <pre class="leading-6"><code data-language="html">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{/section-screens}}
+                            <!--- grid 9 ------>
+                            {{#>section-screens}}
+                                <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview9' }">
+                                    <div
+                                        class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                                        <button
+                                            :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview9' }"
+                                            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                            @click="tab = 'preview9'">
+                                            Preview
+                                        </button>
+                                        <button
+                                            :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code9' }"
+                                            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                                            @click="tab = 'code9'">
+                                            Code
+                                        </button>
+                                        <!---- Copy Buton ------>
+                                        <button
+                                            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                            onclick="copyToClip(document.getElementById('gridNine').innerHTML)"
+                                            x-data="{}"
+                                            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <rect x="8" y="8" width="12" height="12" rx="2" />
+                                                <path
+                                                    d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class=" rounded-b-xl" x-show="tab === 'preview9'">
+                                        {{>"snippets/grids/grid-9"}}
+                                    </div>
+                                    <div class=" rounded-b-xl" x-show="tab === 'code9'">
+                                        <div
+                                            class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                                            <div class="rounded-b-xl">
+                                                <div class="hidden" id="gridNine">
+                                                    {{>"snippets/grids/grid-9"}}
+                                                </div>
+                                                <!---- display code goes here.------>
+                                                <pre class="leading-6"><code data-language="html">
         &lt;section class="text-gray-700 "&gt;
             &lt;div class="container px-8 mx-auto py-36 lg:px-4"&gt;
                 &lt;div class="flex flex-wrap text-left"&gt;
@@ -905,135 +750,60 @@
             &lt;/div&gt;
         &lt;/section&gt;
                                                                         </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-{{/section-screens}}
-<!--- grid 11 ------>
-{{#>section-screens}}
-<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview11' }">
-    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview11' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            @click="tab = 'preview11'">
-            Preview
-        </button>
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code11' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-            @click="tab = 'code11'">
-            Code
-        </button>
-        <!---- Copy Buton ------>
-        <button
-            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            onclick="copyToClip(document.getElementById('headerEleven').innerHTML)" x-data="{}"
-            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <rect x="8" y="8" width="12" height="12" rx="2" />
-                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-            </svg>
-        </button>
-    </div>
-    <div>
-        <div class=" rounded-b-xl" x-show="tab === 'preview11'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/grids/grid-11.html"
-                title="wicked"></iframe>
-        </div>
-        <div class="rounded-b-xl" x-show="tab === 'code11'">
-            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                <div class="rounded-b-xl">
-                    <div class="hidden" id="gridEleven">
-                        <!-------
-          <section class="text-gray-700 ">
-            <div class="container px-8 mx-auto py-36 lg:px-4">
-                <div class="flex flex-wrap text-left">
-                    <div class="px-8 py-6 lg:w-1/4 md:w-full">
-                        <img class="object-cover object-center w-full h-40 mb-6 rounded"
-                            src="https://dummyimage.com/720x400/F3F4F7/8693ac" alt="content">
-                        <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font"> Information 1
-                        </h2>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                        <a href="#"
-                            class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 ">
-                            Read More
-                            <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
-                                height="20" fill="currentColor">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path
-                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="px-8 py-6 lg:w-1/4 md:w-full">
-                        <img class="object-cover object-center w-full h-40 mb-6 rounded"
-                            src="https://dummyimage.com/720x400/F3F4F7/8693ac" alt="content">
-                        <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font"> Information 2
-                        </h2>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                        <a href="#"
-                            class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 ">
-                            Read More
-                            <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
-                                height="20" fill="currentColor">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path
-                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="px-8 py-6 lg:w-1/4 md:w-full">
-                        <img class="object-cover object-center w-full h-40 mb-6 rounded"
-                            src="https://dummyimage.com/720x400/F3F4F7/8693ac" alt="content">
-                        <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font"> Information 3
-                        </h2>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                        <a href="#"
-                            class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 ">
-                            Read More
-                            <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
-                                height="20" fill="currentColor">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path
-                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="px-8 py-6 lg:w-1/4 md:w-full">
-                        <img class="object-cover object-center w-full h-40 mb-6 rounded" src="https://dummyimage.com/720x400/F3F4F7/8693ac"
-                            alt="content">
-                        <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font"> Information 4
-                        </h2>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                        <a href="#" class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 ">
-                            Read More
-                            <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
-                                fill="currentColor">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-                            ------>
-                    </div>
-                    <!---- display code goes here.------>
-                    <pre class="leading-6"><code data-language="html">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                {{/section-screens}}
+                                <!--- grid 11 ------>
+                                {{#>section-screens}}
+                                    <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview11' }">
+                                        <div
+                                            class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                                            <button
+                                                :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview11' }"
+                                                class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                                @click="tab = 'preview11'">
+                                                Preview
+                                            </button>
+                                            <button
+                                                :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code11' }"
+                                                class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                                                @click="tab = 'code11'">
+                                                Code
+                                            </button>
+                                            <!---- Copy Buton ------>
+                                            <button
+                                                class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                                onclick="copyToClip(document.getElementById('headerEleven').innerHTML)"
+                                                x-data="{}"
+                                                @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <rect x="8" y="8" width="12" height="12" rx="2" />
+                                                    <path
+                                                        d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                                                </svg>
+                                            </button>
+                                        </div>
+
+                                        <div class=" rounded-b-xl" x-show="tab === 'preview11'">
+                                            {{>"snippets/grids/grid-11"}}
+                                        </div>
+                                        <div class="rounded-b-xl" x-show="tab === 'code11'">
+                                            <div
+                                                class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                                                <div class="rounded-b-xl">
+                                                    <div class="hidden" id="gridEleven">
+                                                        {{>"snippets/grids/grid-9"}}
+                                                    </div>
+                                                    <!---- display code goes here.------>
+                                                    <pre class="leading-6"><code data-language="html">
         &lt;section class="text-gray-700 "&gt;
             &lt;div class="container px-8 mx-auto py-36 lg:px-4"&gt;
                 &lt;div class="flex flex-wrap text-left"&gt;
@@ -1115,86 +885,59 @@
             &lt;/div&gt;
         &lt;/section&gt;
                                     </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-{{/section-screens}}
-<!--- grid 15 ------>
-{{#>section-screens}}
-<div class="shadow-thick rounded-xl" x-data="{ tab: 'preview15' }">
-    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview15' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            @click="tab = 'preview15'">
-            Preview
-        </button>
-        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code15' }"
-            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-            @click="tab = 'code15'">
-            Code
-        </button>
-        <!---- Copy Buton ------>
-        <button
-            class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-            onclick="copyToClip(document.getElementById('gridFiveteen').innerHTML)" x-data="{}"
-            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <rect x="8" y="8" width="12" height="12" rx="2" />
-                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-            </svg>
-        </button>
-    </div>
-    <div>
-        <div class=" rounded-b-xl" x-show="tab === 'preview15'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/grids/grid-15.html"
-                title="wicked"></iframe>
-        </div>
-        <div class="rounded-b-xl" x-show="tab === 'code15'">
-            <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                <div class="rounded-b-xl">
-                    <div class="hidden" id="gridFiveteen">
-                        <!----
- <section class="block " >
-            <div class="container flex flex-col items-center justify-center px-10 pt-8 mx-auto lg:px-32">
-                <img class="object-cover object-center mx-auto mb-10 rounded-lg lg:w-full md:w-15/5 w-20/6" alt="hero"
-                    src="https://dummyimage.com/620x200/F3F4F7/64748b/64748b">
-            </div>
-        </section>
-        <section class="text-gray-700 ">
-            <div class="container px-8 pt-2 pb-2 mx-auto lg:px-4">
-                <div class="flex flex-col w-full mb-12 text-left lg:text-center">
-                    <h1 class="mb-6 text-2xl font-semibold tracking-tighter text-blue-800 sm:text-3xl title-font">
-                        A centered
-                        <br class="md:hidden">
-                        medium lenght display headline.
-                    </h1>
-                    <p class="mx-auto text-base font-medium leading-relaxed text-gray-700 lg:w-2/3">Whatever cardigan
-                        tote bag tumblr hexagon brooklyn
-                        asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of
-                        them man
-                        bun deep.</p>
-                </div>
-                <div class="flex justify-center">
-                    <a href="#" class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 ">
-                        Learn More
-                        <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
-                            fill="currentColor">
-                            <path fill="none" d="M0 0h24v24H0z" />
-                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" /></svg>
-                    </a>
-                </div>
-            </div>
-        </section>
------->
-                    </div>
-                    <!---- display code goes here.------>
-                    <pre class="leading-6"><code data-language="html">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    {{/section-screens}}
+                                    <!--- grid 15 ------>
+                                    {{#>section-screens}}
+                                        <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview15' }">
+                                            <div
+                                                class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                                                <button
+                                                    :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview15' }"
+                                                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                                    @click="tab = 'preview15'">
+                                                    Preview
+                                                </button>
+                                                <button
+                                                    :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'code15' }"
+                                                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                                                    @click="tab = 'code15'">
+                                                    Code
+                                                </button>
+                                                <!---- Copy Buton ------>
+                                                <button
+                                                    class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                                    onclick="copyToClip(document.getElementById('gridFiveteen').innerHTML)"
+                                                    x-data="{}"
+                                                    @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <rect x="8" y="8" width="12" height="12" rx="2" />
+                                                        <path
+                                                            d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+
+                                            {{>"snippets/grids/grid-15"}}
+                                        </div>
+                                        <div class="rounded-b-xl" x-show="tab === 'code15'">
+                                            <div
+                                                class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                                                <div class="rounded-b-xl">
+                                                    <div class="hidden" id="gridFiveteen">
+                                                        {{>"snippets/grids/grid-15"}}
+                                                    </div>
+                                                    <!---- display code goes here.------>
+                                                    <pre class="leading-6"><code data-language="html">
         &lt;section class="text-gray-700 "&gt;
             &lt;div class="container px-8 pt-24 mx-auto lg:px-4"&gt;
                 &lt;div class="flex flex-wrap text-left"&gt;
@@ -1261,13 +1004,13 @@
             &lt;/div&gt;
         &lt;/section&gt;
                                     </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-{{/section-screens}}
+                                                </div>
+                                            </div>
+                                        </div>
 
-{{>js-tags}}
-{{/content}}{{/extend}}
+                                        </div>
+                                        </div>
+                                        {{/section-screens}}
+
+                                        {{>js-tags}}
+    {{/content}}{{/extend}}

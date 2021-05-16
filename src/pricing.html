@@ -50,43 +50,15 @@
             </svg>
         </button>
     </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview1'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/pricing/pricing-1.html"
-                title="wicked"></iframe>
+        <div class="bg-white rounded-b-xl" x-show="tab === 'preview1'">
+            {{>"snippets/pricing/pricing-1"}}
         </div>
         <div class=" rounded-b-xl" x-show="tab === 'code1'">
             <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                 <div class="rounded-b-xl">
                     <div class="hidden" id="priceOne">
-                        <!-----------
-    <section class="text-gray-700 ">
-            <div class="container px-8 pt-24 mx-auto lg:px-4">
-                <div class="flex flex-wrap text-center">
-                    <div class="px-8 py-6 mx-auto lg:px-24 lg:w-2/4 md:w-full">
-                        <div
-                            class="flex flex-col items-center justify-center h-full px-4 py-6 text-center shadow-xl rounded-xl">
-                            <h2
-                                class="flex items-baseline justify-center mt-2 text-3xl font-bold leading-none text-black lg:text-6xl">
-                                $38
-                                <span class="ml-1 text-base text-gray-600">/mo</span>
-                            </h2>
-                            <p class="my-4 text-base leading-relaxed ">
-                                Use the free templates for free with your whole team. Upgrade to pro to get life support
-                                and
-                                1 year updates or get the whole package delivered to your email instantly and start
-                                integrating!..</p>
-                            <button
-                                class="flex items-center px-8 py-3 mx-auto mt-6 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
-                                Action
-                            </button>
-                        </div>
-                    </div>
+                    {{>"snippets/pricing/pricing-1"}}
                 </div>
-            </div>
-        </section>
-    ----------->
-                    </div>
                     <!---- display code goes here.-->
                     <pre class="leading-6"><code data-language="html">
         &lt;section class="text-gray-700 "&gt;
@@ -118,11 +90,9 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>
 {{/section-screens}}
 {{> wicked-ad }}
-
 <!--- pricing 2-->
 {{#>section-screens}}
 <div class="shadow rounded-xl" x-data="{ tab: 'preview2' }">
@@ -151,58 +121,15 @@
             </svg>
         </button>
     </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview2'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/pricing/pricing-2.html"
-                title="wicked"></iframe>
+        <div class="bg-white rounded-b-xl" x-show="tab === 'preview2'">
+            {{>"snippets/pricing/pricing-2"}}
         </div>
         <div class=" rounded-b-xl" x-show="tab === 'code2'">
             <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                 <div class="rounded-b-xl">
                     <div class="hidden" id="priceTwo">
-                        <!----------------
-                                            <section class="text-gray-700 ">
-            <div class="container px-8 pt-24 mx-auto lg:px-4">
-                <div class="flex flex-wrap text-center">
-                    <div class="px-8 py-6 mx-auto lg:px-24 lg:w-2/4 md:w-full">
-                        <div class="flex flex-col items-center justify-center h-full px-4 py-6 text-center shadow-xl rounded-xl">
-                            <h2 class="flex items-baseline justify-center mt-2 text-3xl font-bold leading-none text-black lg:text-6xl">
-                                $0
-                                <span class="ml-1 text-base text-gray-600">/mo</span>
-                            </h2>
-                            <p class="my-4 text-base leading-relaxed ">
-                                Use the free templates for free with your whole team. Upgrade to pro to get life support
-                                and
-                                1 year updates or get the whole package delivered to your email instantly and start
-                                integrating!..</p>
-                            <button
-                                class="flex items-center px-8 py-3 mx-auto mt-6 font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg hover:bg-gray-200 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
-                                Action
-                            </button>
-                        </div>
-                    </div>
-                    <div class="px-8 py-6 mx-auto lg:px-24 lg:w-2/4 md:w-full">
-                        <div class="flex flex-col items-center justify-center h-full px-4 py-6 text-center shadow-xl rounded-xl">
-                            <h2 class="flex items-baseline justify-center mt-2 text-3xl font-bold leading-none text-black lg:text-6xl">
-                                $38
-                                <span class="ml-1 text-base text-gray-600">/mo</span>
-                            </h2>
-                            <p class="my-4 text-base leading-relaxed ">
-                                Use the free templates for free with your whole team. Upgrade to pro to get life support
-                                and
-                                1 year updates or get the whole package delivered to your email instantly and start
-                                integrating!..</p>
-                            <button
-                                class="flex items-center px-8 py-3 mx-auto mt-6 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
-                                Action
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-                                            -------------->
-                    </div>
+                        {{>"snippets/pricing/pricing-2"}}
+                      </div>
                     <!---- display code goes here.-->
                     <pre class="leading-6"><code data-language="html">
 &lt;section class="text-gray-700 "&gt;
@@ -249,7 +176,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>
 {{/section-screens}}
 <!--- pricing 3-->
@@ -280,10 +206,8 @@
             </svg>
         </button>
     </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview3'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/pricing/pricing-3.html"
-                title="wicked"></iframe>
+        <div class="bg-white rounded-b-xl" x-show="tab === 'preview3'">
+            {{>"snippets/pricing/pricing-3"}}
         </div>
         <div class=" rounded-b-xl" x-show="tab === 'code3'">
             <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
@@ -436,7 +360,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>
 {{/section-screens}}
 <!--- pricing 4 -->
@@ -467,114 +390,14 @@
             </svg>
         </button>
     </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview4'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/pricing/pricing-4.html"
-                title="wicked"></iframe>
+        <div class="bg-white rounded-b-xl" x-show="tab === 'preview4'">
+            {{>"snippets/pricing/pricing-4"}}
         </div>
         <div class=" rounded-b-xl" x-show="tab === 'code4'">
             <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                 <div class="rounded-b-xl">
                     <div class="hidden" id="priceFour">
-                        <!---------
- <section class="text-gray-700 ">
-            <div class="container px-8 pt-8 mx-auto lg:px-20">
-                <div class="flex flex-wrap ">
-                    <div class="px-8 py-6 mx-auto lg:px-10 lg:w-1/2 md:w-full">
-                        <div class="h-full px-4 py-6 border rounded-xl">
-                            <svg class="w-10 h-10 mb-4 ml-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                width="34" height="24" fill="currentColor">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path
-                                    d="M5.68 7.314l-1.82 5.914L12 19.442l8.14-6.214-1.82-5.914L16.643 11H7.356L5.681 7.314zM15.357 9l2.888-6.354a.4.4 0 0 1 .747.048l3.367 10.945a.5.5 0 0 1-.174.544L12 21.958 1.816 14.183a.5.5 0 0 1-.174-.544L5.009 2.694a.4.4 0 0 1 .747-.048L8.644 9h6.712z" />
-                            </svg>
-                            <h3 class="tracking-widest">START</h3>
-                            <h2
-                                class="flex items-center justify-start mt-2 mb-4 text-3xl font-bold leading-none text-left text-black lg:text-6xl">
-                                $8
-                                <span class="ml-1 text-base text-gray-600">/mo</span>
-                            </h2>
-                            <p class="mb-4 text-base leading-relaxed">Tailwind CSS templates
-                                with a wicked design.
-                                Professionally designed and 100% responsive static templates for startups and personal
-                                use.</p>
-                            <p class="flex items-center mb-2 text-gray-600">
-                                <span
-                                    class="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full">
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                        <path d="M20 6L9 17l-5-5"></path>
-                                    </svg>
-                                </span>Feature 1
-                            </p>
-                            <p class="flex items-center mb-20 text-gray-600">
-                                <span
-                                    class="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full">
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                        <path d="M20 6L9 17l-5-5"></path>
-                                    </svg>
-                                </span>Feature 2
-                            </p>
-                            <button
-                                class="items-end w-full px-8 py-3 mx-auto font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg hover:bg-gray-200 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
-                                Action
-                            </button>
-                        </div>
-                    </div>
-                    <div class="px-8 py-6 mx-auto lg:px-10 lg:w-1/2 md:w-full">
-                        <div class="h-full px-4 py-6 border rounded-xl">
-                            <svg class="w-10 h-10 mb-4 ml-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                width="18" height="18" fill="currentColor">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path
-                                    d="M21 3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18zM11 13H4v6h7v-6zm9 0h-7v6h7v-6zm-9-8H4v6h7V5zm9 0h-7v6h7V5z" />
-                            </svg>
-                            <h3 class="tracking-widest">PRO</h3>
-                            <h2
-                                class="flex items-center justify-start mt-2 mb-4 text-3xl font-bold leading-none text-left text-black lg:text-6xl">
-                                $38
-                                <span class="ml-1 text-base text-gray-600">/mo</span>
-                            </h2>
-                            <p class="mb-4 text-base leading-relaxed">Tailwind CSS templates
-                                with a wicked design.
-                                Professionally designed and 100% responsive static templates for startups and personal
-                                use.</p>
-                            <p class="flex items-center mb-2 text-gray-600">
-                                <span
-                                    class="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full">
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                        <path d="M20 6L9 17l-5-5"></path>
-                                    </svg>
-                                </span>Feature 1
-                            </p>
-                            <p class="flex items-center mb-2 text-gray-600">
-                                <span
-                                    class="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full">
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                        <path d="M20 6L9 17l-5-5"></path>
-                                    </svg>
-                                </span>Feature 2
-                            </p>
-                            <p class="flex items-center mb-6 text-gray-600">
-                                <span
-                                    class="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-gray-500 rounded-full">
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
-                                        <path d="M20 6L9 17l-5-5"></path>
-                                    </svg>
-                                </span>Feature 3
-                            </p>
-                            <button
-                                class="w-full px-8 py-3 mx-auto mt-6 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Button</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-                                        --------------------->
+                    {{>"snippets/pricing/pricing-4"}}
                     </div>
                     <!---- display code goes here.-->
                     <pre class="leading-6"><code data-language="html">
@@ -679,12 +502,10 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>
 {{/section-screens}}
 <!--- pricing 5 -->
 {{#>section-screens}}
-
 <div class="shadow rounded-xl" x-data="{ tab: 'preview5' }">
     <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
         <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview5' }"
@@ -711,89 +532,14 @@
             </svg>
         </button>
     </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview5'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/pricing/pricing-5.html"
-                title="wicked"></iframe>
+        <div class="bg-white rounded-b-xl" x-show="tab === 'preview5'">
+            {{>"snippets/pricing/pricing-5"}}
         </div>
         <div class=" rounded-b-xl" x-show="tab === 'code5'">
             <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                 <div class="rounded-b-xl">
                     <div class="hidden" id="priceFive">
-                        <!------------
-     <section class="text-gray-700 ">
-            <div class="container px-8 pt-2 mx-auto">
-                <div class="flex flex-wrap ">
-                    <div class="px-2 py-2 lg:w-1/3 md:w-full">
-                        <div class="border rounded-xl">
-                            <img class="object-cover object-center w-full mb-2 h-52 rounded-t-xl"
-                                src="https://dummyimage.com/420x200/E2E8F0/ffffff" alt="content">
-                            <div class="p-6 ">
-                                <h2
-                                    class="flex items-baseline justify-start mb-4 text-3xl font-bold leading-none text-left text-black lg:text-6xl">
-                                    $8
-                                    <span class="ml-1 text-base text-gray-600">/mo</span>
-                                </h2>
-                                <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font"> Bundle
-                                    1
-                                </h2>
-                                <p class="mb-4 text-base leading-relaxed">Tailwind CSS templates
-                                with a wicked design.
-                                Professionally designed and 100% responsive static templates for startups and personal
-                                use.</p>
-                                <button
-                                    class="w-full px-8 py-3 mx-auto font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg hover:bg-gray-200 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Button</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-2 py-2 lg:w-1/3 md:w-full">
-                        <div class="border rounded-xl">
-                            <img class="object-cover object-center w-full mb-2 h-52 rounded-t-xl"
-                                src="https://dummyimage.com/420x200/E2E8F0/ffffff" alt="content">
-                            <div class="p-6 ">
-                                <h2
-                                    class="flex items-baseline justify-start mb-4 text-3xl font-bold leading-none text-left text-black lg:text-6xl">
-                                    $18
-                                    <span class="ml-1 text-base text-gray-600">/mo</span>
-                                </h2>
-                                <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font"> Bundle
-                                    2
-                                </h2>
-                                <p class="mb-4 text-base leading-relaxed">Tailwind CSS templates
-                                with a wicked design.
-                                Professionally designed and 100% responsive static templates for startups and personal
-                                use.</p>
-                                <button
-                                    class="w-full px-8 py-3 mx-auto font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg hover:bg-gray-200 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Button</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-2 py-2 lg:w-1/3 md:w-full">
-                        <div class="border rounded-xl">
-                            <img class="object-cover object-center w-full mb-2 h-52 rounded-t-xl"
-                                src="https://dummyimage.com/420x200/E2E8F0/ffffff" alt="content">
-                            <div class="p-6 ">
-                                <h2
-                                    class="flex items-baseline justify-start mb-4 text-3xl font-bold leading-none text-left text-black lg:text-6xl">
-                                    $38
-                                    <span class="ml-1 text-base text-gray-600">/mo</span>
-                                </h2>
-                                <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font"> Bundle
-                                    3
-                                </h2>
-                                <p class="mb-4 text-base leading-relaxed">Tailwind CSS templates
-                                with a wicked design.
-                                Professionally designed and 100% responsive static templates for startups and personal
-                                use.</p>
-                                <button
-                                    class="w-full px-8 py-3 mx-auto font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Button</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    --------------->
+                    {{>"snippets/pricing/pricing-5"}}
                     </div>
                     <!---- display code goes here.-->
                     <pre class="leading-6"><code data-language="html">
@@ -873,7 +619,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>
 {{/section-screens}}
 <!--- pricing 6 -->
@@ -904,108 +649,15 @@
             </svg>
         </button>
     </div>
-    <div class="">
-        <div class=" rounded-b-xl" x-show="tab === 'preview6'">
-            <iframe class="w-full h-screen rounded-b-xl" src="./snippets/pricing/pricing-6.html"
-                title="wicked"></iframe>
+        <div class="bg-white rounded-b-xl" x-show="tab === 'preview6'">
+            {{>"snippets/pricing/pricing-6"}}
         </div>
         <div class=" rounded-b-xl" x-show="tab === 'code6'">
             <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                 <div class="rounded-b-xl">
                     <div class="hidden" id="priceSix">
-                        <!----------------
-                                             <section class="text-gray-700 ">
-            <div class="container px-8 pt-20 mx-auto lg:px-4">
-                <div class="flex flex-wrap text-center">
-                    <div class="px-2 py-6 mx-auto lg:w-1/4 md:w-full">
-                        <div class="p-4 border rounded-xl">
-                        <h2 class="mb-3 text-lg font-bold text-blue-700 lg:text-4xl title-font"> User 1
-                        </h2>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                        <div class="flex flex-col items-center justify-center px-2 text-center lg:h-32">
-                            <h3 class="tracking-widest">BEGGINER</h3>
-                            <h2
-                                class="flex items-center justify-center mt-2 mb-4 text-3xl font-bold leading-none text-blue-800 lg:text-6xl">
-                                $0
-                                <span class="ml-1 text-base text-gray-600">/mo</span>
-                            </h2>
-                        </div>
-                        <button
-                            class="w-full px-8 py-3 mx-auto font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg hover:bg-gray-200 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
-                            Action
-                        </button>
-                        </div>
-                    </div>
-                    <div class="px-2 py-6 mx-auto lg:w-1/4 md:w-full">
-                                                <div class="p-4 border rounded-xl">
-                        <h2 class="mb-3 text-lg font-bold text-blue-700 lg:text-4xl title-font"> User 2
-                        </h2>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                        <div class="flex flex-col items-center justify-center px-2 text-center lg:h-32">
-                            <h3 class="tracking-widest">HOBBY</h3>
-                            <h2
-                                class="flex items-center justify-center mt-2 mb-4 text-3xl font-bold leading-none text-blue-800 lg:text-6xl">
-                                $6
-                                <span class="ml-1 text-base text-gray-600">/mo</span>
-                            </h2>
-                        </div>
-                        <button
-                            class="w-full px-8 py-3 mx-auto font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg hover:bg-gray-200 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
-                            Action
-                        </button>
-                        </div>
-                    </div>
-                    <div class="px-2 py-6 mx-auto lg:w-1/4 md:w-full">
-                                                <div class="p-4 border rounded-xl">
-                        <h2 class="mb-3 text-lg font-bold text-blue-700 lg:text-4xl title-font"> User 3
-                        </h2>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                        <div class="flex flex-col items-center justify-center px-2 text-center lg:h-32">
-                            <h3 class="tracking-widest">STARTUP</h3>
-                            <h2
-                                class="flex items-center justify-center mt-2 mb-4 text-3xl font-bold leading-none text-blue-800 lg:text-6xl">
-                                $28
-                                <span class="ml-1 text-base text-gray-600">/mo</span>
-                            </h2>
-                        </div>
-                        <button
-                            class="w-full px-8 py-3 mx-auto font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
-                            Action
-                        </button>
-                        </div>
-                    </div>
-                    <div class="px-2 py-6 mx-auto lg:w-1/4 md:w-full">
-                                                <div class="p-4 border rounded-xl">
-                        <h2 class="mb-3 text-lg font-bold text-blue-700 lg:text-4xl title-font"> User 4
-                        </h2>
-                        <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                            Distillery
-                            hexagon disrupt edison bulbche.</p>
-                        <div class="flex flex-col items-center justify-center px-2 text-center lg:h-32">
-                            <h3 class="tracking-widest">CORPORATE</h3>
-                            <h2
-                                class="flex items-center justify-center mt-2 mb-4 text-3xl font-bold leading-none text-blue-800 lg:text-6xl">
-                                $38
-                                <span class="ml-1 text-base text-gray-600">/mo</span>
-                            </h2>
-                        </div>
-                        <button
-                            class="w-full px-8 py-3 mx-auto font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg hover:bg-gray-200 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
-                            Action
-                        </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-                                            ------------------>
-                    </div>
+                    {{>"snippets/pricing/pricing-6"}}
+                  </div>
                     <!---- display code goes here.-->
                     <pre class="leading-6"><code data-language="html">
                                      &lt;section class="text-gray-700 "&gt;
@@ -1101,7 +753,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>
 {{/section-screens}}
 {{>js-tags}}
