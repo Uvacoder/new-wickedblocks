@@ -1,7 +1,7 @@
-<svg width="1012" height="518" viewBox="0 0 1012 620" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="34" y="2" width="958" height="514" rx="33" fill="#000000" />
-<path d="M32 483C32 502.33 47.67 518 67 518H959C978.33 518 994 502.33 994 483V317H32V483Z" fill="#000000" fill-opacity="0.48"/>
-<path d="M32 483C32 502.33 47.67 518 67 518H959C978.33 518 994 502.33 994 483V467H32V483Z" fill="#000000"/>
+<svg width="962" height="518" viewBox="0 0 962 518" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2" y="2" width="962" height="518" rx="33" fill="#121212"/>
+<path d="M32 483C32 502.33 47.67 518 67 518H959C978.33 518 994 502.33 994 483V317H32V483Z" fill="#121212" fill-opacity="0.48"/>
+<path d="M32 483C32 502.33 47.67 518 67 518H959C978.33 518 994 502.33 994 483V467H32V483Z" fill="#121212"/>
 <g filter="url(#filter0_ddddd)">
 <rect x="272" y="334" width="79" height="17" rx="4.15" fill="#2F72EB"/>
 </g>
