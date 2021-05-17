@@ -2,8 +2,7 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   //mode: 'jit',
 
-  purge: ['./src/**/*.html'],
-  darkMode: 'media', // or 'media' or 'class'
+  //purge: ['./src/**/*.html'],
   theme: {
     extend: {
       zIndex: {
@@ -47,26 +46,11 @@ module.exports = {
         current: 'currentColor',
         black: colors.black,
         white: colors.white,
-        gray: colors.coolGray,
-        coolGray: colors.coolGray,
+        gray: colors.gray,
         blueGray: colors.blueGray,
-        red: colors.red,
-        orange: colors.orange,
-        amber: colors.amber,
-        yellow: colors.yellow,
-        lime: colors.lime,
-        green: colors.emerald,
-        emerald: colors.emerald,
-        teal: colors.teal,
-        cyan: colors.cyan,
         lightBlue: colors.lightBlue,
         blue: colors.blue,
-        indigo: colors.indigo,
-        violet: colors.violet,
-        purple: colors.purple,
-        pink: colors.pink,
-        fuchsia: colors.fuchsia,
-        rose: colors.rose,
+
 
         'gray': {
           '5': '#F7F7F7',

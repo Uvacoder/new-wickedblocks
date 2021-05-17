@@ -61,34 +61,7 @@
                             </div>
                             <!---- display code goes here.-->
                             <pre class="leading-6"><code data-language="html">
-            &lt;div class="text-gray-700 bg-white "&gt;
-                &lt;div class="flex flex-col flex-wrap p-5 mx-auto border-b md:items-center md:flex-row"&gt;
-                    &lt;a href="./index.html" class="pr-2 lg:pr-8 lg:px-6 focus:outline-none"&gt;
-                        &lt;div class="inline-flex items-center"&gt;
-                            &lt;div class="w-2 h-2 p-2 mr-2 rounded-full bg-gradient-to-tr from-cyan-400 to-lightBlue-500"&gt;
-                            &lt;/div&gt;
-                            &lt;h2
-                                class="font-semibold tracking-tighter text-gray-500 transition duration-1000 ease-in-out transform text-bold lg:mr-8"&gt;
-                                Wicked Blocks
-                            &lt;/h2&gt;
-                        &lt;/div&gt;
-                    &lt;/a&gt;
-                    &lt;nav class="flex flex-wrap items-center justify-center text-base md:ml-auto md:mr-auto"&gt;
-                        &lt;a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"&gt;Pricing&lt;/a&gt;
-                        &lt;a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"&gt;Contact&lt;/a&gt;
-                        &lt;a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"&gt;Services&lt;/a&gt;
-                        &lt;a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"&gt;Now&lt;/a&gt;
-                    &lt;/nav&gt;
-                    &lt;button
-                        class="items-center px-8 py-2 ml-auto font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-900 focus:ring focus:outline-none"&gt;Button
-                    &lt;/button&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="container w-full p-20 m-4 mx-auto my-16 text-center bg-white border-2 border-gray-300 border-dashed h-96 rounded-xl"&gt;
-                    &lt;p class="mt-20 italic tracking-tighter text-gray-500 text-md title-font"&gt;
-                      --  Content goes here --
-                    &lt;/p&gt;
-            &lt;/div&gt;
+            {{>"snippets/navigation/navigation-1"}}
                                         </code></pre>
                         </div>
                     </div>
@@ -124,93 +97,16 @@
                             </button>
                         </div>
                         <div class="bg-white rounded-b-xl" x-show="tab === 'preview2'">
-                            <i {{>"snippets/navigation/navigation-2"}}
+                            {{>"snippets/navigation/navigation-2"}}
                         </div>
                         <div class=" rounded-b-xl" x-show="tab === 'code2'">
                             <div
                                 class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                                 <div class="hidden" id="navTwo">
-                                    <!--------
- <div class="text-gray-700 bg-white border-t border-b ">
-            <div class="flex flex-col flex-wrap p-5 mx-auto md:items-center md:flex-row">
-                <a href="./index.html" class="pr-2 lg:pr-8 lg:px-6 focus:outline-none">
-                    <div class="inline-flex items-center">
-                        <div class="w-2 h-2 p-2 mr-2 rounded-full bg-gradient-to-tr from-cyan-400 to-lightBlue-500">
-                        </div>
-                        <h2
-                            class="font-semibold tracking-tighter text-gray-500 transition duration-1000 ease-in-out transform text-bold lg:mr-8">
-                            Wicked Blocks
-                        </h2>
-                    </div>
-                </a>
-                <nav class="flex flex-wrap items-center justify-center text-base ">
-                    <a href="#"
-                        class="mr-5 text-sm font-semibold text-gray-600 lg:ml-24 hover:text-gray-800">Pricing</a>
-                    <a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800">Contact</a>
-                    <a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800">Services</a>
-                    <a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800">Now</a>
-                </nav>
-                <div class="flex ml-auto">
-                    <button
-                        class="items-center px-8 py-2 ml-auto font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-900 focus:ring focus:outline-none">Button</button>
-                    <button
-                        class="items-center px-8 py-2 mt-4 ml-5 font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg lg:inline-flex lg:mt-px hover:border-black0 hover:bg-black hover:text-white focus:ring focus:outline-none">Button
-                        <svg class="hidden lg:block" fill="none" stroke="currentColor" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div
-            class="container w-full p-20 m-4 mx-auto my-16 text-center bg-white border-2 border-gray-300 border-dashed h-96 rounded-xl">
-            <p class="mt-20 italic tracking-tighter text-gray-500 text-md title-font">
-                -- Content goes here --
-            </p>
-        </div>
-                                ------------>
-                                </div>
+                                    {{>"snippets/navigation/navigation-2"}}  </div>
                                 <!---- display code goes here.-->
                                 <pre class="leading-6"><code data-language="html">
-        &lt;div class="text-gray-700 bg-white border-t border-b "&gt;
-            &lt;div class="flex flex-col flex-wrap p-5 mx-auto md:items-center md:flex-row"&gt;
-                &lt;a href="./index.html" class="pr-2 lg:pr-8 lg:px-6 focus:outline-none"&gt;
-                    &lt;div class="inline-flex items-center"&gt;
-                        &lt;div class="w-2 h-2 p-2 mr-2 rounded-full bg-gradient-to-tr from-cyan-400 to-lightBlue-500"&gt;
-                        &lt;/div&gt;
-                        &lt;h2
-                            class="font-semibold tracking-tighter text-gray-500 transition duration-1000 ease-in-out transform text-bold lg:mr-8"&gt;
-                            Wicked Blocks
-                        &lt;/h2&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;nav class="flex flex-wrap items-center justify-center text-base "&gt;
-                    &lt;a href="#"
-                        class="mr-5 text-sm font-semibold text-gray-600 lg:ml-24 hover:text-gray-800"&gt;Pricing&lt;/a&gt;
-                    &lt;a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"&gt;Contact&lt;/a&gt;
-                    &lt;a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"&gt;Services&lt;/a&gt;
-                    &lt;a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"&gt;Now&lt;/a&gt;
-                &lt;/nav&gt;
-                &lt;div class="flex ml-auto"&gt;
-                    &lt;button
-                        class="items-center px-8 py-2 ml-auto font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-900 focus:ring focus:outline-none"&gt;Button&lt;/button&gt;
-                    &lt;button
-                        class="items-center px-8 py-2 mt-4 ml-5 font-semibold text-black transition duration-500 ease-in-out transform bg-white border rounded-lg lg:inline-flex lg:mt-px hover:border-black0 hover:bg-black hover:text-white focus:ring focus:outline-none"&gt;Button
-                        &lt;svg class="hidden lg:block" fill="none" stroke="currentColor" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24"&gt;
-                            &lt;path d="M5 12h14M12 5l7 7-7 7"&gt;&lt;/path&gt;
-                        &lt;/svg&gt;
-                    &lt;/button&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div
-            class="container w-full p-20 m-4 mx-auto my-16 text-center bg-white border-2 border-gray-300 border-dashed h-96 rounded-xl"&gt;
-            &lt;p class="mt-20 italic tracking-tighter text-gray-500 text-md title-font"&gt;
-                -- Content goes here --
-            &lt;/p&gt;
-        &lt;/div&gt;
+        {{>"snippets/navigation/navigation-2"}}
                             </code></pre>
                             </div>
                         </div>
@@ -257,35 +153,7 @@
                                         </div>
                                         <!---- display code goes here.-->
                                         <pre class="leading-6"><code data-language="html">
-            &lt;div class="text-gray-700 bg-white "&gt;
-                &lt;div class="flex flex-col flex-wrap p-5 mx-auto border-b md:items-center md:flex-row"&gt;
-                    &lt;a href="./index.html" class="pr-2 lg:pr-8 lg:px-6 focus:outline-none"&gt;
-                        &lt;div class="inline-flex items-center"&gt;
-                            &lt;div class="w-2 h-2 p-2 mr-2 rounded-full bg-gradient-to-tr from-cyan-400 to-lightBlue-500"&gt;
-                            &lt;/div&gt;
-                            &lt;h2
-                                class="font-semibold tracking-tighter text-gray-500 transition duration-1000 ease-in-out transform text-bold lg:mr-8"&gt;
-                                Wicked Blocks
-                            &lt;/h2&gt;
-                        &lt;/div&gt;
-                    &lt;/a&gt;
-                    &lt;nav class="flex flex-wrap items-center justify-center text-base md:ml-auto "&gt;
-                        &lt;a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"&gt;Pricing&lt;/a&gt;
-                        &lt;a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"&gt;Contact&lt;/a&gt;
-                        &lt;a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"&gt;Services&lt;/a&gt;
-                        &lt;a href="#" class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"&gt;Now&lt;/a&gt;
-                    &lt;/nav&gt;
-                    &lt;button
-                        class="items-center px-8 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-900 focus:ring focus:outline-none"&gt;Button
-                    &lt;/button&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div
-                class="container w-full p-20 m-4 mx-auto my-16 text-center bg-white border-2 border-gray-300 border-dashed h-96 rounded-xl"&gt;
-                &lt;p class="mt-20 italic tracking-tighter text-gray-500 text-md title-font"&gt;
-                    -- Content goes here --
-                &lt;/p&gt;
-            &lt;/div&gt;
+            {{>"snippets/navigation/navigation-4"}}
                                         </code></pre>
                                     </div>
                                 </div>
