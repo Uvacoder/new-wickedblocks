@@ -913,16 +913,16 @@
                                             <div class="bg-white rounded-b-xl" x-show="tab === 'preview15'">
                                                 {{>"snippets/grids/grid-15"}}
                                             </div>
-                                        
-                                        <div class="rounded-b-xl" x-show="tab === 'code15'">
-                                            <div
-                                                class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                                                <div class="rounded-b-xl">
-                                                    <div class="hidden" id="gridFiveteen">
-                                                        {{>"snippets/grids/grid-15"}}
-                                                    </div>
-                                                    <!---- display code goes here.------>
-                                                    <pre class="leading-6"><code data-language="html">
+
+                                            <div class="rounded-b-xl" x-show="tab === 'code15'">
+                                                <div
+                                                    class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                                                    <div class="rounded-b-xl">
+                                                        <div class="hidden" id="gridFiveteen">
+                                                            {{>"snippets/grids/grid-15"}}
+                                                        </div>
+                                                        <!---- display code goes here.------>
+                                                        <pre class="leading-6"><code data-language="html">
         &lt;section class="text-gray-700 "&gt;
             &lt;div class="container px-8 pt-24 mx-auto lg:px-4"&gt;
                 &lt;div class="flex flex-wrap text-left"&gt;
@@ -989,10 +989,10 @@
             &lt;/div&gt;
         &lt;/section&gt;
                                     </code></pre>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        {{/section-screens}}
-                                        {{>js-tags}}
+                                            {{/section-screens}}
+                                            {{>js-tags}}
     {{/content}}{{/extend}}
