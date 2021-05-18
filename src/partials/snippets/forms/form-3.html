@@ -1,65 +1,61 @@
 <section>
     <div class="container items-center px-5 py-12 lg:px-20">
         <form
-            class="flex flex-col w-full p-10 px-8 pt-6 mx-auto my-6 mb-4 transition duration-500 ease-in-out transform bg-black border border-gray-800 rounded-lg lg:w-1/2 hover:border-white">
+            class="flex flex-col w-full p-10 px-8 pt-6 mx-auto my-6 mb-4 transition duration-500 ease-in-out transform bg-white border rounded-lg lg:w-1/2">
             <div class="flex flex-wrap mb-6 -mx-3">
                 <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
-                    <label class="text-base leading-7 text-white" for="grid-title">
+                    <label class="text-base leading-7 text-gray-500" for="grid-title">
                         Title
                     </label>
                     <input
-                        class="w-full px-4 py-2 text-base text-white transition duration-500 ease-in-out transform bg-black border border-transparent border-gray-800 rounded-lg focus:border-blue-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                        class="w-full px-4 py-2 mt-2 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                         id="grid-title" type="text" name="title" placeholder="The Unicorns Feed..." required>
                 </div>
                 <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
-                    <label class="text-base leading-7 text-white" for="grid-url">
+                    <label class="text-base leading-7 text-gray-500" for="grid-url">
                         URL
                     </label>
                     <input
-                        class="w-full px-4 py-2 text-base text-white transition duration-500 ease-in-out transform bg-black border border-transparent border-gray-800 rounded-lg focus:border-blue-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                        class="w-full px-4 py-2 mt-2 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                         id="grid-url" type="text" name="url" placeholder="https://..." required>
                 </div>
             </div>
             <div class="flex flex-wrap mb-6 -mx-3">
                 <div class="w-full px-3">
-                    <label class="text-base leading-7 text-white" for="description">
+                    <label class="text-base leading-7 text-gray-500" for="description">
                         Description
                     </label>
                     <textarea
-                        class="w-full px-4 py-2 text-base text-white transition duration-500 ease-in-out transform bg-black border border-transparent border-gray-800 rounded-lg focus:border-blue-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 apearance-none autoexpand"
+                        class="w-full px-4 py-2 mt-2 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 apearance-none autoexpand"
                         id="description" type="text" name="description" placeholder="Message..." required></textarea>
                 </div>
             </div>
             <div class="flex flex-wrap mb-2 -mx-3">
                 <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
-                    <label class="text-base leading-7 text-white" for="email">
+                    <label class="text-base leading-7 text-gray-500" for="email">
                         Email
                     </label>
                     <input
-                        class="w-full px-4 py-2 text-base text-white transition duration-500 ease-in-out transform bg-black border border-transparent border-gray-800 rounded-lg focus:border-blue-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                        class="w-full px-4 py-2 mt-2 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                         id="email" type="email" name="email" placeholder="email@example.com">
                 </div>
                 <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
-                    <label class="text-base leading-7 text-white" for="date">
+                    <label class="text-base leading-7 text-gray-500" for="date">
                         Date
                     </label>
                     <div class="relative ">
                         <select name="date[]"
-                            class="w-full px-4 py-2 text-base text-white transition duration-500 ease-in-out transform bg-black border border-transparent border-gray-800 rounded-lg appearance-none focus:border-blue-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
-                            <option
-                                class="block mb-4 text-xs font-bold tracking-wide text-gray-200 uppercase text-grey-darker "
+                            class="w-full px-4 py-2 mt-2 text-base text-gray-500 transition duration-500 ease-in-out transform border border-transparent rounded-lg appearance-none bg-blueGray-100 focus:border-blue-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
+                            <option class="block mb-4 text-xs font-bold tracking-wide text-gray-500 uppercase "
                                 value="1912">
                                 Tuesday 19.01.21</option>
-                            <option
-                                class="block mb-4 text-xs font-bold tracking-wide text-gray-200 uppercase text-grey-darker "
+                            <option class="block mb-4 text-xs font-bold tracking-wide text-gray-500 uppercase "
                                 value="1912">
                                 Tuesday 02.02.21</option>
-                            <option
-                                class="block mb-4 text-xs font-bold tracking-wide text-gray-200 uppercase text-grey-darker "
+                            <option class="block mb-4 text-xs font-bold tracking-wide text-gray-500 uppercase "
                                 value="1912">
                                 Tuesday 16.02.21</option>
-                            <option
-                                class="block mb-4 text-xs font-bold tracking-wide text-gray-200 uppercase text-grey-darker "
+                            <option class="block mb-4 text-xs font-bold tracking-wide text-gray-500 uppercase "
                                 value="1912">
                                 Tuesday 02.03.21</option>
                         </select>
@@ -75,7 +71,7 @@
             </div>
             <div class="flex items-center w-full pt-4">
                 <button
-                    class="w-full py-3 text-blue-100 transition duration-500 ease-in-out transform bg-blue-600 border-blue-600 rounded-md text-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-blue-800 ">
+                    class="w-full py-3 font-semibold text-white transition duration-500 ease-in-out transform bg-blue-600 border-blue-600 rounded-md text-base focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-blue-800 ">
                     Primary
                 </button>
             </div>
