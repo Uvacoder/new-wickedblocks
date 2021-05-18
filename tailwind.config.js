@@ -1,7 +1,6 @@
 const colors = require('tailwindcss/colors');
 module.exports = {
   //mode: 'jit',
-
   //purge: ['./src/**/*.html'],
   theme: {
     extend: {
@@ -49,7 +48,7 @@ module.exports = {
         blue: colors.blue,
 
 
-        'gray': {
+        'wickedgray': {
           '5': '#F7F7F7',
   '10': '#EAEAEA',
   '20': '#D1D1D1',

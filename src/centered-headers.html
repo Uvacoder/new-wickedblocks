@@ -25,7 +25,7 @@
             {{#>section-screens}}
                 <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview2' }">
                     <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-                        <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview2' }"
+                        <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'preview2' }"
                             class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                             @click="tab = 'preview2'">
                             Preview
@@ -57,8 +57,8 @@
                             class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                             <div class="rounded-b-xl">
                                 <div class="hidden" id="headerTwo">
-                                {{>"snippets/headers-center/header-2"}}
-                              </div>
+                                    {{>"snippets/headers-center/header-2"}}
+                                </div>
                                 <!---- display code goes here.-->
                                 <pre class="leading-6"><code data-language="html">
         {{>"snippets/headers-center/header-2"}}
@@ -73,7 +73,7 @@
                 {{#>section-screens}}
                     <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview4' }">
                         <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-                            <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview4' }"
+                            <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'preview4' }"
                                 class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                                 @click="tab = 'preview4'">
                                 Preview
@@ -105,7 +105,8 @@
                                 class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                                 <div class="rounded-b-xl">
                                     <div class="hidden" id="headerFour">
-                                    {{>"snippets/headers-center/header-4"}}  </div>
+                                        {{>"snippets/headers-center/header-4"}}
+                                    </div>
                                     <!---- display code goes here.-->
                                     <pre class="leading-6"><code data-language="html">
         {{>"snippets/headers-center/header-4"}}
@@ -119,7 +120,8 @@
                     {{#>section-screens}}
                         <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview6' }">
                             <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-                                <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview6' }"
+                                <button
+                                    :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'preview6' }"
                                     class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                                     @click="tab = 'preview6'">
                                     Preview
@@ -153,7 +155,7 @@
                                     <div class="rounded-b-xl">
                                         <div class="hidden" id="headerSix">
                                             {{>"snippets/headers-center/header-6"}}
-                                           </div>
+                                        </div>
                                         <!---- display code goes here.-->
                                         <pre class="leading-6"><code data-language="html">
                                         {{>"snippets/headers-center/header-6"}}
@@ -167,7 +169,8 @@
                         {{#>section-screens}}
                             <div class="shadow-thick rounded-xl" x-data="{ tab: 'preview7' }">
                                 <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-                                    <button :class="{ 'active font-bold  bg-gray-500 text-white ': tab === 'preview7' }"
+                                    <button
+                                        :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'preview7' }"
                                         class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                                         @click="tab = 'preview7'">
                                         Preview
@@ -201,7 +204,8 @@
                                         class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                                         <div class="rounded-b-xl">
                                             <div class="hidden" id="headerSeven">
-                                            {{>"snippets/headers-center/header-7"}}    </div>
+                                                {{>"snippets/headers-center/header-7"}}
+                                            </div>
                                             <!---- display code goes here.-->
                                             <pre class="leading-6"><code data-language="html">
     {>"snippets/headers-center/header-7"}}
