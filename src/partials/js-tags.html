@@ -1,16 +1,5 @@
-<script>
-    function copyToClip(str) {
-        function listener(e) {
-            e.clipboardData.setData("text/html", str);
-            e.clipboardData.setData("text/plain", str);
-            e.preventDefault();
-        }
-        document.addEventListener("copy", listener);
-        document.execCommand("copy");
-        document.removeEventListener("copy", listener);
-    }
-</script>
-<script src="https://d33wubrfki0l68.cloudfront.net/bundles/f4494f6467ee3f54a4d548e0c195d9e3e4c6e21d.js"></script>
+<script src="https://d33wubrfki0l68.cloudfront.net/bundles/f4494f6467ee3f54a4d548e0c195d9e3e4c6e21d.js" defer></script>
+
 <script>
     // Snackbar
     function noticesHandler() {
