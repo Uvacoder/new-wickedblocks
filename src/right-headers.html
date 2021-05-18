@@ -73,5 +73,9 @@
 		{{/with}}
 	<!--- end header {{this}} -->
 	{{/section-screens}}
+
+	{{#unless @index }}
+		{{> wicked-ad }}
+	{{/unless}}
 {{/each}}
 {{/content}}{{/extend}}
