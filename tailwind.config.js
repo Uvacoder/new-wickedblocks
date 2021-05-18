@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   //mode: 'jit',
 
-  purge: ['./src/**/*.html'],
+  //purge: ['./src/**/*.html'],
   theme: {
     extend: {
       zIndex: {
@@ -44,11 +44,8 @@ module.exports = {
       colors: {
        transparent: 'transparent',
         current: 'currentColor',
-        black: colors.black,
-        white: colors.white,
         gray: colors.gray,
         blueGray: colors.blueGray,
-        lightBlue: colors.lightBlue,
         blue: colors.blue,
 
 
