@@ -1,7 +1,6 @@
 {{#extend "default" }}{{#content "body"}}
         {{> navigation }}
         {{> snackbar }}
-        <!----Hero  -->
         {{#>section-screens-hero}}
             <div class="flex flex-col w-full mb-4 ">
                 <h1
@@ -9,130 +8,46 @@
                     Navigation.
                 </h1>
             </div>
-            <span class="px-4 py-2 text-left text-white border border-gray-400 rounded-lg">3 Blocks</span>
+            <span class="px-4 py-2 text-left text-white border rounded-lg border-wickedgray-500">3 Blocks</span>
             <div class="flex flex-col w-full mt-6 ">
                 <p class="items-center w-full text-2xl leading-snug text-gray-50 lg:text-base lg:w-1/2">
                     <span class="font-semibold tracking-tighter text-blue-500 uppercase">
-                        WEB IMPROVED USER EXPERIENCE</span>
-                    an easy to use navigation system on your website makes using your website a more enjoyable
-                    experience. Therefore, visitors will be more likely to spend more time on your website and they
-                    are more likely to
-                    revisit your website.
+                    WEB IMPROVED USER EXPERIENCE
+                    </span>
+               an easy to use navigation system on your website makes using your website a more enjoyable
+                experience. Therefore, visitors will be more likely to spend more time on your website and they are more likely to
+                revisit your website.
                 </p>
             </div>
             {{/section-screens-hero}}
-            <!----end hero -->
-            <!--- navigtation 1-->
-            {{#>section-screens}}
-                <div class="shadow rounded-xl" x-data="{ tab: 'preview1' }">
-                    <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-                        <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'preview1' }"
-                            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                            @click="tab = 'preview1'">
-                            Preview
-                        </button>
-                        <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'code1' }"
-                            class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-                            @click="tab = 'code1'">
-                            Code
-                        </button>
-                        <!---- Copy Buton -->
-                        <button
-                            class="justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer tems-center ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                            onclick="copyToClip(document.getElementById('navOne').innerHTML)" x-data="{}"
-                            @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24"
-                                height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <rect x="8" y="8" width="12" height="12" rx="2" />
-                                <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="bg-white rounded-b-xl" x-show="tab === 'preview1'">
-                        {{>"snippets/navigation/navigation-1"}}
-                    </div>
-                    <div class=" rounded-b-xl" x-show="tab === 'code1'">
-                        <div
-                            class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                            <div class="hidden" id="navOne">
-                                {{>"snippets/navigation/navigation-1"}}
-                            </div>
-                            <!---- display code goes here.-->
-                            <pre class="leading-6"><code data-language="html">
-            {{>"snippets/navigation/navigation-1"}}
-                                        </code></pre>
-                        </div>
-                    </div>
-                </div>
-                {{/section-screens}}
-                {{> wicked-ad }}
-                <!--- navigtation 2-->
+
+            {{#each data.navigation}} {{@index}}
                 {{#>section-screens}}
-                    <div class="shadow rounded-xl" x-data="{ tab: 'preview2' }">
-                        <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
-                            <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'preview2' }"
-                                class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                                @click="tab = 'preview2'">
-                                Preview
-                            </button>
-                            <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'code2' }"
-                                class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-                                @click="tab = 'code2'">
-                                Code
-                            </button>
-                            <!---- Copy Buton -->
-                            <button
-                                class="justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer tems-center ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                                onclick="copyToClip(document.getElementById('navTwo').innerHTML)" x-data="{}"
-                                @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy"
-                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <rect x="8" y="8" width="12" height="12" rx="2" />
-                                    <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="bg-white rounded-b-xl" x-show="tab === 'preview2'">
-                            {{>"snippets/navigation/navigation-2"}}
-                        </div>
-                        <div class=" rounded-b-xl" x-show="tab === 'code2'">
-                            <div
-                                class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                                <div class="hidden" id="navTwo">
-                                    {{>"snippets/navigation/navigation-2"}}
-                                </div>
-                                <!---- display code goes here.-->
-                                <pre class="leading-6"><code data-language="html">
-        {{>"snippets/navigation/navigation-2"}}
-                            </code></pre>
-                            </div>
-                        </div>
-                    </div>
-                    {{/section-screens}}
-                    <!--- navigtation 4 -->
-                    {{#>section-screens}}
-                        <div class="shadow rounded-xl" x-data="{ tab: 'preview4' }">
+
+                    {{#with this as | partial | }}
+                        <!--- header {{this}} -->
+                        <div class="shadow rounded-xl" x-data="{ tab: 'preview-{{@index}}' }">
                             <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
                                 <button
-                                    :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'preview4' }"
+                                    :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'preview-{{@index}}' }"
                                     class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                                    @click="tab = 'preview4'">
+                                    @click="tab = 'preview-{{@index}}'">
                                     Preview
                                 </button>
-                                <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'code4' }"
+                                <button
+                                    :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'code-{{@index}}' }"
                                     class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-                                    @click="tab = 'code4'">
+                                    @click="tab = 'code-{{@index}}'">
                                     Code
                                 </button>
                                 <!---- Copy Buton -->
                                 <button
-                                    class="justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer tems-center ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                                    onclick="copyToClip(document.getElementById('navFour').innerHTML)" x-data="{}"
-                                    @click="$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})">
+                                    class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                    @click="
+						$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})
+
+						$clipboard($refs['header-{{@index}}'].innerHTML);
+					">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy"
                                         width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
                                         stroke="currentColor" fill="none" stroke-linecap="round"
@@ -143,23 +58,32 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="bg-white rounded-b-xl" x-show="tab === 'preview4'">
-                                {{>"snippets/navigation/navigation-4"}}
+
+                            <div class="bg-white rounded-b-xl" x-show="tab === 'preview-{{@index}}'"
+                                x-ref="header-{{@index}}">
+                                {{> (partial) }}
                             </div>
-                            <div class=" rounded-b-xl" x-show="tab === 'code4'">
+
+                            <div class="rounded-b-xl" x-show="tab === 'code-{{@index}}'">
                                 <div
                                     class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                                     <div class="rounded-b-xl">
-                                        <div class="hidden" id="navFour">
-                                            {{>"snippets/navigation/navigation-4"}}
-                                        </div>
                                         <!---- display code goes here.-->
-                                        <pre class="leading-6"><code data-language="html">
-            {{>"snippets/navigation/navigation-4"}}
-                                        </code></pre>
+                                        <pre class="leading-6">
+							<code data-language="html">
+								{{> (partial) }}
+							</code>
+						</pre>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{/section-screens}}
+                    {{/with}}
+                    <!--- end header {{this}} -->
+                    {{/section-screens}}
+
+                    {{#unless @index }}
+                        {{> wicked-ad }}
+                    {{/unless}}
+            {{/each}}
     {{/content}}{{/extend}}
