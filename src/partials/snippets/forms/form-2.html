@@ -1,25 +1,64 @@
 
 <section class="text-blueGray-700 body-font">
-    <div class="container px-8 pt-48 pb-24 mx-auto lg:px-4">
-        <div class="flex flex-col w-full p-8 mx-auto mt-10 border rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
+    <div class="container items-center px-5 py-12 mx-auto lg:px-20">
+
+        <div
+            class="flex flex-col w-full p-10 mx-auto my-6 transition duration-500 ease-in-out transform bg-black border border-gray-800 rounded-lg hover:border-white lg:w-2/6 md:w-1/2 md:mt-0">
             <div class="relative ">
-                <input type="email" id="email" name="email" placeholder="Password"
-                    class="w-full px-4 py-2 mb-4 text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 mr-4text-base focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
+                <label for="name" class="text-sm leading-7 text-white">name</label>
+                <input type="name" id="name" name="name" placeholder="name"
+                    class="w-full px-4 py-2 mb-4 mr-4 text-base text-white transition duration-500 ease-in-out transform bg-black border border-transparent border-gray-800 rounded-lg focus:border-blue-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
             </div>
             <div class="relative ">
+                <label for="email" class="text-sm leading-7 text-white">Email</label>
                 <input type="email" id="email" name="email" placeholder="email"
-                    class="w-full px-4 py-2 mb-4 text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 mr-4text-base focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
+                    class="w-full px-4 py-2 mb-4 mr-4 text-base text-white transition duration-500 ease-in-out transform bg-black border border-transparent border-gray-800 rounded-lg focus:border-blue-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
             </div>
-            <div class="flex my-4">
+            <div class="flex ">
                 <label class="flex items-center">
-                    <input type="checkbox" class="form-checkbox">
-                    <span class="ml-2">Subscribe me </span>
+                    <input type="checkbox" class="form-checkbox ">
+                    <span class="ml-2 text-white">Register me </span>
                 </label>
             </div>
             <button
-                class="px-8 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-blueGray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">Button</button>
-            <p class="mx-auto mt-3 text-xs text-blueGray-500">Literally you probably haven't heard of them jean
-                shorts.</p>
+                class="w-full px-16 py-2 my-2 mb-4 mr-2 text-blue-100 transition duration-500 ease-in-out transform bg-blue-600 border-blue-600 rounded-md text-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-blue-800 ">
+                Primary
+            </button>
+            <hr class="my-4 border-gray-800">
+            <span
+                class="px-4 py-1 mx-auto -mt-8 text-xs text-white transition duration-500 ease-in-out transform bg-black border border-gray-800 rounded-lg">Or
+                continue with </span>
+            <div class="inline-flex items-center justify-between w-full pt-8 ">
+                <button
+                    class="w-auto px-8 py-1 mr-2 text-white transition duration-500 ease-in-out transform border border-gray-900 rounded-lg text-md hover:bg-gray-900 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 focus:border-gray-700 focus:bg-gray-800 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="20"
+                        height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                    </svg>
+                </button>
+                <button
+                    class="w-auto px-8 py-1 mr-2 text-white transition duration-500 ease-in-out transform border border-gray-900 rounded-lg text-md hover:bg-gray-900 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 focus:border-gray-700 focus:bg-gray-800 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-gitlab" width="20"
+                        height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M21 14l-9 7l-9 -7l3 -11l3 7h6l3 -7z" />
+                    </svg>
+                </button>
+                <button
+                    class="w-auto px-8 py-1 mr-2 text-white transition duration-500 ease-in-out transform border border-gray-900 rounded-lg text-md hover:bg-gray-900 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 focus:border-gray-700 focus:bg-gray-800 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20"
+                        height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
 </section>
