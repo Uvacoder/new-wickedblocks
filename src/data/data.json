@@ -1,0 +1,61 @@
+{
+  "rightHeaders": [
+    "snippets/headers-right/header-1",
+    "snippets/headers-right/header-2",
+    "snippets/headers-right/header-3",
+    "snippets/headers-right/header-4",
+    "snippets/headers-right/header-5",
+    "snippets/headers-right/header-6"
+  ],
+  "leftHeaders": [
+    "snippets/headers-left/header-1",
+    "snippets/headers-left/header-2",
+    "snippets/headers-left/header-3",
+    "snippets/headers-left/header-4",
+    "snippets/headers-left/header-5",
+    "snippets/headers-left/header-6",
+    "snippets/headers-left/header-7"
+  ],
+  "centerHeaders": [
+    "snippets/headers-center/header-1",
+    "snippets/headers-center/header-2",
+    "snippets/headers-center/header-3",
+    "snippets/headers-center/header-4"
+  ],
+  "pricing": [
+    "snippets/pricing/pricing-1",
+    "snippets/pricing/pricing-2",
+    "snippets/pricing/pricing-3",
+    "snippets/pricing/pricing-4",
+    "snippets/pricing/pricing-5"
+  ],
+  "clients": [
+    "snippets/clients/clients-1",
+    "snippets/clients/clients-2",
+    "snippets/clients/clients-3",
+    "snippets/clients/clients-4",
+    "snippets/clients/clients-5"
+  ],
+  "forms": [
+    "snippets/forms/form-1",
+    "snippets/forms/form-2",
+    "snippets/forms/form-3",
+    "snippets/forms/form-4"
+  ],
+  "auth": [
+    "snippets/auth/auth-1",
+    "snippets/auth/auth-2",
+    "snippets/auth/auth-3",
+    "snippets/auth/auth-4"
+  ],
+  "navigation": [
+    "snippets/navigation/navigation-1",
+    "snippets/navigation/navigation-2",
+    "snippets/navigation/navigation-3"
+  ],
+  "footers": [
+    "snippets/footers/footer-1",
+    "snippets/footers/footer-2",
+    "snippets/footers/footer-3"
+  ]
+}
