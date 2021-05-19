@@ -29,6 +29,14 @@
     "snippets/pricing/pricing-4",
     "snippets/pricing/pricing-5"
   ],
+  "alerts": [
+    "snippets/alerts/alert-1",
+    "snippets/alerts/alert-2",
+    "snippets/alerts/alert-3",
+    "snippets/alerts/alert-4",
+    "snippets/alerts/alert-5",
+    "snippets/alerts/alert-6"
+  ],
   "clients": [
     "snippets/clients/clients-1",
     "snippets/clients/clients-2",
@@ -47,6 +55,13 @@
     "snippets/auth/auth-2",
     "snippets/auth/auth-3",
     "snippets/auth/auth-4"
+  ],
+   "sidebars": [
+    "snippets/sidebars/sidebar-1",
+    "snippets/sidebars/sidebar-2",
+    "snippets/sidebars/sidebar-3",
+    "snippets/sidebars/sidebar-4",
+    "snippets/sidebars/sidebar-5"
   ],
   "navigation": [
     "snippets/navigation/navigation-1",

@@ -1,0 +1,86 @@
+{{#extend "default" }}{{#content "body"}}
+        {{> navigation }}
+        {{> snackbar }}
+        {{#>section-screens-hero}}
+            <div class="flex flex-col w-full mb-4 ">
+                <h1
+                    class="mb-2 text-2xl font-bold tracking-tight text-left text-white uppercase sm:text-5xl title-font lg:w-3/3">
+                    auth
+                </h1>
+            </div>
+            <span class="px-4 py-2 text-left text-white border rounded-lg border-wickedgray-500">3 Blocks</span>
+            <div class="flex flex-col w-full mt-6 ">
+                <p class="items-center w-full text-2xl leading-snug text-gray-400 lg:text-base lg:w-1/2">
+                    <span class="font-semibold tracking-tighter text-blue-500 uppercase"> WEB AUTHENTICATION</span>
+                    is an is a fairly recent W3C standard backed by major players like Google, Paypal, Mozilla,
+                    Microsoft, and Qualcomm. It aims at defining a web-browser API for the creation and use of strong
+                    authentication
+                    credentials based on public key cryptography.
+                </p>
+            </div>
+            {{/section-screens-hero}}
+
+            {{#each data.sidebars}}
+                {{#>section-screens}}
+
+                    {{#with this as | partial | }}
+                        <!--- header {{this}} -->
+                        <div class="shadow rounded-xl" x-data="{ tab: 'preview-' }">
+                            <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
+                                <button
+                                    :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'preview-' }"
+                                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                    @click="tab = 'preview-'">
+                                    Preview
+                                </button>
+                                <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'code-' }"
+                                    class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
+                                    @click="tab = 'code-'">
+                                    Code
+                                </button>
+                                <!---- Copy Buton -->
+                                <button
+                                    class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                                    @click="
+						$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})
+
+						$clipboard($refs['header-'].innerHTML);
+					">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy"
+                                        width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <rect x="8" y="8" width="12" height="12" rx="2" />
+                                        <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="bg-white rounded-b-xl" x-show="tab === 'preview-'" x-ref="header-">
+                                {{> (partial) }}
+                            </div>
+
+                            <div class="rounded-b-xl" x-show="tab === 'code-'">
+                                <div
+                                    class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
+                                    <div class="rounded-b-xl">
+                                        <!---- display code goes here.-->
+                                        <pre class="leading-6">
+							<code data-language="html">
+								{{> (partial) }}
+							</code>
+						</pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/with}}
+                    <!--- end header {{this}} -->
+                    {{/section-screens}}
+
+                    {{#unless @index }}
+                        {{> wicked-ad }}
+                    {{/unless}}
+            {{/each}}
+    {{/content}}{{/extend}}
