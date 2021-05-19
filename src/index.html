@@ -1,14 +1,14 @@
 {{#extend "default" }}{{#content "body"}}
-        {{> mainNavigation }}
+{{> mainNavigation }}
         <!----Hero  -->
         <section class="text-gray-700 border-b bg-wickedgray-500 border-wickedgray-400">
             <div class="container justify-center px-5 pt-32 pb-8 mx-auto md:px-12 lg:px-20">
                 <div class="flex flex-col w-full text-left md:text-left">
                     <h1
-                        class="mb-6 text-2xl font-black tracking-tighter text-left text-white md:text-left juistify-start lg:text-7xl title-font lg:w-3/3 ">
+                        class="mb-6 text-2xl font-black tracking-tighter text-left text-white md:text-left juistify-start lg:text-9xl title-font lg:w-3/3 ">
                         wickedblocks
                     </h1>
-                    <p class="items-center w-full text-2xl leading-snug text-gray-400 lg:text-xl lg:w-1/2">
+                    <p class="items-center w-full text-2xl leading-snug text-gray-400 lg:text-3xl lg:w-1/2">
                         A collection of components and layouts ready to copy paste on your next Tailwind CSS
                         project.
                     </p>
@@ -17,7 +17,7 @@
                     <a href="https://wickedtemplates.com" target="_blank">
                         <div class="inline-flex items-center ">
                             <div
-                                class="inline-flex items-center self-center w-full p-3 rounded-xl bg-gradient-to-tr from-gray-300 to-gray-500">
+                                class="inline-flex items-center self-center w-full p-3 rounded-lg bg-gradient-to-tr from-gray-300 to-gray-500">
                                 <div
                                     class="px-4 py-1 text-base font-semibold tracking-tight text-white rounded-lg bg-wickedgray-500 shadow-thick ">
                                     by wickedtemplates
@@ -28,7 +28,7 @@
                     </a>
                 </div>
 
-                <div class="flex flex-wrap justify-start mt-8">
+                <div class="flex-wrap justify-start invisible hidden mt-8 lg:flex">
                     {{#each data.landingCards}}
                         {{#with this as | partial | }}
                             <div class="flex flex-col lg:flex-row">
