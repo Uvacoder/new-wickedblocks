@@ -35,9 +35,14 @@
                                     @click="tab = 'preview-'">
                                     Preview
                                 </button>
-                                <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'code-' }"
+                                <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'code' }"
                                     class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-                                    @click="tab = 'code-'">
+                                    @click="
+										tab = 'code'
+										Rainbow.color($refs.preview.innerHTML, 'html', function(highlightedCode){
+											$refs.code.innerHTML = highlightedCode
+										})
+									">
                                     Code
                                 </button>
                                 <!---- Copy Buton -->

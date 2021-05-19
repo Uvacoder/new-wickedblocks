@@ -12,9 +12,11 @@
             <div class="flex flex-col w-full mt-6 ">
                 <p class="items-center w-full text-2xl leading-snug text-gray-400 lg:text-base lg:w-1/2">
                     <span class="font-semibold tracking-tighter text-blue-500 uppercase"> A WEBSITE SIDEBAR</span>
-                 is a unique, creative, and useful component of website navigation design. In most cases it is a column
-                with typography, color palette, or icons and appears by the side of the main content - either on the left or on the
-                right, depending on the website layout and structure.
+                    is a unique, creative, and useful component of website navigation design. In most cases it is a
+                    column
+                    with typography, color palette, or icons and appears by the side of the main content - either on the
+                    left or on the
+                    right, depending on the website layout and structure.
                 </p>
             </div>
             {{/section-screens-hero}}
@@ -32,9 +34,14 @@
                                     @click="tab = 'preview-'">
                                     Preview
                                 </button>
-                                <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'code-' }"
+                                <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'code' }"
                                     class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
-                                    @click="tab = 'code-'">
+                                    @click="
+										tab = 'code'
+										Rainbow.color($refs.preview.innerHTML, 'html', function(highlightedCode){
+											$refs.code.innerHTML = highlightedCode
+										})
+									">
                                     Code
                                 </button>
                                 <!---- Copy Buton -->

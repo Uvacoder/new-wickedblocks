@@ -18,10 +18,8 @@
 				</p>
 			</div>
 			{{/section-screens-hero}}
-
 			{{#each data.rightHeaders}}
 				{{#>section-screens}}
-
 					{{#with this as | partial | }}
 						<!--- header {{this}} -->
 						<div class="shadow rounded-xl" x-data="{ tab: 'preview' }">
@@ -31,7 +29,6 @@
 									class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
 									@click="
 										tab = 'preview'
-
 										$refs.code.innerHTML = ''
 									">
 									Preview
@@ -40,7 +37,6 @@
 									class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
 									@click="
 										tab = 'code'
-
 										Rainbow.color($refs.preview.innerHTML, 'html', function(highlightedCode){
 											$refs.code.innerHTML = highlightedCode
 										})
@@ -52,7 +48,6 @@
 									class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
 									@click="
 										$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})
-
 										$clipboard($refs.preview.innerHTML);
 									">
 									<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy"
@@ -65,11 +60,9 @@
 									</svg>
 								</button>
 							</div>
-
 							<div class="bg-white rounded-b-xl" x-show="tab === 'preview'" x-ref="preview">
 								{{> (partial)}}
 							</div>
-
 							<div class="rounded-b-xl" x-show="tab === 'code'">
 								<div
 									class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
@@ -85,7 +78,6 @@
 					{{/with}}
 					<!--- end header {{this}} -->
 					{{/section-screens}}
-
 					{{#unless @index }}
 						{{> wicked-ad }}
 					{{/unless}}
