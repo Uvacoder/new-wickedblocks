@@ -4,6 +4,10 @@ module.exports = {
   purge: ['./src/**/*.html'],
   theme: {
     extend: {
+       backgroundImage: theme => ({
+         'customImage': "url('../images/bgimage.svg')",
+
+      }),
       zIndex: {
         '0': 0,
        '10': 10,
