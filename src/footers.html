@@ -29,7 +29,10 @@
                                 <button
                                     :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'preview' }"
                                     class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                                    @click="tab = 'preview'">
+                                    @click="
+										tab = 'preview'
+										$refs.code.innerHTML = ''
+									">
                                     Preview
                                 </button>
                                 <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'code' }"
@@ -46,10 +49,9 @@
                                 <button
                                     class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                                     @click="
-						$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})
-
-						$clipboard($refs['header-'].innerHTML);
-					">
+										$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})
+										$clipboard($refs.preview.innerHTML);
+									">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy"
                                         width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
                                         stroke="currentColor" fill="none" stroke-linecap="round"
