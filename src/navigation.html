@@ -21,10 +21,8 @@
                 </p>
             </div>
             {{/section-screens-hero}}
-
             {{#each data.navigation}}
                 {{#>section-screens}}
-
                     {{#with this as | partial | }}
                         <!--- header {{this}} -->
                         <div class="shadow rounded-xl" x-data="{ tab: 'preview' }">
@@ -69,21 +67,12 @@
                                 {{> (partial)}}
                             </div>
                             <div class="rounded-b-xl" x-show="tab === 'code'">
-                                <div
-                                    class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
-                                    <div class="rounded-b-xl">
-                                        <!---- display code goes here.-->
-                                        <pre class="leading-6">
-											<code data-language="html" x-ref="code"></code>
-										</pre>
-                                    </div>
-                                </div>
+                                {{>tabPreCode}}
                             </div>
                         </div>
                     {{/with}}
                     <!--- end header {{this}} -->
                     {{/section-screens}}
-
                     {{#unless @index }}
                         {{> wicked-ad }}
                     {{/unless}}

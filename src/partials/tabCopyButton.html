@@ -1,0 +1,14 @@
+<button
+    class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+    @click="
+										$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})
+										$clipboard($refs.preview.innerHTML);
+									">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <rect x="8" y="8" width="12" height="12" rx="2" />
+        <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+    </svg>
+</button>
