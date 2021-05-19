@@ -55,6 +55,16 @@
     "snippets/alerts/alert-5",
     "snippets/alerts/alert-6"
   ],
+  "stats": [
+    "snippets/stats/stats-1",
+    "snippets/stats/stats-2",
+    "snippets/stats/stats-3",
+    "snippets/stats/stats-4",
+    "snippets/stats/stats-5",
+    "snippets/stats/stats-6",
+    "snippets/stats/stats-7",
+    "snippets/stats/stats-8"
+  ],
   "clients": [
     "snippets/clients/clients-1",
     "snippets/clients/clients-2",
