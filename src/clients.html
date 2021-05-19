@@ -27,50 +27,48 @@
               <div class="flex w-full p-4 text-white bg-black border-b border-gray-200 rounded-t-xl">
                 <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'preview' }"
                   class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto active focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                  @click="tab = 'preview'">
+                  @click="
+            										tab = 'preview'
+            										$refs.code.innerHTML = ''
+            									">
                   Preview
                 </button>
                 <button :class="{ 'active font-bold  bg-wickedgray-500 text-white ': tab === 'code' }"
                   class="inline-flex items-center justify-center w-full px-4 py-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer font-lg focus:outline-none lg:w-auto focus:shadow-outline focus:ring-2 hover:border-gray-300 ring-offset-current ring-offset-2"
                   @click="
-										tab = 'code'
-										Rainbow.color($refs.preview.innerHTML, 'html', function(highlightedCode){
-											$refs.code.innerHTML = highlightedCode
-										})
-									">
+            										tab = 'code'
+            										Rainbow.color($refs.preview.innerHTML, 'html', function(highlightedCode){
+            											$refs.code.innerHTML = highlightedCode
+            										})
+            									">
                   Code
                 </button>
                 <!---- Copy Buton -->
                 <button
                   class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                   @click="
-						$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})
-
-						$clipboard($refs['header-'].innerHTML);
-					">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24"
-                    height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+            										$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})
+            										$clipboard($refs.preview.innerHTML);
+            									">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <rect x="8" y="8" width="12" height="12" rx="2" />
                     <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
                   </svg>
                 </button>
               </div>
-
-              <div class="bg-white rounded-b-xl" x-show="tab === 'preview'" x-ref="header-">
-                {{> (partial) }}
+              <div class="bg-white rounded-b-xl" x-show="tab === 'preview'" x-ref="preview">
+                {{> (partial)}}
               </div>
-
-              <div class="rounded-b-xl" x-show="tab === 'code-'">
+              <div class="rounded-b-xl" x-show="tab === 'code'">
                 <div class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                   <div class="rounded-b-xl">
                     <!---- display code goes here.-->
                     <pre class="leading-6">
-							<code data-language="html">
-								{{> (partial) }}
-							</code>
-						</pre>
+            											<code data-language="html" x-ref="code"></code>
+            										</pre>
                   </div>
                 </div>
               </div>

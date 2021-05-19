@@ -63,21 +63,17 @@
                                     </svg>
                                 </button>
                             </div>
-
-                            <div class="bg-white rounded-b-xl" x-show="tab === 'preview'" x-ref="header-">
-                                {{> (partial) }}
+                            <div class="bg-white rounded-b-xl" x-show="tab === 'preview'" x-ref="preview">
+                                {{> (partial)}}
                             </div>
-
-                            <div class="rounded-b-xl" x-show="tab === 'code-'">
+                            <div class="rounded-b-xl" x-show="tab === 'code'">
                                 <div
                                     class="h-screen overflow-auto overflow-y-scroll text-gray-200 bg-black rounded-b-xl code-tab">
                                     <div class="rounded-b-xl">
                                         <!---- display code goes here.-->
                                         <pre class="leading-6">
-							<code data-language="html">
-								{{> (partial) }}
-							</code>
-						</pre>
+											<code data-language="html" x-ref="code"></code>
+										</pre>
                                     </div>
                                 </div>
                             </div>
