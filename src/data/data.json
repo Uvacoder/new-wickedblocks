@@ -21,6 +21,11 @@
     "snippets/headers-right/header-5",
     "snippets/headers-right/header-6"
   ],
+  "content": [
+    "snippets/content/content-1",
+    "snippets/content/content-2",
+    "snippets/content/content-3"
+  ],
   "leftHeaders": [
     "snippets/headers-left/header-1",
     "snippets/headers-left/header-2",
