@@ -1,18 +1,5 @@
 {
-  "landingCards": [
-    "landingCards/alerts",
-    "landingCards/auth",
-    "landingCards/clients",
-    "landingCards/footers",
-    "landingCards/forms",
-    "landingCards/navigation",
-    "landingCards/pricing",
-    "landingCards/sidebars",
-    "landingCards/headersCenter",
-    "landingCards/headersLeft",
-    "landingCards/headersRight"
-
-  ],
+  
   "rightHeaders": [
     "snippets/headers-right/header-1",
     "snippets/headers-right/header-2",
@@ -64,6 +51,18 @@
     "snippets/stats/stats-6",
     "snippets/stats/stats-7",
     "snippets/stats/stats-8"
+  ],
+  "cards": [
+    "snippets/cards/card-1",
+    "snippets/cards/card-2",
+    "snippets/cards/card-3",
+    "snippets/cards/card-4",
+    "snippets/cards/card-5",
+    "snippets/cards/card-6",
+    "snippets/cards/card-7",
+    "snippets/cards/card-8",
+    "snippets/cards/card-9",
+    "snippets/cards/card-10"
   ],
   "clients": [
     "snippets/clients/clients-1",
