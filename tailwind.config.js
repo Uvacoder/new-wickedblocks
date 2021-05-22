@@ -4,10 +4,7 @@ module.exports = {
   //purge: ['./src/**/*.html'],
   theme: {
     extend: {
-       backgroundImage: theme => ({
-         'customImage': "url('../images/bgimage.svg')",
 
-      }),
       zIndex: {
         '0': 0,
        '10': 10,
@@ -19,7 +16,7 @@ module.exports = {
        '50': 50,
        '75': 75,
        '100': 100,
-        'auto': 'auto',
+      'auto': 'auto',
       },
        boxShadow: {
         DEFAULT: '0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)',
