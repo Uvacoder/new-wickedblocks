@@ -30,13 +30,13 @@ pre .comment {
   color: #998;
 }
 pre .support {
-  color: #fff;
+  color: #344156;
 }
 pre .tag {
-   color: #ffffff;
+   color: #344156;
 }
 pre .tag-name {
-  color: #CBD5E1;
+  color: #344156;
 }
 pre .keyword,
 pre .css-property,
@@ -73,7 +73,7 @@ pre .variable {
   color: #000000B;
 }
 pre .string{
-    color: #6893e4;
+    color: rgba(6,182,212);
 }
 pre .support.value {
   font-weight: normal;
