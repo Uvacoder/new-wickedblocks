@@ -1,5 +1,5 @@
 {
-  
+
   "rightHeaders": [
     "snippets/headers-right/header-1",
     "snippets/headers-right/header-2",
@@ -40,7 +40,10 @@
     "snippets/alerts/alert-3",
     "snippets/alerts/alert-4",
     "snippets/alerts/alert-5",
-    "snippets/alerts/alert-6"
+    "snippets/alerts/alert-6",
+    "snippets/alerts/alert-7",
+    "snippets/alerts/alert-8",
+    "snippets/alerts/alert-9"
   ],
   "stats": [
     "snippets/stats/stats-1",
@@ -81,7 +84,8 @@
     "snippets/auth/auth-1",
     "snippets/auth/auth-2",
     "snippets/auth/auth-3",
-    "snippets/auth/auth-4"
+    "snippets/auth/auth-4",
+    "snippets/auth/auth-5"
   ],
    "sidebars": [
     "snippets/sidebars/sidebar-1",

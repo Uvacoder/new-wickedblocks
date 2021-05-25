@@ -66,11 +66,11 @@ pre .entity.class {
 }
 pre .entity.id,
 pre .entity.function {
-  color: #64748B;
+  color: #000000B;
 }
 pre .attribute,
 pre .variable {
-  color: #64748B;
+  color: #000000B;
 }
 pre .string{
     color: #6893e4;
