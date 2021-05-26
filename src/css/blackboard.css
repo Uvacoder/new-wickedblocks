@@ -3,8 +3,8 @@ pre {
 }
 pre {
   word-wrap: break-word;
-  padding: 6px 10px;
-  margin-bottom: 20px;
+  padding: 6px 4px;
+  margin-bottom: 10px;
 }
 pre code {
   border: 0;
@@ -30,13 +30,13 @@ pre .comment {
   color: #998;
 }
 pre .support {
-  color: #344156;
+  color: #affc41;
 }
 pre .tag {
    color: #344156;
 }
 pre .tag-name {
-  color: #344156;
+  color: #af2bbf;
 }
 pre .keyword,
 pre .css-property,
