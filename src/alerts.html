@@ -25,7 +25,8 @@
                     {{#with this as | partial | }}
                         <!--- header {{this}} -->
                         <div class="shadow rounded-xl" x-data="{ tab: 'preview' }">
-                            <div class="flex w-full p-4 text-white bg-black border-b border-gray-800 rounded-t-xl">
+                            <div
+                                class="flex w-full p-4 text-white bg-wickedgray-600 border-b border-gray-800 rounded-t-xl">
                                 {{>tabPreviewButton}}
                                 {{>tabCodeButton}}
                                 <!---- Copy Buton -->
@@ -34,7 +35,7 @@
                             <div class="bg-white rounded-b-xl" x-show="tab === 'preview'" x-ref="preview">
                                 {{> (partial)}}
                             </div>
-                            <div  x-show="tab === 'code'">
+                            <div x-show="tab === 'code'">
                                 {{>tabPreCode}}
                             </div>
                         </div>

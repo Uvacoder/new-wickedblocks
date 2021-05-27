@@ -48,7 +48,7 @@ module.exports = {
         blueGray: colors.blueGray,
         cyan: colors.cyan,
         blue: colors.blue,
-        orange: colors.orange,
+
 
 
         'wickedgray': {
@@ -62,7 +62,8 @@ module.exports = {
           '200': '#5E5E5E',
           '300': '#444444',
           '400': '#2B2B2B',
-          '500': '#121212',
+          '500': '#1e2228',
+          '600': '#0d1117',
 
         },
       },

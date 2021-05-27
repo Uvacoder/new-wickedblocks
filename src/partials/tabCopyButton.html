@@ -1,5 +1,5 @@
 <button
-    class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded-lg cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+    class="items-center justify-center w-full p-1 my-2 mt-2 mr-2 text-center text-white transition duration-500 ease-in-out transform border border-transparent rounded cursor-pointer ininline-flex hover:border font-lg e focus:outline-none lg:w-auto hover:border-gray-300 focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
     @click="
 										$dispatch('notice', {type: 'success', text: ' ✓ Block Copied To Clipboard!'})
 										$clipboard($refs.preview.innerHTML);
