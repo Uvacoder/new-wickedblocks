@@ -48,6 +48,7 @@ module.exports = {
         blueGray: colors.blueGray,
         cyan: colors.cyan,
         blue: colors.blue,
+        orange: colors.orange,
 
 
         'wickedgray': {
@@ -66,8 +67,12 @@ module.exports = {
         },
       },
       fontFamily: {
+        mono: [
+          '"IBM Plex Mono"',
+          'ui-monospace',
+          ], // Ensure fonts with spaces have " " surrounding it.
         sans: [
-          '"Inter"',
+          '"IBM Plex Sans"',
           'system-ui',
           '-apple-system',
           'BlinkMacSystemFont',
