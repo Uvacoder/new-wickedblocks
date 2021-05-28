@@ -24,19 +24,19 @@ code {
 }
 pre,
 pre code {
-  font-size: 16px;
+  font-size: 15px;
 }
 pre .comment {
   color: #998;
 }
 pre .support {
-  color: #636e7b;
+  color: #9ef0f0;
 }
 pre .tag {
-   color: #636e7b;
+   color: #78a9ff;
 }
 pre .tag-name {
-  color: #06b6d4;
+  color: #78a9ff;
 }
 pre .keyword,
 pre .css-property,
@@ -59,7 +59,7 @@ pre .constant.numeric,
 pre .keyword.unit,
 pre .hex-color {
   font-weight: normal;
-  color: #b2ebf2;
+  color: #9ef0f0;
 }
 pre .entity.class {
   color: #458;
@@ -73,7 +73,7 @@ pre .variable {
   color: #000000B;
 }
 pre .string{
-    color: #dcbdfb;
+    color: #be95ff;
 }
 pre .support.value {
   font-weight: normal;
