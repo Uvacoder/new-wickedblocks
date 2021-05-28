@@ -51,15 +51,15 @@
     "snippets/alerts/alert-8",
     "snippets/alerts/alert-9"
   ],
-  "stats": [
-    "snippets/stats/stats-1",
-    "snippets/stats/stats-2",
-    "snippets/stats/stats-3",
-    "snippets/stats/stats-4",
-    "snippets/stats/stats-5",
-    "snippets/stats/stats-6",
-    "snippets/stats/stats-7",
-    "snippets/stats/stats-8"
+  "grids": [
+    "snippets/grids/grid-1",
+    "snippets/grids/grid-2",
+    "snippets/grids/grid-3",
+    "snippets/grids/grid-4",
+    "snippets/grids/grid-5",
+    "snippets/grids/grid-6",
+    "snippets/grids/grid-7",
+    "snippets/grids/grid-8"
   ],
   "cards": [
     "snippets/cards/card-1",
