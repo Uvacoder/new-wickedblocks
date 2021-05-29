@@ -92,7 +92,12 @@
     "snippets/clients/clients-2",
     "snippets/clients/clients-3",
     "snippets/clients/clients-4",
-    "snippets/clients/clients-5"
+    "snippets/clients/clients-5",
+    "snippets/clients/clients-6",
+    "snippets/clients/clients-7",
+    "snippets/clients/clients-8",
+    "snippets/clients/clients-9",
+    "snippets/clients/clients-10"
   ],
   "forms": [
     "snippets/forms/form-1",
@@ -183,7 +188,7 @@
   "clientsHero": [
      {
       "name": "clients",
-      "quantity": "5",
+      "quantity": "10",
       "description": "can be very powerful for helping to establish trust and encouraging visitors to buy, sign up, fill out a form, or take whatever action you are after."
     }
   ],
