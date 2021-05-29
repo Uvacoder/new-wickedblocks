@@ -10,8 +10,19 @@
   ],
   "content": [
     "snippets/content/content-1",
-    "snippets/content/content-2"
-  ],
+    "snippets/content/content-2",
+    "snippets/content/content-3",
+    "snippets/content/content-4",
+    "snippets/content/content-5",
+    "snippets/content/content-6",
+    "snippets/content/content-7",
+    "snippets/content/content-8",
+    "snippets/content/content-9",
+    "snippets/content/content-10",
+    "snippets/content/content-11",
+    "snippets/content/content-12",
+    "snippets/content/content-13"
+    ],
   "leftHeaders": [
     "snippets/headers-left/header-1",
     "snippets/headers-left/header-2",
