@@ -80,7 +80,12 @@
     "snippets/cards/card-7",
     "snippets/cards/card-8",
     "snippets/cards/card-9",
-    "snippets/cards/card-10"
+    "snippets/cards/card-10",
+    "snippets/cards/card-11",
+    "snippets/cards/card-12",
+    "snippets/cards/card-13",
+    "snippets/cards/card-14",
+    "snippets/cards/card-15"
   ],
   "clients": [
     "snippets/clients/clients-1",
@@ -157,7 +162,7 @@
   "cardsHero": [
      {
       "name": "cards",
-      "quantity": "10",
+      "quantity": "15",
       "description": "makes your website scannable — suitable for content heavy website. Since your visitors do not really read the text on your website word by word, having a card-based design interface makes it easier for your visitors to scan the content."
     }
   ],
