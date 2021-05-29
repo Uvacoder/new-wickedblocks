@@ -1,28 +1,31 @@
 {{#extend "default" }}{{#content "body"}}
 		{{> navigation }}
 		{{> snackbar }}
-		{{#>section-screens-hero}}
-			<div class="flex flex-col w-full mb-4 ">
-				<h1 class="mb-2 text-2xl font-bold  text-left text-white uppercase sm:text-5xl title-font lg:w-3/3">
-					Right Headers.
-				</h1>
-			</div>
-			<span class="px-4 py-2 text-left text-white border rounded-lg border-wickedgray-500">8 Blocks</span>
-			<div class="flex flex-col w-full mt-6 ">
-				<p class="items-center w-full text-2xl leading-snug text-gray-400 lg:text-base lg:w-1/2">
-					<span class="font-semibold tracking-tighter text-blue-500 uppercase">HEADERS</span>
-					are important to your web pages. In fact, they're vital. They serve your readers and search engines,
-					meaning
-					they're significant to Search Engine Optimisation (SEO).
-				</p>
-			</div>
-			{{/section-screens-hero}}
+		{{#each data.rightHeadersHero}}
+			{{#with this as | partial | }}
+				{{#>section-screens-hero}}
+					<div class="flex flex-col w-full mb-4 ">
+						<h1 class="mb-2 text-2xl font-bold text-left text-white uppercase sm:text-5xl title-font lg:w-3/3">
+							{{name}}
+						</h1>
+					</div>
+					<span class="px-4 py-2 text-left text-white border rounded-lg border-wickedgray-500">{{quantity}}
+						Blocks</span>
+					<div class="flex flex-col w-full mt-6 ">
+						<p class="items-center w-full text-2xl leading-snug text-gray-400 lg:text-base lg:w-1/2">
+							<span class="font-semibold tracking-tighter text-blue-500 uppercase">{{name}}</span>
+							{{description}}
+						</p>
+					</div>
+					{{/section-screens-hero}}
+			{{/with}}
+		{{/each}}
 			{{#each data.rightHeaders}}
 				{{#>section-screens}}
 					{{#with this as | partial | }}
 						<!--- header {{this}} -->
 						<div class="shadow rounded-xl" x-data="{ tab: 'preview' }">
-							<div class="flex w-full p-4 text-white bg-black border-b border-gray-800 rounded-t-xl">
+							<div class="flex w-full p-4 text-white border-b border-gray-800 bg-black rounded-t-xl">
 								{{>tabPreviewButton}}
 								{{>tabCodeButton}}
 								<!---- Copy Buton -->

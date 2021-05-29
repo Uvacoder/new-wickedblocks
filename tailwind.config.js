@@ -4,7 +4,6 @@ module.exports = {
   purge: ['./src/**/*.html'],
   theme: {
     extend: {
-
       zIndex: {
         '0': 0,
        '10': 10,
@@ -40,7 +39,6 @@ module.exports = {
         threescreen: '75vh',
         halfscreen: '50vh',
       },
-
       colors: {
        transparent: 'transparent',
         current: 'currentColor',
@@ -48,11 +46,7 @@ module.exports = {
         blueGray: colors.blueGray,
         cyan: colors.cyan,
         blue: colors.blue,
-
-
-
         'wickedgray': {
-
           '50': '#C6C6C6',
           '100': '#A8A8A8',
           '200': '#8D8D8D',
@@ -61,7 +55,6 @@ module.exports = {
           '500': '#393939',
           '600': '#262626',
           '700': '#161616',
-
         },
       },
       fontFamily: {
