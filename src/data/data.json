@@ -259,7 +259,7 @@
   "sidebarHero": [
      {
       "name": "sidebars",
-      "quantity": "4",
+      "quantity": "5",
       "description": "is a unique, creative, and useful component of website navigation design. In most cases it is a column with typography, color palette, or icons and appears by the side of the main content - either on the left or on the right, depending on the website layout and structure."
     }
   ],
