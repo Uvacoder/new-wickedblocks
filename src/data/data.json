@@ -145,7 +145,14 @@
   "footers": [
     "snippets/footers/footer-1",
     "snippets/footers/footer-2",
-    "snippets/footers/footer-3"
+    "snippets/footers/footer-3",
+    "snippets/footers/footer-4",
+    "snippets/footers/footer-5",
+    "snippets/footers/footer-6",
+    "snippets/footers/footer-7",
+    "snippets/footers/footer-8",
+    "snippets/footers/footer-9",
+    "snippets/footers/footer-10"
   ],
   "leftHeadersHero": [
      {
@@ -242,7 +249,7 @@
   "footerHero": [
      {
       "name": "footer",
-      "quantity": "3",
+      "quantity": "10",
       "description": "are important to your web pages. In fact, they're vital. They serve your readers and search engines, meaning they're significant to Search Engine Optimisation (SEO)."
     }
   ]
