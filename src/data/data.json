@@ -110,6 +110,12 @@
     "snippets/clients/clients-9",
     "snippets/clients/clients-10"
   ],
+   "modals": [
+    "snippets/modals/modal-1",
+    "snippets/modals/modal-2",
+    "snippets/modals/modal-3",
+    "snippets/modals/modal-4"
+  ],
   "forms": [
     "snippets/forms/form-1",
     "snippets/forms/form-2",
@@ -215,6 +221,13 @@
       "description": "in web design is to guide the designers with how and where to place elements on the page. These guidelines incorporate margins, spaces, and columns, collectively – providing an encompassing, consistent framework for the page’s content.."
     }
   ],
+  "modalsHero": [
+     {
+      "name": "modals",
+      "quantity": "4",
+      "description": "  is a web page element that displays in front of and deactivates all other page content. To return to the main content, the user must engage with the modal by completing an action or by closing it."
+    }
+  ],
   "clientsHero": [
      {
       "name": "clients",
@@ -249,8 +262,7 @@
       "quantity": "4",
       "description": "is a unique, creative, and useful component of website navigation design. In most cases it is a column with typography, color palette, or icons and appears by the side of the main content - either on the left or on the right, depending on the website layout and structure."
     }
-  ]
-  ,
+  ],
   "footerHero": [
      {
       "name": "footer",
