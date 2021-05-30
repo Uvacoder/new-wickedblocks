@@ -140,7 +140,12 @@
   "navigation": [
     "snippets/navigation/navigation-1",
     "snippets/navigation/navigation-2",
-    "snippets/navigation/navigation-3"
+    "snippets/navigation/navigation-3",
+    "snippets/navigation/navigation-4",
+    "snippets/navigation/navigation-5",
+    "snippets/navigation/navigation-6",
+    "snippets/navigation/navigation-7",
+    "snippets/navigation/navigation-8"
   ],
   "footers": [
     "snippets/footers/footer-1",
@@ -234,7 +239,7 @@
   "navigationHero": [
      {
       "name": "navigation",
-      "quantity": "3",
+      "quantity": "8",
       "description": "on your website makes using your website a more enjoyable experience. Therefore, visitors will be more likely to spend more time on your website and they are more likely to revisit your website."
     }
   ],
