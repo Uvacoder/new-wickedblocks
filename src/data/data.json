@@ -114,7 +114,14 @@
     "snippets/forms/form-1",
     "snippets/forms/form-2",
     "snippets/forms/form-3",
-    "snippets/forms/form-4"
+    "snippets/forms/form-4",
+    "snippets/forms/form-5",
+    "snippets/forms/form-6",
+    "snippets/forms/form-7",
+    "snippets/forms/form-8",
+    "snippets/forms/form-9",
+    "snippets/forms/form-10",
+    "snippets/forms/form-11"
   ],
   "auth": [
     "snippets/auth/auth-1",
@@ -206,14 +213,14 @@
   "contentHero": [
      {
       "name": "content",
-      "quantity": "2",
+      "quantity": "13",
       "description": " that’s optimized for the web rises to the top of search results and holds readers’ attention."
     }
   ],
   "formsHero": [
      {
       "name": "forms",
-      "quantity": "4",
+      "quantity": "11",
       "description": "are pages that your users request using their browser. These pages can be written using a combination of HTML, client-script, server controls, and server code."
     }
   ],
