@@ -167,6 +167,7 @@
   ],
   "leftHeadersHero": [
      {
+      "link": "./left-headers.html",
       "name": "left headers",
       "quantity": "7",
       "description": " are important to your web pages. In fact, they're vital. They serve your readers and search engines meaning they're significant to Search Engine Optimisation (SEO)."
@@ -174,6 +175,7 @@
   ],
   "centerHeadersHero": [
      {
+        "link": "./centered-headers.html",
       "name": "centered headers",
       "quantity": "10",
       "description": " in a web design is a very effective way to create visual balance. Centered designs can also facilitate responsiveness, a property that is becoming increasingly desirable with the growth of the 'mobile web'."
@@ -181,6 +183,7 @@
   ],
   "rightHeadersHero": [
      {
+        "link": "./right-headers.html",
       "name": "right headers",
       "quantity": "8",
       "description": " are important to your web pages. In fact, they're vital. They serve your readers and search engines meaning they're significant to Search Engine Optimisation (SEO)."
@@ -188,6 +191,7 @@
   ],
   "authHero": [
      {
+        "link": "./auth.html",
       "name": "auth",
       "quantity": "5",
       "description": "is a fairly recent W3C standard backed by major players like Google, Paypal, Mozilla, Microsoft, and Qualcomm. It aims at defining a web-browser API for the creation and use of strong authentication credentials based on public key cryptography."
@@ -195,6 +199,7 @@
   ],
   "pricingHero": [
      {
+      "link": "./pricing.html",
       "name": "pricing",
       "quantity": "12",
       "description": "on your website helps attract the kind of customers you want. You may think that your potential audience will go to a cheaper competitor, but often that's not the case. By displaying your prices, you're making it clear who you're targeting."
@@ -202,6 +207,7 @@
   ],
   "cardsHero": [
      {
+      "link": "./cards.html",
       "name": "cards",
       "quantity": "15",
       "description": "makes your website scannable — suitable for content heavy website. Since your visitors do not really read the text on your website word by word, having a card-based design interface makes it easier for your visitors to scan the content."
@@ -209,6 +215,7 @@
   ],
   "alertsHero": [
      {
+        "link": "./alerts.html",
       "name": "alerts",
       "quantity": "6",
       "description": "are often boxes of text that can pop up on a web page or be present during a certain time period. Alerts can be very similar to modals, in that they prompt a user to take some action."
@@ -216,6 +223,7 @@
   ],
   "gridsHero": [
      {
+      "link": "./grids.html",
       "name": "grids",
       "quantity": "10",
       "description": "in web design is to guide the designers with how and where to place elements on the page. These guidelines incorporate margins, spaces, and columns, collectively – providing an encompassing, consistent framework for the page’s content.."
@@ -223,6 +231,7 @@
   ],
   "modalsHero": [
      {
+      "link": "./modals.html",
       "name": "modals",
       "quantity": "4",
       "description": "  is a web page element that displays in front of and deactivates all other page content. To return to the main content, the user must engage with the modal by completing an action or by closing it."
@@ -230,6 +239,7 @@
   ],
   "clientsHero": [
      {
+      "link": "./clients.html",
       "name": "clients",
       "quantity": "10",
       "description": "can be very powerful for helping to establish trust and encouraging visitors to buy, sign up, fill out a form, or take whatever action you are after."
@@ -237,6 +247,7 @@
   ],
   "contentHero": [
      {
+      "link": "./content.html",
       "name": "content",
       "quantity": "13",
       "description": " that’s optimized for the web rises to the top of search results and holds readers’ attention."
@@ -244,6 +255,7 @@
   ],
   "formsHero": [
      {
+      "link": "./forms.html",
       "name": "forms",
       "quantity": "11",
       "description": "are pages that your users request using their browser. These pages can be written using a combination of HTML, client-script, server controls, and server code."
@@ -251,6 +263,7 @@
   ],
   "navigationHero": [
      {
+      "link": "./navigation.html",
       "name": "navigation",
       "quantity": "8",
       "description": "on your website makes using your website a more enjoyable experience. Therefore, visitors will be more likely to spend more time on your website and they are more likely to revisit your website."
@@ -258,6 +271,7 @@
   ],
   "sidebarHero": [
      {
+      "link": "./sidebars.html",
       "name": "sidebars",
       "quantity": "5",
       "description": "is a unique, creative, and useful component of website navigation design. In most cases it is a column with typography, color palette, or icons and appears by the side of the main content - either on the left or on the right, depending on the website layout and structure."
@@ -265,6 +279,7 @@
   ],
   "footerHero": [
      {
+      "link": "./footers.html",
       "name": "footer",
       "quantity": "10",
       "description": "are important to your web pages. In fact, they're vital. They serve your readers and search engines, meaning they're significant to Search Engine Optimisation (SEO)."
