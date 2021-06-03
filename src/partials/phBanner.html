@@ -1,0 +1,49 @@
+{{!-- El ultimo div que con clase Hidden no se necesita, Es simplemeten para esconderlo. Esta hecho con alpine.js, click
+away. Los cantidades que estan debaja la barra de progreso, estan con <span> ---- </span> por si necesitas cambiarlos
+con js... --}}
+
+<div class="fixed bottom-0 z-10 flex flex-wrap w-full">
+    <div class="w-full h-full px-2 py-3 bg-white border-l-8 border-blue-600 lg:px-8" x-data="{ show: true }"
+        x-show="show">
+        <div class="justify-between w-full h-full mx-auto">
+            <div class="flex items-center justify-between mb-4">
+                <svg width="32" class="text-black" height="32" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12ZM9 16V8H13C14.6569 8 16 9.34315 16 11C16 12.6569 14.6569 14 13 14H11V16H9ZM14 11C14 11.5523 13.5523 12 13 12H11V10H13C13.5523 10 14 10.4477 14 11Z"
+                        fill="currentColor" />
+                </svg>
+                <button @click="show = false"
+                    class="p-1 text-black transition-colors duration-200 transform rounded-md hiver:text-cyan-500 hover:bg-opacity-25 hover:bg-gray-600 focus:outline-none"
+                    type="button" aria-label="Close" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-x" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M10 10l4 4m0 -4l-4 4"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-wrap lg:items-center lg:justify-between lg:flex-nowrap">
+                <div class="w-full">
+                    <h3 class="mb-4 text-base font-semibold leading-snug text-black lg:text-lg ">
+                        Our project <span class="font-semibold tracking-tighter">Wicked Templates</span> is on Product Hunt today it
+                        would mean the world if you come and say hi!
+                    </h3>
+
+                </div>
+
+                <div class="">
+                    <a class="text-right lg:ml-auto"
+                        href="https://www.producthunt.com/posts/wicked-templates-2-0?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-wicked-templates-2-0"
+                        target="_blank"><img
+                            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=298051&theme=light"
+                            alt="Wicked Templates 2.0 - Landing pages for your next projects | Product Hunt"
+                            style="width: 250px; height: 54px;" width="250" height="54" /></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
