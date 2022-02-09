@@ -1,5 +1,5 @@
 # Wicked HTML Starter
-
+--
 This repo is the scaffolding we use at [Wicked Templates](https://wickedtemplates.com) to create new
 Tailwind based HTML templates.
 
